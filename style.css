@@ -1,0 +1,267 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar {
+    transition: 0.2s;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    border: none;
+    padding: 0;
+}
+
+.navbar h1 {
+    width: auto;
+    padding: 15px;
+    color: #fff;
+}
+
+.navbar .menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar .menu li {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 9%;
+}
+
+.navbar .menu li a {
+    color: #fff;
+}
+
+.navbar .menu li a:hover {
+    color: #c2c2c2;
+}
+
+.home {
+    background-image: url("img/img1.jpg");
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.home .text {
+	text-align: center;
+
+}
+
+.home .text h1{
+	font-weight: 1000;
+	margin-block-end: 0;
+    color: white;
+}
+
+.home .text span {
+	color: white;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #e1e0e0;
+	color: #222;
+	font-size: 14px;
+	padding: 0 30px;
+}
+
+@media only screen and (max-width: 1200px){
+	.navbar {
+		justify-content: center;
+	}
+	.navbar img {
+		padding: 3px;
+	}
+	.navbar .menu {
+		display: none;
+	}
+	.footer {
+		justify-content: center;
+		flex-direction: column;
+		padding: 10px;
+		font-size: 12px;
+	}
+}
+
+.wrapper {
+    padding: 15px; /* Diminui o padding para ajustar melhor */
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
+    background-color: whitesmoke;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as caixas se ajustem à linha */
+    justify-content: center; /* Centraliza as caixas */
+    margin: 0 auto; /* Centraliza o container na página */
+}
+
+
+
+.row:hover {
+    color: #c2c2c2;
+}
+
+.cast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os itens */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.list-cast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list-cast div {
+    position: relative;
+    width: 22%; /* Define o tamanho das imagens */
+    margin: 20px 0;
+}
+
+.list-cast img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.list-cast img:hover {
+    transform: scale(1.05); /* Efeito de zoom quando passa o mouse */
+}
+
+.list-cast p {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.list-cast div:hover p {
+    display: block;
+    opacity: 1;
+}
+
+.list-cast p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.contact {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #f9f9f9;
+}
+
+.margin {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.number, .email {
+    font-size: 18px;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background-color: #f2f2f2;
+}
+
+input[type="submit"] {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #cc5200;
+}
+
+textarea {
+    resize: none;
+}
+
+@media (max-width: 768px) {
+    .margin {
+        flex-direction: column;
+        align-items: center;
+    }
+}
