@@ -39,6 +39,34 @@ a {
     color: #fff;
 }
 
+.gallery-container {
+    display: flex;
+    justify-content: flex-start; /* Alinha a galeria à esquerda */
+    align-items: center;
+    padding: 20px;
+    background-color: #000; /* Caixa preta */
+    border-radius: 8px;
+    margin-bottom: 40px; /* Espaçamento para o texto abaixo */
+}
+
+.image-box {
+    display: flex;
+    gap: 15px; /* Espaço entre as imagens */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.image-box img {
+    width: 100px; /* Tamanho reduzido */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
 .navbar .menu {
     display: flex;
     justify-content: flex-end;
@@ -59,7 +87,7 @@ a {
 }
 
 .home {
-    background-image: url("img/img1.jpg");
+    background-image: url("");
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,7 +157,11 @@ a {
     margin: 0 auto; /* Centraliza o container na página */
 }
 
-
+.logo {
+    width: 150px; /* Ajuste para o tamanho desejado do logo */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 100px; /* Espaçamento entre o logo e o título */
+}
 
 .row:hover {
     color: #c2c2c2;
