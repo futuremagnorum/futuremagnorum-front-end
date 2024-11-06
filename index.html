@@ -29,68 +29,59 @@
         <div class="wrapper">
             <main>
                 <section class="section" id="inicio">
-                    <div class="container">
+                    <div class="container2">
                         <div class="row">
-                            <h2 class="section-title">Nosso projeto</h2>
+                            <h2 class="section-title">Objetivo do App</h2>
                         </div>
                         <div class="row">
-                            <p>"Durante uma conversa com nosso professor de Ensino Técnico, 
-                            notamos que tinhamos conhecimento avançado em desenvolvimento 
-                            de sistemas e programação.
-                             Ele nos deu assim a oportunidade de organizar um pequeno grupo, 
-                             e juntos desenvolvermos um projeto de nossa escolha em suas aulas.
-                              Assim, começamos com um sistema onde todos os participantes
-                               pudessem aprender a programar e evoluir seus conhecimentos, 
-                               por meio de programas com ajuda da Inteligência Artificial.
-                                Começamos com criadores de cursos, que nós usamos para aprender 
-                                juntos e gratuitamente" - Raphael, Líder do Projeto</p>
+                            <p>O Magnorum foi desenvolvido para facilitar a contratação de jovens que buscam entrar no mercado de trabalho de forma rápida e prática. app simplifica o processo de recrutamento e ajuda a encontrar vagas de emprego que correspondam ao perfil dos usuários.</p>
                         </div>
-                        <div class="row">
-                            <h2 class="section-title">
-                                O que fazemos
-                            </h2>  
+                            <h2 class="section-title">Tecnologia Utilizada</h2>
+                        <div class="tech-row">
+                            <div class="tech-item">
+                                <img src="img/Python-logo-notext.svg.png" alt="Logo Python" class="tech-logo">
+                                <p>Python</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="img/logo-kivymd-no-bg.png" alt="Logo KivyMD" class="tech-logo">
+                                <p>KivyMD</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="img/image2_no_bg.png" alt="Logo MongoDB" class="tech-logo">
+                                <p>MongoDB</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="img/image1_no_bg.png" alt="Logo FastAPI" class="tech-logo">
+                                <p>FastAPI</p>
+                            </div>
                         </div>
-                        <div class="row">
-Bem-vindo ao Magnorum, a plataforma de banco de dados projetada para transformar a maneira como você gerencia, 
-acessa e protege suas informações. Desenvolvido com a mais avançada tecnologia, o Magnorum é a solução ideal 
-para empresas e profissionais que buscam eficiência, escalabilidade e segurança no gerenciamento de dados.
-Principais Recursos do Magnorum:
-Desempenho Imbatível: Com nossa arquitetura de alta performance, você experimentará consultas mais rápidas e processamento ágil, mesmo com grandes volumes de dados.
-Segurança de Nível Superior: Proteja suas informações com criptografia robusta, controle de acesso granular e monitoramento contínuo contra ameaças.
-Escalabilidade Sem Esforço: Adapte-se às crescentes demandas do seu negócio com nossa solução escalável, que permite expandir suas operações sem comprometer a eficiência.
-Interface Intuitiva: Navegue facilmente pela plataforma com nossa interface amigável e personalizável, que facilita a administração e análise de dados.
-Integração Fluida: Conecte o Magnorum a outras ferramentas e sistemas com facilidade, garantindo uma experiência integrada e sem interrupções em seus fluxos de trabalho.
-Suporte Dedicado: Nossa equipe de suporte está disponível 24/7 para ajudá-lo a resolver qualquer questão e garantir que você aproveite ao máximo todos os recursos do Magnorum.
-Transforme a forma como você lida com dados e descubra um novo nível de produtividade com o Magnorum. Experimente hoje mesmo e veja como podemos ajudar você a alcançar seus objetivos com mais eficiência e segurança.
+
                         </div>
-                    </div>
                     </section>
             </div>
-            <div class="cast" id="sobre">
-                <div class="gallery-container">
-                    <div class="image-box">
-                        <img src="elenco/giovanni/my.png" alt="Imagem da Galeria">
-                        <img src="elenco/Matheus/Conteúdo do site - meu/foto 1 trello.jfif" alt="Imagem da Galeria">
-                        <img src="elenco/Matheus/Conteúdo do site - meu/foto3.jfif" alt="Imagem da Galeria">
+        <section class="section" id="sobre">
+            <!-- Galeria de imagens -->
+            <div class="gallery-container">
+                <button class="nav-button" onclick="prevImage()">&#10094;</button>
+                <div class="image-box">
+                    <div class="gallery-text" id="galleryText">
+                        <h3>Rafael - Líder do Projeto</h3><p>Sou desenvolvedor com experiência em aplicativos móveis e backend, liderando o projeto Magnorum, uma plataforma para conectar jovens talentos a vagas de emprego. Tenho um portfólio variado e domínio de tecnologias como Kivy, KivyMD e MongoDB, focando em criar interfaces intuitivas e experiências de usuário de alta qualidade. Trabalho de forma colaborativa, promovendo o crescimento da equipe e buscando sempre contribuir com soluções inovadoras em tecnologia.</p>
+                        </p>
                     </div>
                 </div>
+                <button class="nav-button" onclick="nextImage()">&#10095;</button>
             </div>
-            
-                <script src="script.js"></script>
+            <script src="script.js"></script>
 
         </div>
-        <div class="contact" id="#contact">
+        <div class="contact" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="title">
                         <h2 class="section-title">Contact</h2>
                     </div>
                 </div>
-                <div class="margin">
-                    <div class="number">Telefone<br/>+55 11 974890057</div>
-                    <div class="email">Email<br/>rafabaruck@gmail.com</div>
-                </div>
-                <form action="contact">
+                <form action="contact" >
                     <div class="text">
 
                         <div class="barra">

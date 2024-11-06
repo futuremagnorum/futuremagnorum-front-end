@@ -41,30 +41,54 @@ a {
 
 .gallery-container {
     display: flex;
-    justify-content: flex-start; /* Alinha a galeria à esquerda */
     align-items: center;
-    padding: 20px;
-    background-color: #000; /* Caixa preta */
-    border-radius: 8px;
-    margin-bottom: 40px; /* Espaçamento para o texto abaixo */
+    justify-content: center;
+    padding: 125px;
+    background-color: #000;
 }
 
 .image-box {
     display: flex;
-    gap: 15px; /* Espaço entre as imagens */
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-}
-
-.image-box img {
-    width: 100px; /* Tamanho reduzido */
-    height: auto;
-    object-fit: cover;
+    flex-direction: column; /* Organiza o conteúdo na direção vertical */
+    align-items: center;
+    justify-content: center; /* Garante que o conteúdo fique centralizado */
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    background-color: #222;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a caixa */
+    text-align: center; /* Centraliza o texto dentro da caixa */
 }
 
-.image-box img:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+.gallery-text {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-top: 20px;
+}
+
+.text-header h3 {
+    font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    margin-bottom: 40px; /* Espaço entre o nome e o texto */
+    text-transform: capitalize;
+}
+
+.nav-button {
+    background: none;
+    color: white;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    color: #ccc;
 }
 
 .navbar .menu {
@@ -79,7 +103,8 @@ a {
 }
 
 .navbar .menu li a {
-    color: #fff;
+    color: #fff200;
+    font-size: 18px;
 }
 
 .navbar .menu li a:hover {
@@ -87,7 +112,7 @@ a {
 }
 
 .home {
-    background-image: url("");
+    background-image: url("img/fundo.webp");
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,7 +126,7 @@ a {
 
 .home .text {
 	text-align: center;
-
+    
 }
 
 .home .text h1{
@@ -238,11 +263,17 @@ a {
     padding: 0 20px;
 }
 
+.container2 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .section-title {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 30px;
-    color: #f9f9f9;
+    margin-bottom: 0px;
+    color: #000000;
 }
 
 .margin {
@@ -290,6 +321,27 @@ input[type="submit"]:hover {
 textarea {
     resize: none;
 }
+
+.tech-row {
+    display: flex;
+    justify-content: center; /* Alinha as logos à direita */
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 60px;
+    flex-wrap: nowrap;
+}
+
+.tech-item {
+    text-align: center;
+}
+
+.tech-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+
 
 @media (max-width: 768px) {
     .margin {
