@@ -27,3 +27,8 @@
     }
 
     setInterval(nextImage, 5000); // Muda a imagem a cada 5 segundos
+
+
+  
+    
+    
