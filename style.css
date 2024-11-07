@@ -20,19 +20,6 @@ a {
     transition: 0.2s ease-in-out;
 }
 
-.navbar {
-    transition: 0.2s;
-    background-color: transparent;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-    border: none;
-    padding: 0;
-}
-
 .navbar h1 {
     width: auto;
     padding: 15px;
@@ -115,8 +102,23 @@ a {
     color: #c2c2c2;
 }
 
+.navbar {
+    position: fixed; /* Fixa a barra de navegação no topo */
+    top: 0; /* Define o topo da posição fixa */
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px; /* Ajuste o padding conforme necessário */
+    z-index: 1; /* Garante que o navbar fique acima do conteúdo */
+    background-color: transparent; /* Ajuste de cor com opacidade */
+    transition: background-color 0.2s; /* Transição suave */
+}
+
 .home {
-    background-image: url("img/oll_processed.gif");
+    margin-top: 0px; /* Adiciona margem para compensar a navbar fixa */
+    background-image: url("img/Untitled ‑ Made with FlexClip.gif");
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;
@@ -127,6 +129,7 @@ a {
     justify-content: center;
     color: white;
 }
+
 
 .home .text {
 	text-align: center;
