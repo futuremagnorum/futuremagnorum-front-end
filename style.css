@@ -9,44 +9,50 @@ html, body {
 body {
     font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 400;
-    color: #222;
+    color: #FFD700;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
 }
 
-a {
-    color: #222;
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
+/* AOS animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
 }
 
-.navbar {
-    transition: 0.2s;
-    background-color: transparent;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-    border: none;
-    padding: 0;
+/* Todos os elementos irão vir da esquerda para a direita */
+[data-aos="fade-right"] {
+    transform: translateX(-100px); /* Inicialmente, os elementos começam 100px à esquerda */
 }
 
+[data-aos="fade-right"].aos-animate {
+    transform: translateX(0); /* Quando a animação ocorre, eles se movem para a posição final */
+}
+
+
+/* Restante do seu CSS */
 .navbar h1 {
     width: auto;
     padding: 15px;
     color: #fff;
 }
 
+/* Adicionando animações de AOS ao restante do conteúdo */
 .gallery-container {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 125px;
-    background-color: #000000;
-    background-image: url("img/ff.webp");
+    background-color: #001F3F;
+    transition: all 0.3s ease;
+}
 
+a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
 }
 
 .image-box {
@@ -64,7 +70,7 @@ a {
 }
 
 .gallery-text {
-    color: #030303;
+    color: #FFD700;
     font-size: 16px;
     text-align: center;
     max-height: 600px;
@@ -107,7 +113,7 @@ a {
 }
 
 .navbar .menu li a {
-    color: #fff200;
+    color: #FFD700;
     font-size: 18px;
 }
 
@@ -115,9 +121,22 @@ a {
     color: #c2c2c2;
 }
 
+.navbar {
+    position: fixed; /* Fixa a barra de navegação no topo */
+    top: 0; /* Define o topo da posição fixa */
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px; /* Ajuste o padding conforme necessário */
+    z-index: 1; /* Garante que o navbar fique acima do conteúdo */
+    background-color: transparent; /* Ajuste de cor com opacidade */
+    transition: background-color 0.2s; /* Transição suave */
+}
+
 .home {
-    background-image: url("caminho/do/gif.gif"); /* Substitua pelo caminho do seu GIF */
-    background-color: black;
+    background-color:  #001F3F;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,11 +156,11 @@ a {
 .home .text h1{
 	font-weight: 1000;
 	margin-block-end: 0;
-    color: white;
+    color: #FFD700;
 }
 
 .home .text span {
-	color: white;
+	color: #FFD700;
 }
 
 .footer {
@@ -149,8 +168,8 @@ a {
     position: fixed;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #e1e0e0;
-	color: #222;
+	background-color: #001F3F;
+	color: #FFD700;
 	font-size: 14px;
 	padding: 0 30px;
 }
@@ -178,7 +197,7 @@ a {
     display: flex;
     flex-direction: column; /* Alinha os itens verticalmente */
     align-items: center; /* Centraliza o conteúdo */
-    background-color: whitesmoke;
+    background-color: #001F3F   ;
 }
 
 .row {
@@ -186,6 +205,7 @@ a {
     flex-wrap: wrap; /* Permite que as caixas se ajustem à linha */
     justify-content: center; /* Centraliza as caixas */
     margin: 0 auto; /* Centraliza o container na página */
+
 }
 
 .logo {
@@ -254,36 +274,106 @@ a {
 }
 
 .contact {
-    background-image: url("img/clll.webp");
-    background-color: #ffffff;
+    background-color: #001F3F;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    padding: 125px;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding: 50px 0;
 }
+
+.contact-header h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #FFD700  ;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contact-option {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff200;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.contact-option h3 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #FFD700;
+}
+
+.contact-option p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.contact-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.contact-icon2 {
+    width: 145px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .contact-options {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-option {
+        width: 100%;
+    }
+}
+
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    min-height: 100vh;
 }
 
 .container2 {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 20px;
+    min-height: 100vh;
 }
 
 .container3 {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 20px;
-    color: #000000;
+    min-height: 100vh;
+    color: #FFD700;
 }
 
 .section-title {
     text-align: center;
     font-size: 36px;
     margin-bottom: 30px;
-    color: #000000;
+    color: #FFD700;
 }
 
 .margin {
@@ -343,6 +433,14 @@ textarea {
 
 .tech-item {
     text-align: center;
+    opacity: 0;
+    transform: translateX(-50px); /* Inicia as logos fora da tela à esquerda */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tech-item.active {
+    opacity: 1;
+    transform: translateX(0); /* Movimenta as logos para a posição original */
 }
 
 .tech-logo {
@@ -351,23 +449,48 @@ textarea {
     margin-bottom: 30px;
 }
 
-
-
-@media (max-width: 768px) {
-    .margin {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
 .histori {
-    background-color: rgb(255, 255, 255);
+    background-color: #001F3F;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    padding: 125px;
     align-items: center;
     justify-content: center;
     color: white;
+}
+
+/* Estilo do separador animado */
+.section-separator {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+    margin: 50px 0;
+    overflow: hidden;
+}
+
+.section-separator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+    animation: slide 2s infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: -50%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: -50%;
+    }
 }
