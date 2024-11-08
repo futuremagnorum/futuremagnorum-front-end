@@ -13,6 +13,39 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
 }
+/* Fundo e container centralizado */
+
+.logo-center {
+    text-align: center;
+    color: #FFD700;
+    font-family: 'Cinzel', serif;
+}
+
+.logo-symbol {
+    font-size: 100px; /* Tamanho grande para o símbolo */
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); /* Brilho dourado */
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.app-name {
+    font-size: 36px;
+    color: #FFD700;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Animação de brilho */
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8), 0px 0px 15px rgba(255, 215, 0, 0.4);
+    }
+    to {
+        text-shadow: 0px 0px 20px rgba(255, 215, 0, 1), 0px 0px 30px rgba(255, 215, 0, 0.6);
+    }
+}
+
 
 /* AOS animations */
 [data-aos] {
@@ -140,7 +173,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,17 +194,6 @@ a {
 
 .home .text span {
 	color: #FFD700;
-}
-
-.footer {
-	display: flex;
-    position: fixed;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #001F3F;
-	color: #FFD700;
-	font-size: 14px;
-	padding: 0 30px;
 }
 
 @media only screen and (max-width: 1200px){
@@ -273,16 +295,14 @@ a {
     font-size: 14px;
 }
 
-.contact {
+#contact {
     background-color: #001F3F;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+    min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da tela */
     display: flex;
-    padding: 125px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0; /* Remove o padding extra */
     color: white;
 }
 
@@ -301,7 +321,7 @@ a {
 }
 
 .contact-option {
-    background-color: #ffffff;
+    background-color: #F3F4F6;
     border-radius: 8px;
     padding: 20px;
     color: #fff200;
@@ -494,3 +514,26 @@ textarea {
         left: -50%;
     }
 }
+
+.text-container {
+    display: flex;  
+    justify-content: space-between; /* Empurra o texto para as laterais */
+    align-items: center; /* Alinha verticalmente no centro, se necessário */
+    width: 100%; /* Garante que o container ocupe toda a largura */
+    background-color: #001F3F;
+
+}
+
+.left-text {
+    font-size: 18px; /* Tamanho do texto à esquerda */
+    color: #FFD700; /* Ajuste a cor conforme necessário */
+}
+
+.right-span {
+    font-size: 18px; /* Tamanho do texto à direita */
+    color: #FFD700; /* Ajuste a cor conforme necessário */
+    text-align: right; /* Alinha o texto dentro do span, à direita */
+}
+
+
+
