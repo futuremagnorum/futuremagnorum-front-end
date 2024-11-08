@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" size="32x32" href="img/icon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
-    <title>MAGNORUM</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" size="32x32" href="img/icon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
+        
+        <!-- AOS Animation -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        <title>MAGNORUM</title>
     </head>
     <body>
         <div>
-            <header class="navbar">
-                <img src="img/transparent_gold_logo.png" alt="Logotipo da Empresa" class="logo">                
-                <nav class="menu">
+            <header class="navbar" data-aos="fade-right">
+                <a href="#home">
+                    <img src="img/transparent_gold_logo.png" alt="Logotipo da Empresa" class="logo">
+                </a>            
                 <nav class="menu">
                     <li><a href="#histori">Magnorum</a></li>
                     <li><a href="#inicio">App</a></li>
@@ -20,105 +25,110 @@
                     <li><a href="#contact">Contato</a></li>
                 </nav>
             </header>
-            <div class="home">
-                <div class="logo1">
+            
+            <section class="section" id="home">
+                <div class="home" data-aos="fade-right">
+                    <div class="logo1"></div>
                 </div>
-            </div>
-        </div>
-        <div class="wrapper">
-            <main>
-                <section class="section" id="inicio">
-                    <div class="container2">
-                        <div class="row">
-                            <h2 class="section-title">Objetivo do App</h2>
-                        </div>
-                        <div class="row">
-                            <p>O Magnorum foi desenvolvido para facilitar a contratação de jovens que buscam entrar no mercado de trabalho de forma rápida e prática. app simplifica o processo de recrutamento e ajuda a encontrar vagas de emprego que correspondam ao perfil dos usuários.</p>
-                        </div>
-                            <h2 class="section-title">Tecnologia Utilizada</h2>
-                        <div class="tech-row">
-                            <div class="tech-item">
-                                <img src="img/Python-logo-notext.svg.png" alt="Logo Python" class="tech-logo">
-                                <p>Python</p>
-                            </div>
-                            <div class="tech-item">
-                                <img src="img/logo-kivymd-no-bg.png" alt="Logo KivyMD" class="tech-logo">
-                                <p>KivyMD</p>
-                            </div>
-                            <div class="tech-item">
-                                <img src="img/image2_no_bg.png" alt="Logo MongoDB" class="tech-logo">
-                                <p>MongoDB</p>
-                            </div>
-                            <div class="tech-item">
-                                <img src="img/image1_no_bg.png" alt="Logo FastAPI" class="tech-logo">
-                                <p>FastAPI</p>
-                            </div>
-                        </div>
+            </section>
 
+            <div class="wrapper">
+                <main>
+                    <div class="section-separator"></div> <!-- Separador animado -->
+                    <section class="section" id="inicio">
+                        <div class="container2" data-aos="fade-right">
+                            <div class="row">
+                                <h2 class="section-title">Objetivo do App</h2>
+                            </div>
+                            <div class="row">
+                                <p>O Magnorum foi desenvolvido para facilitar a contratação de jovens que buscam entrar no mercado de trabalho de forma rápida e prática...</p>
+                            </div>
+                            <h2 class="section-title">Tecnologia Utilizada</h2>
+                            <div class="tech-row" data-aos="fade-right">
+                                <div class="tech-item">
+                                    <img src="img/Python-logo-notext.svg.png" alt="Logo Python" class="tech-logo">
+                                    <p>Python</p>
+                                </div>
+                                <div class="tech-item">
+                                    <img src="img/logo-kivymd-no-bg.png" alt="Logo KivyMD" class="tech-logo">
+                                    <p>KivyMD</p>
+                                </div>
+                                <div class="tech-item">
+                                    <img src="img/image2_no_bg.png" alt="Logo MongoDB" class="tech-logo">
+                                    <p>MongoDB</p>
+                                </div>
+                                <div class="tech-item">
+                                    <img src="img/image1_no_bg.png" alt="Logo FastAPI" class="tech-logo">
+                                    <p>FastAPI</p>
+                                </div>
+                            </div>
                         </div>
                     </section>
-            </div>
-        <section class="section" id="sobre">
-            <!-- Galeria de imagens -->
-            <div class="gallery-container">
-                <button class="nav-button" onclick="prevImage()">&#10094;</button>
-                <div class="image-box">
-                    <div class="gallery-text" id="galleryText">
-                        <h3>Rafael - Líder do Projeto</h3><p>Sou desenvolvedor com experiência em aplicativos móveis e backend, liderando o projeto Magnorum, uma plataforma para conectar jovens talentos a vagas de emprego. Tenho um portfólio variado e domínio de tecnologias como Kivy, KivyMD e MongoDB, focando em criar interfaces intuitivas e experiências de usuário de alta qualidade. Trabalho de forma colaborativa, promovendo o crescimento da equipe e buscando sempre contribuir com soluções inovadoras em tecnologia.</p>
-                        </p>
+                </main>
+                <div class="section-separator"></div> <!-- Separador animado -->
+                <section class="section" id="sobre">
+                    <div class="gallery-container" data-aos="fade-right">
+                        <button class="nav-button" onclick="prevImage()">&#10094;</button>
+                        <div class="image-box">
+                            <div class="gallery-text" id="galleryText">
+                                <h3>Rafael - Líder do Projeto</h3><p>Sou desenvolvedor com experiência em aplicativos móveis e backend...</p>
+                            </div>
+                        </div>
+                        <button class="nav-button" onclick="nextImage()">&#10095;</button>
                     </div>
-                </div>
-                <button class="nav-button" onclick="nextImage()">&#10095;</button>
-            </div>
-            <script src="script.js"></script>
-
-        </div>
-        <div class="histori">
-        <div class="histori" id="histori">
-            <section class="section" id="histori">
-                <div class="container3">
-                    <div class="row">
-                        <div class="title">
+                </section>
+                <div class="section-separator"></div> <!-- Separador animado -->
+                <section class="section" id="histori" data-aos="fade-right">
+                    <div class="container3">
+                        <div class="row">
                             <h2 class="section-title">História da Magnorum</h2>
                         </div>
                         <div class="row">
-                            <p></p>
+                            <p>Conteúdo sobre a história da empresa...</p>
                         </div>
                     </div>
-                </div>
                 </section>
-            </div>
-            </div>
-                <div class="contact" id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="title">
-                        <h2 class="section-title">Contact</h2>
+                <div class="section-separator"></div> <!-- Separador animado -->
+                <section class="section" id="contact" data-aos="fade-right">
+                    <div class="contact-header">
+                        <h2>Como você prefere falar com a gente?</h2>
                     </div>
-                </div>
-                <form action="contact" >
-                    <div class="text">
-
-                        <div class="barra">
-                            <div class="row">
-                                <div class="col-md">
-                                    <input placeholder="Enter Your Name" type="text" name="" value="" class="margin-bottom-small">
-                                    <input placeholder="Enter Your Email" type="email" name=""  value="">
-                                </div>
-                            </div>
-
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <img src="img/png-clipart-computer-icons-email-email-miscellaneous-angle (1).png" alt="Ícone de E-mail" class="contact-icon2">
+                            <h3>E-mail</h3>
+                            <p>Tem alguma dúvida?</p>
+                            <p>Magnorum@gmail.com</p>
                         </div>
-                        <div class="col-md padding-small">
-                            <textarea placeholder="Your Message" name="" rows="8" class="margin-bottom-small"></textarea>
-                            <input type="submit" value="Submit">
+                        <div class="contact-option">
+                            <img src="img/pngtree-phone-icon-in-solid-circle-png-image_2380227.png" alt="Ícone de Telefone" class="contact-icon">
+                            <h3>Telefone</h3>
+                            <p>Você pode ligar a qualquer hora.</p>
+                            <p>0800 591 2117</p>
+                        </div>
+                        <div class="contact-option">
+                            <img src="img/images (1).png" alt="Ícone de Chat" class="contact-icon">
+                            <h3>Chat</h3>
+                            <p>Precisa de uma ajuda agora?</p>
+                            <p>Basta abrir o chat no app.</p>
                         </div>
                     </div>
-                </form>
+                </section>
+
             </div>
+
+            <div class="footer" data-aos="fade-right">
+                <p>Feito por Giovanni Medeiros Palomo</p>
+                <span>Todos os direitos reservados | © 2024</span>
+            </div>
+
         </div>
-        <footer class="footer">
-			<p>Feito por Giovanni Medeiros Palomo</p>
-			<span>Todos os direitos reservados | © 2024</span>
-		</footer>
+
+        <!-- AOS Script -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init(); // Inicializa a biblioteca AOS para animações no scroll
+        </script>
+        <script src="script.js"></script>
     </body>
 </html>

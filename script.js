@@ -27,3 +27,40 @@
     }
 
     setInterval(nextImage, 5000); // Muda a imagem a cada 5 segundos
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const techItems = document.querySelectorAll(".tech-item");
+        const techSection = document.querySelector(".tech-row");
+        let animationInProgress = false;
+    
+        // Configura o observador para monitorar a visibilidade da seção
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animationInProgress) {
+                    startAnimation();
+                } else if (!entry.isIntersecting) {
+                    resetAnimation();
+                }
+            });
+        }, { threshold: 0.5 }); // Define que pelo menos 50% da seção precisa estar visível
+    
+        observer.observe(techSection);
+    
+        function startAnimation() {
+            animationInProgress = true;
+            techItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add("active");
+                }, index * 500); // Ajuste o tempo entre as logos, aqui está a cada 500ms
+            });
+        }
+    
+        function resetAnimation() {
+            animationInProgress = false;
+            techItems.forEach(item => {
+                item.classList.remove("active");
+            });
+        }
+    });
+    
