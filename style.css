@@ -1,3 +1,4 @@
+/*funções gerais*/
 html, body {
     height: 100%;
     margin: 0;
@@ -13,109 +14,35 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
 }
-/* Fundo e container centralizado */
-
-.logo-center {
-    text-align: center;
-    color: #FFD700;
-    font-family: 'Cinzel', serif;
-}
-
-.logo-symbol {
-    font-size: 100px; /* Tamanho grande para o símbolo */
-    font-weight: bold;
-    color: #FFD700;
-    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); /* Brilho dourado */
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-.app-name {
-    font-size: 36px;
-    color: #FFD700;
-    margin-top: 10px;
-    font-weight: 500;
-}
-
-/* Animação de brilho */
-@keyframes glow {
-    from {
-        text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8), 0px 0px 15px rgba(255, 215, 0, 0.4);
-    }
-    to {
-        text-shadow: 0px 0px 20px rgba(255, 215, 0, 1), 0px 0px 30px rgba(255, 215, 0, 0.6);
-    }
-}
 
 
-/* AOS animations */
-[data-aos] {
-    opacity: 0;
-    transition-property: opacity, transform;
-    transition-duration: 0.6s;
-    transition-timing-function: ease-out;
-}
-
-/* Todos os elementos irão vir da esquerda para a direita */
-[data-aos="fade-right"] {
-    transform: translateX(-100px); /* Inicialmente, os elementos começam 100px à esquerda */
-}
-
-[data-aos="fade-right"].aos-animate {
-    transform: translateX(0); /* Quando a animação ocorre, eles se movem para a posição final */
-}
-
-
-/* Restante do seu CSS */
-.navbar h1 {
-    width: auto;
-    padding: 15px;
-    color: #fff;
-}
-
-/* Adicionando animações de AOS ao restante do conteúdo */
-.gallery-container {
+/*home functions*/
+.home {
+    background-color:  #001F3F;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 125px;
-    background-color: #001F3F;
-    transition: all 0.3s ease;
+    color: white;
 }
 
-a {
+
+.home .text {
+	text-align: center;
+    
+}
+
+.home .text h1{
+	font-weight: 1000;
+	margin-block-end: 0;
     color: #FFD700;
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
 }
 
-.image-box {
-    display: flex;
-    flex-direction: column; /* Organiza o conteúdo na direção vertical */
-    align-items: center;
-    justify-content: center; /* Garante que o conteúdo fique centralizado */
-    width: 500px;
-    height: 400px;
-    padding: 20px;
-    background-color: transparent;
-    border-radius: 8px;
-    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a caixa */
-    text-align: center; /* Centraliza o texto dentro da caixa */
-}
-
-.gallery-text {
-    color: #FFD700;
-    font-size: 16px;
-    text-align: center;
-    max-height: 600px;
-    overflow-y: auto;
-    padding-top: 20px;
-}
-
-.text-header h3 {
-    font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
-    font-weight: bold;
-    margin-bottom: 40px; /* Espaço entre o nome e o texto */
-    text-transform: capitalize;
+.home .text span {
+	color: #FFD700;
 }
 
 .nav-button {
@@ -168,50 +95,10 @@ a {
     transition: background-color 0.2s; /* Transição suave */
 }
 
-.home {
-    background-color:  #001F3F;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-
-.home .text {
-	text-align: center;
-    
-}
-
-.home .text h1{
-	font-weight: 1000;
-	margin-block-end: 0;
-    color: #FFD700;
-}
-
-.home .text span {
-	color: #FFD700;
-}
-
-@media only screen and (max-width: 1200px){
-	.navbar {
-		justify-content: center;
-	}
-	.navbar img {
-		padding: 3px;
-	}
-	.navbar .menu {
-		display: none;
-	}
-	.footer {
-		justify-content: center;
-		flex-direction: column;
-		padding: 10px;
-		font-size: 12px;
-	}
+.navbar h1 {
+    width: auto;
+    padding: 15px;
+    color: #fff;
 }
 
 .wrapper {
@@ -222,6 +109,78 @@ a {
     background-color: #001F3F   ;
 }
 
+.logo {
+    width: 150px; /* Ajuste para o tamanho desejado do logo */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 100px; /* Espaçamento entre o logo e o título */
+}
+
+.logo-center {
+    text-align: center;
+    color: #FFD700;
+    font-family: 'Cinzel', serif;
+}
+
+.logo-symbol {
+    font-size: 100px; /* Tamanho grande para o símbolo */
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); /* Brilho dourado */
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.app-name {
+    font-size: 36px;
+    color: #FFD700;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+
+
+
+/*app functions*/
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #FFD700;
+}
+
+.container2 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 100vh;
+}
+
+.tech-row {
+    display: flex;
+    justify-content: center; /* Alinha as logos à direita */
+    align-items: center;
+    gap: 0px;
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+}
+
+.tech-item {
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-50px); /* Inicia as logos fora da tela à esquerda */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tech-item.active {
+    opacity: 1;
+    transform: translateX(0); /* Movimenta as logos para a posição original */
+}
+
+.tech-logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap; /* Permite que as caixas se ajustem à linha */
@@ -230,20 +189,53 @@ a {
 
 }
 
-.logo {
-    width: 150px; /* Ajuste para o tamanho desejado do logo */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 100px; /* Espaçamento entre o logo e o título */
+
+
+
+/*equipe function*/
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 125px;
+    background-color: #001F3F;
+    transition: all 0.3s ease;
 }
 
-.cast {
+a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.image-box {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Organiza o conteúdo na direção vertical */
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px; /* Espaço entre os itens */
-    max-width: 1200px;
-    margin: auto;
+    justify-content: center; /* Garante que o conteúdo fique centralizado */
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a caixa */
+    text-align: center; /* Centraliza o texto dentro da caixa */
+}
+
+.gallery-text {
+    color: #FFD700;
+    font-size: 16px;
+    text-align: center;
+    max-height: 600px;
+    overflow-y: auto;
+    padding-top: 20px;
+}
+
+.text-header h3 {
+    font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    margin-bottom: 40px; /* Espaço entre o nome e o texto */
+    text-transform: capitalize;
 }
 
 .list-cast {
@@ -295,6 +287,28 @@ a {
     font-size: 14px;
 }
 
+.text-container {
+    display: flex;  
+    justify-content: space-between; /* Empurra o texto para as laterais */
+    align-items: center; /* Alinha verticalmente no centro, se necessário */
+    width: 100%; /* Garante que o container ocupe toda a largura */
+    background-color: #001F3F;
+
+}
+
+.left-text {
+    font-size: 18px; /* Tamanho do texto à esquerda */
+    color: #FFD700; /* Ajuste a cor conforme necessário */
+}
+
+.right-span {
+    font-size: 18px; /* Tamanho do texto à direita */
+    color: #FFD700; /* Ajuste a cor conforme necessário */
+    text-align: right; /* Alinha o texto dentro do span, à direita */
+}
+
+
+/*contact fuctions*/
 #contact {
     background-color: #001F3F;
     min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da tela */
@@ -366,36 +380,6 @@ a {
     }
 }
 
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    min-height: 100vh;
-}
-
-.container2 {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
-    min-height: 100vh;
-}
-
-.container3 {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
-    min-height: 100vh;
-    color: #FFD700;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #FFD700;
-}
-
 .margin {
     display: flex;
     justify-content: space-around;
@@ -442,33 +426,11 @@ textarea {
     resize: none;
 }
 
-.tech-row {
-    display: flex;
-    justify-content: center; /* Alinha as logos à direita */
-    align-items: center;
-    gap: 0px;
-    margin-bottom: 30px;
-    flex-wrap: nowrap;
-}
 
-.tech-item {
-    text-align: center;
-    opacity: 0;
-    transform: translateX(-50px); /* Inicia as logos fora da tela à esquerda */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
 
-.tech-item.active {
-    opacity: 1;
-    transform: translateX(0); /* Movimenta as logos para a posição original */
-}
 
-.tech-logo {
-    width: 130px;
-    height: auto;
-    margin-bottom: 30px;
-}
 
+/*histori functions*/
 .histori {
     background-color: #001F3F;
     background-position: center;
@@ -481,6 +443,94 @@ textarea {
     justify-content: center;
     color: white;
 }
+
+.container3 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 100vh;
+    color: #FFD700;
+}
+
+
+
+
+
+/*functions random*/
+
+/* Animação de brilho */
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8), 0px 0px 15px rgba(255, 215, 0, 0.4);
+    }
+    to {
+        text-shadow: 0px 0px 20px rgba(255, 215, 0, 1), 0px 0px 30px rgba(255, 215, 0, 0.6);
+    }
+}
+
+/* AOS animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
+}
+
+/* Todos os elementos irão vir da esquerda para a direita */
+[data-aos="fade-right"] {
+    transform: translateX(-100px); /* Inicialmente, os elementos começam 100px à esquerda */
+}
+
+[data-aos="fade-right"].aos-animate {
+    transform: translateX(0); /* Quando a animação ocorre, eles se movem para a posição final */
+}
+
+@media only screen and (max-width: 1200px){
+	.navbar {
+		justify-content: center;
+	}
+	.navbar img {
+		padding: 3px;
+	}
+	.navbar .menu {
+		display: none;
+	}
+	.footer {
+		justify-content: center;
+		flex-direction: column;
+		padding: 10px;
+		font-size: 12px;
+	}
+}
+
+.cast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os itens */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Estilo do separador animado */
 .section-separator {
@@ -515,25 +565,7 @@ textarea {
     }
 }
 
-.text-container {
-    display: flex;  
-    justify-content: space-between; /* Empurra o texto para as laterais */
-    align-items: center; /* Alinha verticalmente no centro, se necessário */
-    width: 100%; /* Garante que o container ocupe toda a largura */
-    background-color: #001F3F;
 
-}
-
-.left-text {
-    font-size: 18px; /* Tamanho do texto à esquerda */
-    color: #FFD700; /* Ajuste a cor conforme necessário */
-}
-
-.right-span {
-    font-size: 18px; /* Tamanho do texto à direita */
-    color: #FFD700; /* Ajuste a cor conforme necessário */
-    text-align: right; /* Alinha o texto dentro do span, à direita */
-}
 
 
 
