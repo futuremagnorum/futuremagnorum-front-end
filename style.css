@@ -82,7 +82,7 @@ body {
 }
 
 .navbar {
-    position: fixed; /* Fixa a barra de navegação no topo */
+    position: absolute; /* Fixa a barra de navegação no topo */
     top: 0; /* Define o topo da posição fixa */
     left: 0;
     width: 100%; /* Ocupa toda a largura da tela */
@@ -144,7 +144,7 @@ body {
     text-align: center;
     font-size: 36px;
     margin-bottom: 30px;
-    color: #FFD700;
+    color: #fff200;
 }
 
 .container2 {
@@ -431,25 +431,83 @@ textarea {
 
 
 /*histori functions*/
-.histori {
+.historia {
     background-color: #001F3F;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     display: flex;
-    padding: 125px;
+    flex-direction: column; /* Permite alinhar itens em coluna inicialmente */
     align-items: center;
-    justify-content: center;
+    padding: 50px 20px;
     color: white;
 }
+
+.box-container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza as caixas horizontalmente */
+    gap: 20px; /* Espaçamento entre as caixas */
+    width: 100%; /* Ajusta a largura total */
+    max-width: 600px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container na página */
+}
+
+.historia .box {
+    flex-direction: column; /* Alinha o conteúdo em coluna */
+    flex: 1; /* Todas as caixas terão tamanhos iguais */
+    max-width: 600px; /* Limita a largura máxima de cada caixa */
+    height: 330px; /* Altura fixa para as caixas */
+    background-color: transparent   ;
+    color: #001F3F;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.historia .box h2 {
+    font-size: 24px; /* Ajusta o tamanho do título */
+    margin-bottom: 10px; /* Espaço entre título e texto */
+    color: #fff200;
+}
+
+.historia .box p {
+    font-size: 16px; /* Ajusta o tamanho do texto */
+    line-height: 1.5; /* Melhor espaçamento entre linhas */
+    color: #fff200;
+}
+
 
 .container3 {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 20px;
     min-height: 100vh;
+    color: #fff200;
+}
+
+@media (max-width: 768px) {
+    .historia .box-container {
+        flex-direction: column; /* Organiza as caixas em coluna */
+    }
+
+    .historia .box {
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço */
+    }
+}
+
+
+.logo-symbol2 {
+    font-size: 60px; /* Tamanho grande para o símbolo */
+    font-weight: bold;
     color: #FFD700;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); /* Brilho dourado */
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 
