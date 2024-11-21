@@ -433,85 +433,126 @@ textarea {
 
 /*histori functions*/
 .historia {
-    background-color: #001F3F;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Permite alinhar itens em coluna inicialmente */
-    align-items: center;
-    padding: 50px 20px;
-    color: white;
-}
-
-.box-container {
-    display: flex;
-    flex-direction: column; /* Organiza os itens em coluna */
-    align-items: center; /* Centraliza as caixas horizontalmente */
-    gap: 20px; /* Espaçamento entre as caixas */
-    width: 100%; /* Ajusta a largura total */
-    max-width: 600px; /* Limita a largura máxima */
-    margin: 0 auto; /* Centraliza o container na página */
-}
-
-.historia .box {
-    flex-direction: column; /* Alinha o conteúdo em coluna */
-    flex: 1; /* Todas as caixas terão tamanhos iguais */
-    max-width: 600px; /* Limita a largura máxima de cada caixa */
-    height: 330px; /* Altura fixa para as caixas */
-    background-color: transparent   ;
-    color: #001F3F;
-    border-radius: 8px;
-    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 18px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.historia .box h2 {
-    font-size: 24px; /* Ajusta o tamanho do título */
-    margin-bottom: 10px; /* Espaço entre título e texto */
-    color: #fff200;
-}
-
-.historia .box p {
-    font-size: 16px; /* Ajusta o tamanho do texto */
-    line-height: 1.5; /* Melhor espaçamento entre linhas */
-    color: #fff200;
-}
-
-
-.container3 {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
+    position: relative;
     min-height: 100vh;
-    color: #fff200;
 }
 
-@media (max-width: 768px) {
-    .historia .box-container {
-        flex-direction: column; /* Organiza as caixas em coluna */
-    }
+.move-btn {
+    background-color: transparent;
+    color: #001F3F;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+}
 
-    .historia .box {
-        width: 100%; /* Ajusta a largura para ocupar todo o espaço */
-    }
+.image-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.historia-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+    max-width: 500px;
+}
+
+.historia-image {
+    width: 120%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.move-btn {
+    background-color: transparent;
+    color: #001F3F;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: move; /* Indica que o botão é arrastável */
+    border-radius: 8px;
+    margin-top: 10px;
+    position: absolute; /* Permite que os botões se movam livremente */
 }
 
 
-.logo-symbol2 {
-    font-size: 60px; /* Tamanho grande para o símbolo */
-    font-weight: bold;
+.button-container button {
+    position: absolute;
+    pointer-events: all;
+    background-color: transparent;
+    color: #001F3F;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    top: 20%; /* Coloca o botão mais abaixo */
+    left: 35%; /* Ajusta a posição para a direita */
+    border-radius: 8px;
+    transition:0.3s ease;
+}
+
+.button-container2 button {
+    position: absolute;
+    pointer-events: all;
+    background-color: transparent;
+    color: #001F3F;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    top: 35%; /* Coloca o botão mais abaixo */
+    left: 58%; /* Ajusta a posição para a direita */
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.button-container3 button {
+    position: absolute;
+    pointer-events: all;
+    background-color: transparent;
+    color: #001F3F;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    top: 55%; /* Coloca o botão mais abaixo */
+    left: 55%; /* Ajusta a posição para a direita */
+    border-radius: 8px;
+    transition:0.3s ease;
+}
+
+.button-overlay button:hover {
+    background-color: #FFC107;
+    color: transparent;
+}
+
+.text-display {
+    flex: 1;
+
+    padding: 20px;
+    background-color: #001F3F;
     color: #FFD700;
-    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); /* Brilho dourado */
-    animation: glow 2s ease-in-out infinite alternate;
+    border-radius: 8px;
+    min-width: 200px;
 }
 
-
+.text-display p {
+    font-size: 16px;
+    line-height: 1.5;
+}
 
 
 
@@ -581,16 +622,6 @@ textarea {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* Estilo do separador animado */
 .section-separator {
     position: relative;
@@ -623,8 +654,3 @@ textarea {
         left: -50%;
     }
 }
-
-
-
-
-
