@@ -18,7 +18,6 @@ body {
 
 /*home functions*/
 .home {
-    background-image: url(img/homeye.png);
     background-color:  #001F3F;
     background-position: center;
     background-repeat: no-repeat;
@@ -86,7 +85,7 @@ body {
     position: absolute; /* Fixa a barra de navegação no topo */
     top: 0; /* Define o topo da posição fixa */
     left: 0;
-    width: 100%; /* Ocupa toda a largura da tela */
+    width: 60%; /* Ocupa toda a largura da tela */
     display: flex;
     justify-content: space-between;
     align-items: center;
