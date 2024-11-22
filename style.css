@@ -51,30 +51,143 @@ body {
     font-size: 30px;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 0px;
     transition: 0.3s;
     color: #030303;
 
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Garante que a barra ocupe toda a largura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent; /* Mantém transparência */
+    z-index: 10;
+    transition: background-color 0.2s;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%; /* Ajuste o tamanho total do container */
+    max-width: 1200px; /* Define um limite para o tamanho máximo */
+}
+
+.links-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 18px 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 0px; /* Espaçamento do menu para o links-box */
+}
+
+.links-box span {
+    color: #000000;
+    font-size: 14px;
+}
+
+
+
+.logo {
+    position: fixed; /* Posiciona a logo no topo */
+    top: -1px; /* Distância do topo */
+    left: 60%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o centro exato */
+    width: 8%; /* Ajuste o tamanho da logo */
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.menu li {
+    margin: 0 10px; /* Ajusta o espaço entre os itens */
+}
+
+.menu li a {
+    color: #FFD700;
+    font-size: 14px; /* Diminui o tamanho da fonte */
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: rgba(255, 215, 0, 0.8);
+    color: #001F3F;
+}
+
+/* Adicionando movimentação */
+.logo-container {
+    position: relative; /* Necessário para habilitar movimentação */
+    cursor: grab; /* Indicativo de drag */
+}
+
+.logo-container:active {
+    cursor: grabbing;
+}
+
+/* Função JavaScript para mover a logo */
+
+
+
 .nav-button:hover {
     color: #ccc;
 }
 
-.navbar .menu {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .navbar .menu li {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: -10px;
     padding: 9%;
+    position: relative; /* Necessário para alinhar o fundo à posição do link */
 }
 
 .navbar .menu li a {
     color: #FFD700;
     font-size: 18px;
+    text-decoration: none; /* Remove o sublinhado do link */
+    background-color: rgba(41, 33, 33, 0.5); /* Fundo preto com transparência */
+    padding: 10px 15px; /* Ajuste o tamanho da "caixa" ao redor do texto */
+    border-radius: 50px; /* Deixa os cantos arredondados */
+    display: inline-block; /* Garante que o fundo respeite o tamanho do texto */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição das cores */
+}
+
+.navbar .menu li a:hover {
+    background-color: rgba(255, 215, 0, 0.8); /* Altere para dourado mais opaco no hover */
+    color: #001F3F; /* Texto azul escuro no hover */
+}
+
+
+.navbar .menu {
+    display: flex;
+    justify-content: center; /* Centraliza os links */
+}
+
+.navbar .menu li {
+    display: inline-block;
+    margin-left: -14px;
+    padding: 1%;
+}
+
+.navbar .menu li a {
+    color: #FFD700;
+    font-size: 12px; /* Tamanho menor */
 }
 
 .navbar .menu li a:hover {
@@ -82,7 +195,7 @@ body {
 }
 
 .navbar {
-    position: absolute; /* Fixa a barra de navegação no topo */
+    position: fixed; /* Fixa a barra de navegação no topo */
     top: 0; /* Define o topo da posição fixa */
     left: 0;
     width: 60%; /* Ocupa toda a largura da tela */
@@ -109,11 +222,7 @@ body {
     background-color: #001F3F   ;
 }
 
-.logo {
-    width: 150px; /* Ajuste para o tamanho desejado do logo */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 100px; /* Espaçamento entre o logo e o título */
-}
+
 
 .logo-center {
     text-align: center;
@@ -138,727 +247,3 @@ body {
 
 
 
-
-/*app functions*/
-.section-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #fff200;
-}
-
-.container2 {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0 20px;
-    min-height: 100vh;
-}
-
-.tech-row {
-    display: flex;
-    justify-content: center; /* Alinha as logos à direita */
-    align-items: center;
-    gap: 0px;
-    margin-bottom: 30px;
-    flex-wrap: nowrap;
-}
-
-.tech-item {
-    text-align: center;
-    opacity: 0;
-    transform: translateX(-50px); /* Inicia as logos fora da tela à esquerda */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.tech-item.active {
-    opacity: 1;
-    transform: translateX(0); /* Movimenta as logos para a posição original */
-}
-
-.tech-logo {
-    width: 130px;
-    height: auto;
-    margin-bottom: 30px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap; /* Permite que as caixas se ajustem à linha */
-    justify-content: center; /* Centraliza as caixas */
-    margin: 0 auto; /* Centraliza o container na página */
-
-}
-
-
-
-
-/*equipe function*/
-.gallery-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 125px;
-    background-color: #001F3F;
-    transition: all 0.3s ease;
-}
-
-a {
-    color: #FFD700;
-    text-decoration: none;
-    transition: 0.2s ease-in-out;
-}
-
-.image-box {
-    display: flex;
-    flex-direction: column; /* Organiza o conteúdo na direção vertical */
-    align-items: center;
-    justify-content: center; /* Garante que o conteúdo fique centralizado */
-    width: 500px;
-    height: 400px;
-    padding: 20px;
-    background-color: transparent;
-    border-radius: 8px;
-    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse a caixa */
-    text-align: center; /* Centraliza o texto dentro da caixa */
-}
-
-.gallery-text {
-    color: #FFD700;
-    font-size: 16px;
-    text-align: center;
-    max-height: 600px;
-    overflow-y: auto;
-    padding-top: 20px;
-}
-
-.text-header h3 {
-    font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
-    font-weight: bold;
-    margin-bottom: 40px; /* Espaço entre o nome e o texto */
-    text-transform: capitalize;
-}
-
-.list-cast {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.list-cast div {
-    position: relative;
-    width: 22%; /* Define o tamanho das imagens */
-    margin: 20px 0;
-}
-
-.list-cast img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.list-cast img:hover {
-    transform: scale(1.05); /* Efeito de zoom quando passa o mouse */
-}
-
-.list-cast p {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    overflow-y: auto;
-    transition: opacity 0.5s ease;
-    opacity: 0;
-}
-
-.list-cast div:hover p {
-    display: block;
-    opacity: 1;
-}
-
-.list-cast p {
-    text-align: center;
-    font-size: 14px;
-}
-
-.text-container {
-    display: flex;  
-    justify-content: space-between; /* Empurra o texto para as laterais */
-    align-items: center; /* Alinha verticalmente no centro, se necessário */
-    width: 100%; /* Garante que o container ocupe toda a largura */
-    background-color: #001F3F;
-
-}
-
-.left-text {
-    font-size: 18px; /* Tamanho do texto à esquerda */
-    color: #FFD700; /* Ajuste a cor conforme necessário */
-}
-
-.right-span {
-    font-size: 18px; /* Tamanho do texto à direita */
-    color: #FFD700; /* Ajuste a cor conforme necessário */
-    text-align: right; /* Alinha o texto dentro do span, à direita */
-}
-
-
-/*contact fuctions*/
-#contact {
-    background-color: #001F3F;
-    min-height: 100vh; /* Garante que a altura mínima seja 100% da altura da tela */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0; /* Remove o padding extra */
-    color: white;
-}
-
-.contact-header h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #FFD700  ;
-}
-
-.contact-options {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-.contact-option {
-    background-color: #F3F4F6;
-    border-radius: 8px;
-    padding: 20px;
-    color: #fff200;
-    text-align: center;
-    width: 250px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-
-}
-
-.contact-option h3 {
-    font-size: 24px;
-    margin: 15px 0;
-    color: #FFD700;
-}
-
-.contact-option p {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #FFD700;
-}
-
-.contact-icon {
-    width: 100px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.contact-icon2 {
-    width: 145px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-@media (max-width: 768px) {
-    .contact-options {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-option {
-        width: 100%;
-    }
-}
-
-.margin {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-.number, .email {
-    font-size: 18px;
-    text-align: center;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-    background-color: #f2f2f2;
-}
-
-input[type="submit"] {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #cc5200;
-}
-
-textarea {
-    resize: none;
-}
-
-
-
-
-
-/*histori functions*/
-.historia {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    min-height: 100vh;
-}
-
-.move-btn {
-    background-color: transparent;
-    color: #001F3F;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.image-section {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.historia-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.image-container {
-    position: relative;
-    max-width: 500px;
-}
-
-.historia-image {
-    width: 120%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.move-btn {
-    background-color: transparent;
-    color: #001F3F;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: move; /* Indica que o botão é arrastável */
-    border-radius: 8px;
-    margin-top: 10px;
-    position: absolute; /* Permite que os botões se movam livremente */
-}
-
-
-.button-container button {
-    position: absolute;
-    pointer-events: all;
-    background-color: transparent;
-    color: #001F3F;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    top: 20%; /* Coloca o botão mais abaixo */
-    left: 35%; /* Ajusta a posição para a direita */
-    border-radius: 8px;
-    transition:0.3s ease;
-}
-
-.button-container2 button {
-    position: absolute;
-    pointer-events: all;
-    background-color: transparent;
-    color: #001F3F;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    top: 35%; /* Coloca o botão mais abaixo */
-    left: 58%; /* Ajusta a posição para a direita */
-    border-radius: 8px;
-    transition: 0.3s ease;
-}
-
-.button-container3 button {
-    position: absolute;
-    pointer-events: all;
-    background-color: transparent;
-    color: #001F3F;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    top: 55%; /* Coloca o botão mais abaixo */
-    left: 55%; /* Ajusta a posição para a direita */
-    border-radius: 8px;
-    transition:0.3s ease;
-}
-
-.button-overlay button:hover {
-    background-color: #FFC107;
-    color: transparent;
-}
-
-.text-display {
-    flex: 1;
-
-    padding: 20px;
-    background-color: #001F3F;
-    color: #FFD700;
-    border-radius: 8px;
-    min-width: 200px;
-}
-
-.text-display p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-
-
-/*functions random*/
-
-/* Animação de brilho */
-@keyframes glow {
-    from {
-        text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8), 0px 0px 15px rgba(255, 215, 0, 0.4);
-    }
-    to {
-        text-shadow: 0px 0px 20px rgba(255, 215, 0, 1), 0px 0px 30px rgba(255, 215, 0, 0.6);
-    }
-}
-
-/* AOS animations */
-[data-aos] {
-    opacity: 0;
-    transition-property: opacity, transform;
-    transition-duration: 0.6s;
-    transition-timing-function: ease-out;
-}
-
-/* Todos os elementos irão vir da esquerda para a direita */
-[data-aos="fade-right"] {
-    transform: translateX(-100px); /* Inicialmente, os elementos começam 100px à esquerda */
-}
-
-[data-aos="fade-right"].aos-animate {
-    transform: translateX(0); /* Quando a animação ocorre, eles se movem para a posição final */
-}
-
-@media only screen and (max-width: 1200px){
-	.navbar {
-		justify-content: center;
-	}
-	.navbar img {
-		padding: 3px;
-	}
-	.navbar .menu {
-		display: none;
-	}
-	.footer {
-		justify-content: center;
-		flex-direction: column;
-		padding: 10px;
-		font-size: 12px;
-	}
-}
-
-.cast {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px; /* Espaço entre os itens */
-    max-width: 1200px;
-    margin: auto;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    min-height: 100vh;
-}
-
-
-
-/* Estilo do separador animado */
-.section-separator {
-    position: relative;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #FFD700, transparent);
-    margin: 50px 0;
-    overflow: hidden;
-}
-
-.section-separator::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50%;
-    height: 100%;
-    width: 50%;
-    background: linear-gradient(90deg, transparent, #FFD700, transparent);
-    animation: slide 2s infinite;
-}
-
-@keyframes slide {
-    0% {
-        left: -50%;
-    }
-    50% {
-        left: 100%;
-    }
-    100% {
-        left: -50%;
-    }
-}
-
-
-
-
-/* Tornando o layout responsivo */
-@media (max-width: 1024px) {
-    /* Navbar */
-    .navbar .menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin-left: 0; /* Remove qualquer margem à esquerda */
-        margin-right: 0;
-    }
-    .navbar h1 {
-        font-size: 24px;
-    }
-
-
-    /* Home */
-    .home {
-        padding: 20px;
-        text-align: center;
-    }
-    .home .text h1 {
-        font-size: 36px;
-    }
-
-    .logo{
-        width: 20%;
-        margin-left: 0; /* Remove qualquer margem à esquerda */
-        margin-right: 0;
-    }
-
-    /* Gallery */
-    .gallery-container {
-        flex-direction: column;
-        padding: 10vw;
-        width: 90vw;
-    }
-    .gallery-text{
-        flex-direction: block;
-        width: 60vw;
-    }
-    .image-box {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Contact Section */
-    .contact-options {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .contact-option {
-        width: 100%;
-        padding: 15px;
-    }
-}
-
-/* Responsividade para celulares */
-@media (max-width: 768px) {
-    /* Ajusta o layout do navbar */
-    .navbar .menu {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-        margin-left: 0; /* Remove qualquer margem à esquerda */
-        margin-right: 0;
-    }
-
-    .navbar .menu li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    /* Reduz o tamanho do texto e margens da home */
-    .home .text h1 {
-        font-size: 24px;
-    }
-
-    .home .text span {
-        font-size: 18px;
-    }
-
-    /* Ajusta o tamanho das imagens e disposição */
-    .image-box {
-        width: 90%;
-        height: auto;
-        
-    }
-
-    .list-cast div {
-        width: 45%; /* Ajusta para caber melhor em telas pequenas */
-        margin: 10px 5px;
-    }
-
-    .list-cast img {
-        border-radius: 5px;
-    }
-
-    /* Ajusta as seções de contato */
-    .contact-options {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-option {
-        width: 90%;
-    }
-
-    /* Ajusta a galeria */
-    .gallery-container {
-        flex-wrap: wrap;
-        padding: 50px 10px;
-    }
-
-    /* Reduz o tamanho de botões na seção de história */
-    .button-container button,
-    .button-container2 button,
-    .button-container3 button {
-        font-size: 12px;
-        top: auto; /* Remove valores fixos para ajustar dinamicamente */
-        left: auto;
-        position: static;
-        margin-top: 10px;
-    }
-
-    /* Ajusta o tamanho geral das fontes */
-    h1, h2, h3, p {
-        font-size: 90%; /* Reduz proporcionalmente */
-    }
-
-    .section-title {
-        font-size: 28px;
-    }
-
-    .text-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .left-text,
-    .right-span {
-        font-size: 16px;
-    }
-
-    /* Formulário */
-    form {
-        width: 90%;
-        padding: 0;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        font-size: 14px;
-    }
-
-    input[type="submit"] {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    /* Navbar */
-    .navbar h1 {
-        font-size: 18px;
-    }
-    .navbar .menu {
-        flex-direction: column;
-        align-items: flex-end;
-        margin-left: 0; /* Remove qualquer margem à esquerda */
-        margin-right: 0;
-    }
-
-    /* Home */
-    .home {
-        padding: 10px;
-    }
-    .home .text h1 {
-        font-size: 28px;
-    }
-
-    
-    /* Sections */
-    .container2 {
-        padding: 10px;
-    }
-
-    /* Gallery */
-    .list-cast div {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    /* Contact */
-    .contact-option {
-        padding: 10px;
-    }
-    .contact-option h3 {
-        font-size: 18px;
-    }
-    .contact-option p {
-        font-size: 12px;
-    }
-}
