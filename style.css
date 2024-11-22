@@ -18,7 +18,6 @@ body {
 
 /*home functions*/
 .home {
-    background-image: url(img/homeye.png);
     background-color:  #001F3F;
     background-position: center;
     background-repeat: no-repeat;
@@ -652,5 +651,214 @@ textarea {
     }
     100% {
         left: -50%;
+    }
+}
+
+
+
+
+/* Tornando o layout responsivo */
+@media (max-width: 1024px) {
+    /* Navbar */
+    .navbar .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-left: 0; /* Remove qualquer margem à esquerda */
+        margin-right: 0;
+    }
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+
+    /* Home */
+    .home {
+        padding: 20px;
+        text-align: center;
+    }
+    .home .text h1 {
+        font-size: 36px;
+    }
+
+    .logo{
+        width: 20%;
+        margin-left: 0; /* Remove qualquer margem à esquerda */
+        margin-right: 0;
+    }
+
+    /* Gallery */
+    .gallery-container {
+        flex-direction: column;
+        padding: 10vw;
+        width: 90vw;
+    }
+    .gallery-text{
+        flex-direction: block;
+        width: 60vw;
+    }
+    .image-box {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contact Section */
+    .contact-options {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contact-option {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    /* Ajusta o layout do navbar */
+    .navbar .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        margin-left: 0; /* Remove qualquer margem à esquerda */
+        margin-right: 0;
+    }
+
+    .navbar .menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Reduz o tamanho do texto e margens da home */
+    .home .text h1 {
+        font-size: 24px;
+    }
+
+    .home .text span {
+        font-size: 18px;
+    }
+
+    /* Ajusta o tamanho das imagens e disposição */
+    .image-box {
+        width: 90%;
+        height: auto;
+        
+    }
+
+    .list-cast div {
+        width: 45%; /* Ajusta para caber melhor em telas pequenas */
+        margin: 10px 5px;
+    }
+
+    .list-cast img {
+        border-radius: 5px;
+    }
+
+    /* Ajusta as seções de contato */
+    .contact-options {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-option {
+        width: 90%;
+    }
+
+    /* Ajusta a galeria */
+    .gallery-container {
+        flex-wrap: wrap;
+        padding: 50px 10px;
+    }
+
+    /* Reduz o tamanho de botões na seção de história */
+    .button-container button,
+    .button-container2 button,
+    .button-container3 button {
+        font-size: 12px;
+        top: auto; /* Remove valores fixos para ajustar dinamicamente */
+        left: auto;
+        position: static;
+        margin-top: 10px;
+    }
+
+    /* Ajusta o tamanho geral das fontes */
+    h1, h2, h3, p {
+        font-size: 90%; /* Reduz proporcionalmente */
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .text-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-text,
+    .right-span {
+        font-size: 16px;
+    }
+
+    /* Formulário */
+    form {
+        width: 90%;
+        padding: 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar h1 {
+        font-size: 18px;
+    }
+    .navbar .menu {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: 0; /* Remove qualquer margem à esquerda */
+        margin-right: 0;
+    }
+
+    /* Home */
+    .home {
+        padding: 10px;
+    }
+    .home .text h1 {
+        font-size: 28px;
+    }
+
+    
+    /* Sections */
+    .container2 {
+        padding: 10px;
+    }
+
+    /* Gallery */
+    .list-cast div {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Contact */
+    .contact-option {
+        padding: 10px;
+    }
+    .contact-option h3 {
+        font-size: 18px;
+    }
+    .contact-option p {
+        font-size: 12px;
     }
 }
