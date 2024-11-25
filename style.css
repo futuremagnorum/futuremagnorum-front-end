@@ -207,9 +207,6 @@ body {
 }
 
 
-
-
-
 .sobre {
     background-color:  #001F3F;
     background-position: center;
@@ -350,7 +347,7 @@ body {
     transform: translate(-50%, -50%);
     width: 100%; /* Ajusta a largura da caixa de texto */
     padding: 20px;
-    background-color: transparent; /* Fundo escuro com transparência */
+    background-color: #001F3F; /* Fundo escuro com transparência */
     border-radius: 10px; /* Arredonda os cantos da caixa de texto */
     text-align: center;
     color: #FFD700; /* Texto dourado */
@@ -412,3 +409,275 @@ body {
 
 
 
+
+/* Telas pequenas (máx. 768px - tablets e smartphones) */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column; /* Reorganiza itens verticalmente */
+        align-items: center;
+        padding: 10px; /* Ajusta o espaçamento */
+        background-color: rgba(0, 0, 0, 0.9); /* Fundo sólido */
+    }
+
+    .menu {
+        flex-direction: column; /* Links em coluna */
+        align-items: center;
+        gap: 10px; /* Espaço entre os links */
+    }
+
+    .menu li {
+        margin: 5px 0; /* Espaçamento entre os links */
+    }
+
+    .menu li a {
+        font-size: 0.9rem; /* Fonte menor */
+        padding: 6px 10px; /* Reduz o espaço interno */
+    }
+
+    /* Botões e Links */
+    .nav-button {
+        font-size: 1.5rem; /* Ajusta o tamanho dos botões de navegação */
+    }
+
+    /* Home Section */
+    .home {
+        padding: 20px;
+        text-align: center;
+        background-size: cover;
+    }
+
+    .home .text h1 {
+        font-size: 2.5rem; /* Reduz tamanho do título */
+        line-height: 1.2;
+    }
+
+    /* Imagens */
+    .imglogos, .imglogos2 {
+        max-width: 90%; /* Ocupa 90% da largura */
+        height: auto; /* Mantém proporção */
+    }
+
+    .image-box {
+        height: 200px; /* Reduz altura para telas menores */
+    }
+
+    /* Magnorum Section */
+    .Magnorum {
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .section-title2 {
+        font-size: 2rem;
+    }
+
+    /* Galeria */
+    .gallery-container {
+        flex-direction: column; /* Itens em coluna */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .gallery-text h3 {
+        font-size: 1.2rem; /* Texto menor */
+    }
+
+    .gallery-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Divisor */
+    .divider {
+        width: 90%;
+    }
+}
+
+/* Telas médias (máx. 1024px - laptops pequenos) */
+@media (max-width: 1024px) {
+    /* Navbar */
+    .navbar {
+        padding: 15px 20px; /* Ajusta padding */
+        justify-content: space-between;
+    }
+
+    .menu {
+        flex-direction: row; /* Links em linha */
+        gap: 10px;
+    }
+
+    .menu li a {
+        font-size: 1rem;
+        padding: 8px 12px; /* Padding intermediário */
+    }
+
+    /* Botões e Links */
+    .nav-button {
+        font-size: 1.8rem; /* Botões maiores */
+    }
+
+    /* Home Section */
+    .home .text h1 {
+        font-size: 3rem; /* Tamanho médio do título */
+    }
+
+    /* Imagens */
+    .imglogos, .imglogos2 {
+        max-width: 80%;
+    }
+
+    /* Magnorum Section */
+    .Magnorum {
+        padding: 30px;
+    }
+
+    .section-title2 {
+        font-size: 2.5rem;
+    }
+
+    /* Galeria */
+    .gallery-container {
+        flex-wrap: wrap; /* Organização em linha, quebra se necessário */
+    }
+
+    .gallery-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .gallery-text p {
+        font-size: 1rem;
+    }
+
+    /* Divisor */
+    .divider {
+        width: 80%;
+    }
+}
+
+/* Telas grandes (máx. 1440px - desktops padrão) */
+@media (max-width: 1440px) {
+    /* Navbar */
+    .navbar {
+        max-width: 1440px;
+        padding: 0px;
+        justify-content: space-between;
+    }
+
+    .menu {
+        flex-direction: row; /* Links em linha */
+        justify-content: center;
+        gap: opx;
+    }
+
+    .menu li a {
+        font-size: 1rem; /* Tamanho menor */
+        padding: 6px 7px;
+    }
+
+    /* Home Section */
+    .home {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 40px;
+    }
+
+    .home .text h1 {
+        font-size: 3.5rem; /* Tamanho intermediário */
+    }
+
+    /* Imagens */
+    .imglogos {
+        max-width: 70%;
+    }
+
+    /* Magnorum Section */
+    .Magnorum {
+        padding: 40px;
+        gap: 30px;
+    }
+
+    .section-title2 {
+        font-size: 2.8rem;
+    }
+
+    /* Galeria */
+    .gallery-container {
+        flex-wrap: wrap;
+    }
+
+    .gallery-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .gallery-text p {
+        font-size: 1rem;
+    }
+
+    /* Divisor */
+    .divider {
+        width: 70%;
+    }
+}
+
+/* Telas ultra-grandes (mín. 1920px - desktops grandes) */
+@media (min-width: 1920px) {
+    /* Navbar */
+    .navbar {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .menu li a {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+    }
+
+    /* Home Section */
+    .home {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 50px;
+    }
+
+    .home .text h1 {
+        font-size: 4rem; /* Aumenta o título */
+    }
+
+    /* Imagens */
+    .imglogos {
+        max-width: 60%;
+    }
+
+    /* Magnorum Section */
+    .Magnorum {
+        padding: 50px;
+    }
+
+    .section-title2 {
+        font-size: 3rem;
+    }
+
+    /* Galeria */
+    .gallery-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .gallery-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-text p {
+        font-size: 1.2rem;
+    }
+
+    /* Divisor */
+    .divider {
+        width: 60%;
+    }
+}
