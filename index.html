@@ -21,10 +21,9 @@
                     <img src="img/Nav - Main → List.png" alt="" class="image-box2">
                 </a>      
                 <nav class="menu">
-                    <li><a href="#sobre">Magnorum</a></li>
-                    <li><a href="#Magnorum">App</a></li>
+                    <li><a href="#Magnorum">Aplicativo</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#Equipe">Equipe</a></li>
-                    <li><a href="#quipe">????</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </nav>
                 <div class="links-box"></div> <!-- Mover o links-box para baixo aqui -->
@@ -36,22 +35,21 @@
                 </div>
                 <hr class="divider">
             </section>
-            <section class="section" id="sobre">
-                <div class="sobre" data-aos="fade-right">
-                   <h2 class="">Sobre Magnorum</h2>
-                   <p>Sou desenvolvedor com experiência em aplicativos móveis e backend, liderando o projeto Magnorum, uma plataforma para conectar jovens talentos a vagas de emprego. Tenho um portfólio variado e domínio de tecnologias como Kivy, KivyMD e MongoDB, focando em criar interfaces intuitivas e experiências de usuário de alta qualidade. Trabalho de forma colaborativa, promovendo o crescimento da equipe e buscando sempre contribuir com soluções inovadoras em tecnologia.Sou desenvolvedor com experiência em aplicativos móveis e backend, liderando o projeto Magnorum, uma plataforma para conectar jovens talentos a vagas de emprego. Tenho um portfólio variado e domínio de tecnologias como Kivy, KivyMD e MongoDB, focando em criar interfaces intuitivas e experiências de usuário de alta qualidade. Trabalho de forma colaborativa, promovendo o crescimento da equipe e buscando sempre contribuir com soluções inovadoras em tecnologia.Sou desenvolvedor com experiência em aplicativos móveis e backend, liderando o projeto Magnorum, uma plataforma para conectar jovens talentos a vagas de emprego. Tenho um portfólio variado e domínio de tecnologias como Kivy, KivyMD e MongoDB, focando em criar interfaces intuitivas e experiências de usuário de alta qualidade. Trabalho de forma colaborativa, promovendo o crescimento da equipe e buscando sempre contribuir com soluções inovadoras em tecnologia.</p>
-                </div>
-                <hr class="divider">
-            </section>
             
             <section class="section" id="Magnorum">
                 <div class="Magnorum" data-aos="fade-right">
                     <h1 class="section-title2">Tecnologias do Aplicativo</h1>
-                    <img src="img/Container.png" alt="" class="imglogos">
+                    
                 </div>
                 <hr class="divider">
             </section>
-            
+            <section class="section" id="sobre">
+                <div class="sobre" data-aos="fade-right">
+                   <h2 class="sobre-title">Sobre</h2>
+                   <p class="text-definition">Magnorum, é um aplicativo móvel focado em conectar estudantes e jovens profissionais a oportunidades de estágio e emprego, especialmente em áreas como programação. Ele classifica candidatos por cursos e experiências, oferecendo uma interface para recrutadores realizarem entrevistas online.</p>
+                </div>
+                <hr class="divider">
+            </section>
             <section class="section" id="Equipe">
                 <div class="equipe" data-aos="fade-right">
                     <h1 class="section-title">Equipe Magnorum</h1>
@@ -60,7 +58,7 @@
                         <div class="image-box">
                             <img src="img/Background+Shadow+OverlayBlur.png" alt="">
                             <div class="gallery-text">
-                                <h3>Rafael - Líder do Projeto</h3>
+                                <h3>Raphael Baruck - Líder do Projeto</h3>
                                 <p>Sou desenvolvedor com experiência em aplicativos móveis e backend, liderando o projeto Magnorum, uma plataforma para conectar jovens talentos a vagas de emprego. Tenho um portfólio variado e domínio de tecnologias como Kivy, KivyMD e MongoDB, focando em criar interfaces intuitivas e experiências de usuário de alta qualidade. Trabalho de forma colaborativa, promovendo o crescimento da equipe e buscando sempre contribuir com soluções inovadoras em tecnologia.</p>
                             </div>
                         </div>
@@ -69,13 +67,30 @@
                 </div>
                 <hr class="divider">
             </section>
-            
-
-
             <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init(); // Inicializa a biblioteca AOS para animações no scroll
         </script>
         <script src="script.js"></script>
+        <section
+            class="contact" id="contact">
+            <div class="container">
+                <div class="row">
+                </div>
+                <form action="contact" >
+                    <div class="text">
+                        <div class="barra">
+                            <div class="row">
+                                <div class="col-md">
+                                    <input placeholder="Enter Your Name" type="text" name="" value="" class="margin-bottom-small">
+                                    <input placeholder="Enter Your Email" type="email" name=""  value="">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md padding-small">
+                            <textarea placeholder="Your Message" name="" rows="8" class="margin-bottom-small"></textarea>
+                            <input type="submit" value="Submit">
+                        </div>
     </body>
 </html>

@@ -278,6 +278,24 @@ body {
     z-index: 1000; /* Garante que o título fique sobre outros elementos */
 }
 
+.sobre-title {
+    position: absolute;
+    top: 20px; /* Título no topo da tela */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFD700;
+    font-size: 2rem;
+    font-weight: 600;
+    z-index: 10; /* Garantir que o título fique acima da imagem */
+}
+.text-definition {
+    font-size: 1.5rem;
+    font-weight: 400;
+    
+}
+
+
+
 
 /* Estilo para os separadores */
 .divider {
