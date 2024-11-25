@@ -45,17 +45,7 @@ body {
 	color: #FFD700;
 }
 
-.nav-button {
-    background: none;
-    color: white;
-    font-size: 30px;
-    border: none;
-    cursor: pointer;
-    padding: 0px;
-    transition: 0.3s;
-    color: #030303;
 
-}
 
 .navbar {
     position: fixed;
@@ -79,38 +69,47 @@ body {
     max-width: 1200px; /* Define um limite para o tamanho máximo */
 }
 
-.links-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 18px 20px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 300px;
-    margin-top: 0px; /* Espaçamento do menu para o links-box */
-}
-
-.links-box span {
-    color: #000000;
-    font-size: 14px;
-}
 
 
 
 .logo {
     position: fixed; /* Posiciona a logo no topo */
-    top: -1px; /* Distância do topo */
-    left: 60%; /* Centraliza horizontalmente */
+    top: 0px; /* Distância do topo */
+    left: 50%; /* Centraliza horizontalmente */
     transform: translateX(-50%); /* Ajusta o centro exato */
-    width: 8%; /* Ajuste o tamanho da logo */
+    width: 9%; /* Ajuste o tamanho da logo */
     height: auto;
 }
 
-.menu {
+/* Adicionando movimentação */
+.logo-container {
+    position: relative; /* Necessário para habilitar movimentação */
+    cursor: grab; /* Indicativo de drag */
+}
+
+.logo-container:active {
+    cursor: grabbing;
+}
+
+/* Navbar com links dentro da caixa */
+
+
+.navbar-container {
     display: flex;
     align-items: center;
-    margin-left: auto;
+    justify-content: space-between;
+    width: 90%; /* Ajuste o tamanho total do container */
+    max-width: 1200px; /* Define um limite para o tamanho máximo */
+}
+
+/* Menu dentro da navbar */
+.menu {
+    position: absolute;
+    bottom: -48px;
+    right: 0; /* Alinha o menu à direita */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Faz os itens do menu irem para a direita */
 }
 
 .menu li {
@@ -132,48 +131,9 @@ body {
     color: #001F3F;
 }
 
-/* Adicionando movimentação */
-.logo-container {
-    position: relative; /* Necessário para habilitar movimentação */
-    cursor: grab; /* Indicativo de drag */
-}
-
-.logo-container:active {
-    cursor: grabbing;
-}
-
-/* Função JavaScript para mover a logo */
 
 
-
-.nav-button:hover {
-    color: #ccc;
-}
-
-.navbar .menu li {
-    display: inline-block;
-    margin-left: -10px;
-    padding: 9%;
-    position: relative; /* Necessário para alinhar o fundo à posição do link */
-}
-
-.navbar .menu li a {
-    color: #FFD700;
-    font-size: 18px;
-    text-decoration: none; /* Remove o sublinhado do link */
-    background-color: rgba(41, 33, 33, 0.5); /* Fundo preto com transparência */
-    padding: 10px 15px; /* Ajuste o tamanho da "caixa" ao redor do texto */
-    border-radius: 50px; /* Deixa os cantos arredondados */
-    display: inline-block; /* Garante que o fundo respeite o tamanho do texto */
-    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição das cores */
-}
-
-.navbar .menu li a:hover {
-    background-color: rgba(255, 215, 0, 0.8); /* Altere para dourado mais opaco no hover */
-    color: #001F3F; /* Texto azul escuro no hover */
-}
-
-
+/* Organiza a navbar para que a logo fique à esquerda e os links fiquem dentro da caixa */
 .navbar .menu {
     display: flex;
     justify-content: center; /* Centraliza os links */
@@ -187,13 +147,14 @@ body {
 
 .navbar .menu li a {
     color: #FFD700;
-    font-size: 12px; /* Tamanho menor */
+    font-size: 17px; /* Tamanho menor */
 }
 
 .navbar .menu li a:hover {
     color: #c2c2c2;
 }
 
+/* Modificando o estilo do navbar para garantir a integração da logo e links */
 .navbar {
     position: fixed; /* Fixa a barra de navegação no topo */
     top: 0; /* Define o topo da posição fixa */
@@ -202,7 +163,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 0px; /* Ajuste o padding conforme necessário */
+    padding: 0px 20px; /* Ajuste o padding conforme necessário */
     z-index: 1; /* Garante que o navbar fique acima do conteúdo */
     background-color: transparent; /* Ajuste de cor com opacidade */
     transition: background-color 0.2s; /* Transição suave */
@@ -210,7 +171,7 @@ body {
 
 .navbar h1 {
     width: auto;
-    padding: 15px;
+    padding: 20px;
     color: #fff;
 }
 
@@ -235,7 +196,7 @@ body {
     font-weight: bold;
     color: #FFD700;
     text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); /* Brilho dourado */
-    animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate, slideInFromRight 1s ease-out; /* Aplica as duas animações */
 }
 
 .app-name {
@@ -243,6 +204,210 @@ body {
     color: #FFD700;
     margin-top: 10px;
     font-weight: 500;
+}
+
+
+
+
+
+.sobre {
+    background-color:  #001F3F;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.Magnorum {
+    background-color:  #001F3F;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+
+.imglogos2 {
+    width: calc(100% - 20px); /* Deixa uma borda de 10px em cada lado horizontal */
+    height: calc(100% - 20px); /* Deixa uma borda de 10px em cada lado vertical */
+    margin: auto; /* Centraliza a imagem se necessário */
+    border: 10px solid transparent; /* Define a borda, pode personalizar a cor se necessário */
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos no tamanho total */
+    object-fit: contain; /* Ajusta a imagem para caber proporcionalmente */
+    display: block; /* Remove comportamento inline, garantindo que ocupe o espaço configurado */
+}
+
+.imglogos {
+    width: calc(48% - 20px); /* Deixa uma borda de 10px em cada lado horizontal */
+    height: calc(300% - 20px); /* Deixa uma borda de 10px em cada lado vertical */
+    margin: auto; /* Centraliza a imagem se necessário */
+    border: 10px solid transparent; /* Define a borda, pode personalizar a cor se necessário */
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos no tamanho total */
+    object-fit: contain; /* Ajusta a imagem para caber proporcionalmente */
+    display: block; /* Remove comportamento inline, garantindo que ocupe o espaço configurado */
+    margin-top: 50px;  /* Aumente o valor para aumentar a distância */
+
+}
+
+.logo-symbol2 {
+    font-size: 100px; /* Tamanho grande para o símbolo */
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); /* Brilho dourado */
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Estilo para os títulos das seções */
+.section-title2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8);
+    position: fixed; /* Faz o título ficar fixo no topo */
+    top: 10px; /* Distância do topo */
+    left: 50%; /* Centraliza o título */
+    transform: translateX(-50%); /* Ajuste para garantir o centro exato */
+    z-index: 1000; /* Garante que o título fique sobre outros elementos */
+}
+
+
+/* Estilo para os separadores */
+.divider {
+    border: none;
+    height: 5px;
+    background: linear-gradient(to right, #FFD700, #001F3F, #FFD700);
+    margin: 0px 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.equipe {
+    background-color: #001F3F;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative; /* Permite posicionamento do título e texto dentro da imagem */
+}
+
+.section-title {
+    position: absolute;
+    top: 20px; /* Título no topo da tela */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFD700;
+    font-size: 2rem;
+    font-weight: 600;
+    z-index: 10; /* Garantir que o título fique acima da imagem */
+}
+
+.gallery-container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centraliza a galeria */
+    align-items: center;
+    max-width: 80%; /* Controla a largura máxima da galeria */
+    margin: 0 auto;
+}
+
+
+.image-box {
+    position: relative;
+    width: 100%; /* Ocupará toda a largura disponível */
+    height: 400px; /* Defina uma altura maior para dar mais espaço à caixa */
+    max-width: 800px; /* Defina uma largura máxima para evitar que a caixa fique muito grande */
+    overflow: hidden;
+    border-radius: 400px; /* Arredonda os cantos */
+}
+
+.image-box img {
+    width: 170%;
+    height: 500%;
+    object-fit: cover; /* Faz a imagem preencher a caixa */
+}
+
+.gallery-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Ajusta a largura da caixa de texto */
+    padding: 20px;
+    background-color: transparent; /* Fundo escuro com transparência */
+    border-radius: 10px; /* Arredonda os cantos da caixa de texto */
+    text-align: center;
+    color: #FFD700; /* Texto dourado */
+    font-size: 18px; /* Tamanho do texto */
+    box-sizing: border-box;
+}
+
+.gallery-text h3 {
+    font-size: 24px; /* Aumenta o tamanho do título */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.gallery-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.nav-button {
+    background: none;
+    color: white;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+
+.nav-button:first-of-type {
+    left: -40px;
+}
+
+.nav-button:last-of-type {
+    right: -40px;
+}
+
+
+.image-box2 {
+    position: fixed;   /* Faz a imagem ficar fora do fluxo normal do layout */
+    top: 0px;           /* Ajuste a posição da imagem em relação ao topo da página */
+    left: 80%;            /* Centraliza a imagem horizontalmente */
+    transform: translateX(-50%); /* Para garantir o alinhamento exato no centro */
+    z-index: -1;          /* Coloca a imagem atrás do conteúdo dos botões */
+    width: 50%;
+}
+
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(-100%); /* Começa fora da tela à direita */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Termina na posição original */
+        opacity: 1;
+    }
 }
 
 
