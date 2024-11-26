@@ -209,14 +209,11 @@ body {
 
 .sobre {
     background-color:  #001F3F;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 20px;
+    min-height: 150vh; /* Preenche a altura da tela */
 }
 
 .Magnorum {
@@ -288,14 +285,30 @@ body {
     font-weight: 600;
     z-index: 10; /* Garantir que o título fique acima da imagem */
 }
+
 .text-definition {
-    font-size: 1.5rem;
-    font-weight: 400;
-    
+    background-color: rgba(0, 31, 63, 0.8); /* Fundo escuro com transparência */
+    color: #FFD700; /* Texto dourado */
+    width: 50%; /* Caixa menor */
+    height: 50%;
+    padding: 20px;
+    top: 100%;
+    border: 2px solid #FFD700; /* Borda dourada */
+    border-radius: 10px;
+    line-height: 1.6;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
-
-
+.text-definition2{
+    background-color: rgba(0, 31, 63, 0.8); /* Fundo escuro com transparência */
+    color: #FFD700; /* Texto dourado */
+    width: 200%; /* Caixa menor */
+    padding: 20px;
+    border: 2px solid #FFD700; /* Borda dourada */
+    border-radius: 10px;
+    line-height: 1.6;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Sombra */
+}
 
 /* Estilo para os separadores */
 .divider {
@@ -365,12 +378,23 @@ body {
     transform: translate(-50%, -50%);
     width: 100%; /* Ajusta a largura da caixa de texto */
     padding: 20px;
-    background-color: #001F3F; /* Fundo escuro com transparência */
+    background-color: transparent; /* Fundo escuro com transparência */
     border-radius: 10px; /* Arredonda os cantos da caixa de texto */
     text-align: center;
-    color: #FFD700; /* Texto dourado */
+    color: #001F3F; /* Texto dourado */
     font-size: 18px; /* Tamanho do texto */
     box-sizing: border-box;
+}
+
+.h3-sobre{
+    position: absolute;
+    top: 250px; /* Título no topo da tela */
+    left: 12%;
+    transform: translateX(-50%);
+    color: #FFD700;
+    font-size: 2rem;
+    font-weight: 600;
+    z-index: 10; /* Garantir que o título fique acima da imagem */
 }
 
 .gallery-text h3 {
@@ -380,7 +404,7 @@ body {
 }
 
 .gallery-text p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.6;
 }
 
@@ -411,6 +435,88 @@ body {
     transform: translateX(-50%); /* Para garantir o alinhamento exato no centro */
     z-index: -1;          /* Coloca a imagem atrás do conteúdo dos botões */
     width: 50%;
+}
+
+.Mag-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 20px; /* Espaço entre as caixas */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.text-definition1 {
+    position: absolute;
+    top: 800px; /* Posição vertical */
+    left: 50px; /* Posição horizontal */
+    width: 200px;
+    height: 100px;
+    background-color: rgba(0, 31, 63, 0.8);
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Caixa 2 */
+.text-definition2 {
+    position: absolute;
+    top: 600px;
+    left: 300px; /* Mova horizontalmente para evitar sobreposição */
+    width: 200px;
+    height: 100px;
+    background-color: rgba(0, 31, 63, 0.8);
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Caixa 3 */
+.text-definition3 {
+    position: absolute;
+    top: 900px; /* Mova para baixo */
+    left: 50px;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(0, 31, 63, 0.8);
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Caixa 4 */
+.text-definition4 {
+    position: absolute;
+    top: 900px;
+    left: 300px; /* Posição na mesma linha que a caixa 3 */
+    width: 200px;
+    height: 100px;
+    background-color: rgba(0, 31, 63, 0.8);
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.box-elements-mag{
+    color: #FFD700;
+    padding: 40px;
+    border: 3px solid #FFD700;
+    border-radius: 20px;
+}
+
+.imagens-tec{
+    font-size: 10px;
+    width: 40%;
+}
+
+.h2tec-box{
+    font-size: 50px;
+    color: #FFD700;
 }
 
 
