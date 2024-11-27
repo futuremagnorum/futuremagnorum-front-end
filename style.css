@@ -462,7 +462,6 @@ body {
     color: #ffffff; /* Cor do texto transparente para o gradiente */
     background-clip: text; /* Faz o gradiente aparecer no texto */
     -webkit-background-clip: text; /* Suporte para navegadores baseados em Webkit */
-    animation: glow 2s ease-in-out infinite alternate, slideInFromRight 1s ease-out; /* Aplica as duas animações */
 }
 
 .redes-home2{
@@ -472,6 +471,7 @@ body {
     animation: glow 2s ease-in-out infinite alternate, slideInFromRight 1s ease-out; /* Aplica as duas animações */
     border: 2px solid #FFD700; /* Borda dourada */
     border-radius: 10px;
+    background-color: rgba(0, 31, 63, 0.8);
     width: 15%;
     height: 15%;
 }
@@ -615,15 +615,15 @@ body {
 
 /* Estilo para os títulos das seções */
 .section-title2 {
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #FFD700;
     text-align: center;
     margin-bottom: 20px;
     text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8);
     position: fixed; /* Faz o título ficar fixo no topo */
-    top: 10px; /* Distância do topo */
-    left: 50%; /* Centraliza o título */
+    top: 130px; /* Distância do topo */
+    left: 20%; /* Centraliza o título */
     transform: translateX(-50%); /* Ajuste para garantir o centro exato */
     z-index: 1000; /* Garante que o título fique sobre outros elementos */
 }
@@ -1141,9 +1141,41 @@ body {
     padding: 10px;
 }
 
-.box-elements-mag{
+.box-elements-mag1{
+    width: 50%;
+    height: 50%;
     color: #FFD700;
-    padding: 40px;
+    padding: 0px;
+    border: 3px solid #FFD700;
+    background-color: rgba(0, 31, 63, 0.8);
+    border-radius: 20px;
+}
+
+.box-elements-mag2{
+    width: 50%;
+    height: 50%;
+    color: #FFD700;
+    padding: 0px;
+    border: 3px solid #FFD700;
+    background-color: rgba(0, 31, 63, 0.8);
+    border-radius: 20px;
+}
+
+.box-elements-mag3{
+    width: 50%;
+    height: 50%;
+    color: #FFD700;
+    padding: 0px;
+    border: 3px solid #FFD700;
+    background-color: rgba(0, 31, 63, 0.8);
+    border-radius: 20px;
+}
+
+.box-elements-mag4{
+    width: 50%;
+    height: 50%;
+    color: #FFD700;
+    padding: 0px;
     border: 3px solid #FFD700;
     background-color: rgba(0, 31, 63, 0.8);
     border-radius: 20px;
@@ -1155,9 +1187,10 @@ body {
 }
 
 .h2tec-box{
-    font-size: 50px;
+    font-size: 20px;
     color: #FFD700;
 }
+
 
 
 
@@ -1808,7 +1841,7 @@ body {
 }
 
 /* Telas entre 1440px e 1920px (grandes monitores) */
-@media (min-width: 1440px) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) {
     .home .text h1 {
         font-size: 4rem;
         margin: 20px 0;
@@ -2006,63 +2039,253 @@ body {
 
 
 /* Telas ultra-grandes (mín. 1920px - desktops grandes) */
-@media screen and (min-width: 1920px) {
-    /* Navbar */
-    .navbar {
-        max-width: 1920px;
-        margin: 0 auto;
-    }
-
-    .menu {
-        gap: 20px;
-    }
-
-    .menu li a {
-        font-size: 1.2rem;
-        padding: 12px 20px;
-    }
-
-    /* Home Section */
-    .home {
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 50px;
-    }
-
+@media screen and (max-width: 1920px){
     .home .text h1 {
-        font-size: 4rem; /* Aumenta o título */
+        font-size: 4rem;
+        margin: 20px 0;
     }
 
-    /* Imagens */
-    .imglogos {
-        max-width: 60%;
+    .gallery-container{
+        min-height: 60vw;
     }
 
-    /* Magnorum Section */
-    .Magnorum {
-        padding: 50px;
+    .image-box{
+        width: 500px;
+        height: 200px;
     }
 
-    .section-title2 {
-        font-size: 3rem;
+    .Magnorum{
+        min-height: 150vw;
+    }
+    .sobre{
+        min-height: 90vw;
     }
 
-    /* Galeria */
-    .gallery-container {
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .home .text span {
+        font-size: 2rem;
     }
 
-    .gallery-text h3 {
-        font-size: 1.8rem;
+    .navbar {
+        padding: 20px 50px;
     }
 
-    .gallery-text p {
+    .navbar-link2{
         font-size: 1.2rem;
+        top: -15px;
+        left: 400px;
     }
 
-    /* Divisor */
-    .divider {
-        width: 60%;
+    .navbar-link3{
+        font-size: 1.2rem;
+        top: -15px;
+        left: 330px;
     }
+
+    .navbar-link4{
+        font-size: 1.2rem;
+        top: -15px;
+        left: 265px;
+    }
+
+    .navbar-link {
+        font-size: 1.2rem;
+        top: -15px;
+        left: 480px;
+    }
+
+    .navbar-link-hover{
+        font-size: 1.2rem;
+        left: 480px;
+        top: 70%;
+    }
+
+    .navbar-link-hover2{
+        font-size: 1.2rem;
+        left: 400px;
+        top: 70%;
+    }
+
+    .navbar-link-hover3{
+        font-size: 1.2rem;
+        left: 330px;
+        top: 70%;
+    }
+
+    .navbar-link-hover4{
+        font-size: 1.2rem;
+        left: 265px;
+        top: 70%;
+    }
+
+    .balloon-text {
+        left: 20px;
+        font-size: 4.5rem;
+    }
+
+    .h5-home{
+        font-size:2rem;
+        top: 32%;
+        left: 20px;
+    }
+
+    .redes-home{
+        top: 80%;
+        left: 46px;
+    }
+
+    .redes-home2{
+        top: 84%;
+        left: 30px;
+        width: 155px;
+    }
+
+    .insta{
+        top: 34%;
+        left: 30px;
+    }
+    .insta i{
+        font-size: 40px;
+    }
+
+    .linkedin{
+        top: -38%;
+        left: 80px;
+    }
+    .linkedin i{
+        font-size: 40px;
+    }
+
+    .ptextsobre{
+        width: 30%;
+    }
+
+    .balloon-text2 {
+        font-size: 2.5rem;
+    }
+
+    .ptextsobre, .box-elements-mag {
+        width: 70%;
+        padding: 30px;
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+
+    .image-box {
+        height: 500px;
+        border-radius: 30px;
+    }
+
+    .section-title, .sobre-title {
+        font-size: 3rem;
+        margin: 30px 0;
+    }
+
+    .text-definition {
+        font-size: 1.5rem;
+        padding: 25px;
+    }
+
+    .text-sobre-porque{
+        left: 10%;
+    }
+
+    .ptextsobre0{
+        left: 10%;
+    }
+    .text-definition1{
+        left: 11%;
+    }
+    .sobre-porque1 i{
+        left: 38%;
+    }
+
+    .ptextsobre2{
+        left: 50%;
+    }
+    .text-definition2{
+        left: 51%;
+    }
+    .sobre-porque2 i{
+        left: 78%;
+    }
+
+    .ptextsobre3{
+        left: 10%;
+    }
+    .text-definition3{
+        left: 11%;
+    }
+    .sobre-porque3 i{
+        left: 38%;
+    }
+
+    .ptextsobre4{
+        left: 50%;
+    }
+    .text-definition4{
+        left: 51%;
+    }
+    .img-suppot{
+        left: 77%;
+    }
+
+
+    .ptextsobre5{
+        left: 50%;
+    }
+    .text-definition5{
+        left: 51%;
+    }
+    .sobre-porque5 i{
+        left: 78%;
+    }
+
+    .ptextsobre6{
+        left: 10%;
+    }
+    .text-definition6{
+        left: 11%;
+    }
+    .sobre-porque6 i{
+        left: 38%;
+    }
+
+    .h3-sobre-co{
+        top: 15%;
+        height: 190px;
+    }
+    .h3-sobre-lo{
+        top: 15%;
+        left: 51%;
+    }
+    .sub-sobre-lo1{
+        top: 20%;
+        left: 55%;
+    }
+    .sub-sobre-lo2{
+        top: 34%;
+    }
+    .sub-sobre-lo3{
+        top: 55%;
+        left: 57%;
+    }
+
+    .p-sobre-co{
+        top: 20%;
+    }
+
+    .p-sobre-lo1{
+        top: 24%;
+        left: 53%;
+    }
+    .p-sobre-lo2{
+        top: 39%;
+        left: 53%;
+    }
+    .p-sobre-lo3{
+        top: 60%;
+        left: 53%;
+    }
+
 }
+
