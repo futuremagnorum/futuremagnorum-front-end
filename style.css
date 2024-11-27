@@ -737,6 +737,7 @@ body {
 
 .h3-sobre-co{
     position: absolute;
+    font-size: 1.6rem;
     top: 100px; /* Mova para baixo */
     left: 50px;
     background-color: rgba(0, 31, 63, 0.8); /* Fundo escuro com transparência */
@@ -753,11 +754,12 @@ body {
 .h3-sobre-lo{
     position: absolute;
     top: 100px; /* Mova para baixo */
+    font-size: 1.6rem;
     left: 650px;
     background-color: rgba(0, 31, 63, 0.8); /* Fundo escuro com transparência */
     color: #FFD700; /* Texto dourado */
     width: 41%; /* Caixa menor */
-    height: 70%;
+    height: 77%;
     padding: 20px;
     border: 2px solid #FFD700; /* Borda dourada */
     border-radius: 10px;
@@ -1063,9 +1065,41 @@ body {
     padding: 10px;
 }
 
-.p-sobre-co{
+.sub-sobre-lo1{
     position: absolute;
-    top: 150px;
+    top: 220px; /* Título no topo da tela */
+    left: 56%;
+    transform: translateX(-50%);
+    color: #FFD700;
+    font-size: 1.6rem;
+    font-weight: 600;
+    z-index: 10; /* Garantir que o título fique acima da imagem */
+}
+.sub-sobre-lo2{
+    position: absolute;
+    top: 380px; /* Título no topo da tela */
+    left: 59%;
+    transform: translateX(-50%);
+    color: #FFD700;
+    font-size: 2rem;
+    font-weight: 600;
+    z-index: 10; /* Garantir que o título fique acima da imagem */
+}
+.sub-sobre-lo3{
+    position: absolute;
+    top: 630px; /* Título no topo da tela */
+    left: 58%;
+    transform: translateX(-50%);
+    color: #FFD700;
+    font-size: 2rem;
+    font-weight: 600;
+    z-index: 10; /* Garantir que o título fique acima da imagem */
+}
+
+
+.p-sobre-co1{
+    position: absolute;
+    top: 240px;
     left: 70px; /* Posição na mesma linha que a caixa 3 */
     width: 525px;
     height: 100px;
@@ -1074,10 +1108,32 @@ body {
     padding: 10px;
 }
 
-.p-sobre-lo{
+.p-sobre-lo1{
     position: absolute;
-    top: 150px;
-    left: 670px; /* Posição na mesma linha que a caixa 3 */
+    top: 265px;
+    left: 770px; /* Posição na mesma linha que a caixa 3 */
+    width: 520px;
+    height: 100px;
+    color: #FFD700;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.p-sobre-lo2{
+    position: absolute;
+    top: 445px;
+    left: 770px; /* Posição na mesma linha que a caixa 3 */
+    width: 520px;
+    height: 100px;
+    color: #FFD700;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.p-sobre-lo3{
+    position: absolute;
+    top: 700px;
+    left: 770px; /* Posição na mesma linha que a caixa 3 */
     width: 520px;
     height: 100px;
     color: #FFD700;
@@ -1791,21 +1847,25 @@ body {
     }
 
     .navbar-link-hover{
+        font-size: 1.4rem;
         left: 530px;
         top: 80%;
     }
 
     .navbar-link-hover2{
+        font-size: 1.4rem;
         left: 450px;
         top: 80%;
     }
 
     .navbar-link-hover3{
+        font-size: 1.4rem;
         left: 380px;
         top: 80%;
     }
 
     .navbar-link-hover4{
+        font-size: 1.4rem;
         left: 320px;
         top: 80%;
     }
