@@ -640,7 +640,7 @@ body {
 }
 
 /*h4tecnologia*/
-.ptextsobre{
+.ptextsobre0{
     position: absolute;
     top: 1300px; /* Mova para baixo */
     left: 150px;
@@ -1104,6 +1104,7 @@ body {
 }
 
 
+
 @keyframes slideInFromRight {
     0% {
         transform: translateX(-100%); /* Começa fora da tela à direita */
@@ -1116,108 +1117,291 @@ body {
 }
 
 
-
-
-/* Telas pequenas (máx. 768px - tablets e smartphones) */
-@media screen and (max-width: 768px) {
-    /* Navbar */
-    .navbar {
-        flex-direction: column; /* Reorganiza itens verticalmente */
-        align-items: center;
-        padding: 10px; /* Ajusta o espaçamento */
-        background-color: rgba(0, 0, 0, 0.9); /* Fundo sólido */
+@media (min-width: 320px) and (max-width: 430px){
+    .home{
+        min-height: 190vw;
+    }
+    .Magnorum{
+        min-height: 300vh;
+        padding: 30px;
     }
 
-    .menu {
-        flex-direction: column; /* Links em coluna */
-        align-items: center;
-        gap: 10px; /* Espaço entre os links */
+    .sobre{
+        min-height: 300vh;
+
     }
 
-    .menu li {
-        margin: 5px 0; /* Espaçamento entre os links */
+    .navbar{
+        display: none;
     }
 
-    .menu li a {
-        font-size: 0.9rem; /* Fonte menor */
-        padding: 6px 10px; /* Reduz o espaço interno */
+    .balloon-text {
+        left: 20px;
+        top: 17%;
+        font-size: 2.3rem;
     }
+
+    .h5-home{
+        font-size:1rem;
+        top: 25%;
+        left: 20px;
+    }
+
+    .redes-home{
+        top: 77%;
+        left: 46px;
+        font-size: 1.3rem;
+    }
+
+    .redes-home2{
+        top: 80%;
+        left: 40px;
+        width: 40%;
+    }
+    .insta{
+        top: 40%;
+    }
+    .insta i{
+        font-size: 40px;
+    }
+
+    .linkedin{
+        top: -18%;
+        left: 56px;
+    }
+    .linkedin i{
+        font-size: 40px;
+    }
+
+    .section-title2{
+        font-size: 1.5rem;
+    }
+
+    .box-elements-mag{
+        width: 90px;
+        height: 140px;
+    }
+    
+    .imagens-tec{
+        width: 100%;
+    }
+    
+    .h2tec-box{
+        font-size: 1.5rem;
+    }
+
+    .text-sobre-porque{
+        font-size: 0.9rem;
+        top: 90%;
+        left: 10%;
+        height: 230px;
+    }
+
+    .ptextsobre0{
+        top: 194%;
+        left: 10%;
+        width: 290px;
+        height: 80px;
+    }
+    .text-definition1{
+        top: 201%;
+        left: 13%;
+    }
+
+    .ptextsobre2{
+        top: 221%;
+        left: 10%;
+        width: 290px;
+        height: 80px;
+    }
+    .text-definition2{
+        top: 228%;
+        left: 13%;
+    }
+
+    .ptextsobre3{
+        top: 248%;
+        left: 10%;
+        width: 290px;
+        height: 80px;
+    }
+    .text-definition3{
+        top: 255%;
+        left: 13%;
+    }
+
+    .ptextsobre4{
+        top: 275%;
+        left: 10%;
+        width: 290px;
+        height: 80px;
+    }
+    .text-definition4{
+        top: 282%;
+        left: 13%;
+    }
+
+    .ptextsobre5{
+        top: 167%;
+        left: 10%;
+        width: 290px;
+        height: 80px;
+    }
+    .text-definition5{
+        top: 174%;
+        left: 13%;
+    }
+
+    .ptextsobre6{
+        top: 140%;
+        left: 10%;
+        width: 290px;
+        height: 80px;
+    }
+    .text-definition6{
+        top: 147%;
+        left: 13%;
+    }
+
+
 
     /* Botões e Links */
     .nav-button {
-        font-size: 1.5rem; /* Ajusta o tamanho dos botões de navegação */
+        font-size: 1.8rem; /* Botões maiores */
     }
 
     /* Home Section */
-    .home {
-        padding: 20px;
-        text-align: center;
-        background-size: cover;
-    }
-
     .home .text h1 {
-        font-size: 2.5rem; /* Reduz tamanho do título */
-        line-height: 1.2;
+        font-size: 3rem; /* Tamanho médio do título */
     }
 
     /* Imagens */
     .imglogos, .imglogos2 {
-        max-width: 90%; /* Ocupa 90% da largura */
-        height: auto; /* Mantém proporção */
-    }
-
-    .image-box {
-        height: 200px; /* Reduz altura para telas menores */
+        max-width: 80%;
     }
 
     /* Magnorum Section */
-    .Magnorum {
-        padding: 20px;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .section-title2 {
-        font-size: 2rem;
-    }
 
     /* Galeria */
     .gallery-container {
-        flex-direction: column; /* Itens em coluna */
-        align-items: center;
-        gap: 15px;
+        flex-wrap: wrap; /* Organização em linha, quebra se necessário */
     }
 
     .gallery-text h3 {
-        font-size: 1.2rem; /* Texto menor */
+        font-size: 1.4rem;
     }
 
     .gallery-text p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     /* Divisor */
     .divider {
-        width: 90%;
+        width: 80%;
     }
+
+    .h3-sobre-co{
+        top: 15%;
+        left: 25%;
+        height: 380px;
+
+    }
+    .h3-sobre-lo{
+        top: 62%;
+        left: 25%;
+    }
+
+    .p-sobre-co{
+        top: 25%;
+        font-size: 0.8rem;
+        width: 185px;
+        left: 25%;
+    }
+
+    .p-sobre-lo{
+        top: 68%;
+        font-size: 0.8rem;
+        width: 185px;
+        left: 25%;
+    }
+
+    .section-title{
+        font-size: 1.7rem;
+    }
+
+    .gallery-container{
+        width: 200%;
+        height: 200%;
+    }
+
+    .gallery-text{
+        font-size: 0.2rem;
+        width: 300px;
+    }
+
 }
 
 /* Telas médias (máx. 1024px - laptops pequenos) */
-@media screen and (max-width: 1024px) {
-    /* Navbar */
-    .navbar {
-        padding: 15px 20px; /* Ajusta padding */
-        justify-content: space-between;
+@media (min-width: 1114px) and (max-width: 1280px) {
+    .Magnorum{
+        min-height: 270vh;
+        padding: 30px;
+    }
+    .navbar-link2{
+        font-size: none;
     }
 
-    .menu {
-        flex-direction: row; /* Links em linha */
-        gap: 10px;
+    .navbar-link3{
+        font-size: none;
     }
 
-    .menu li a {
-        font-size: 1rem;
-        padding: 8px 12px; /* Padding intermediário */
+    .navbar-link4{
+        font-size: none;
+    }
+
+    .navbar-link {
+        font-size: none;
+    }
+
+    .navbar-link-hover{
+        font-size: none;
+
+    }
+
+    .navbar-link-hover2{
+        font-size: none;
+
+    }
+
+    .navbar-link-hover3{
+        font-size: none;
+
+    }
+
+    .navbar-link-hover4{
+        font-size: none;
+
+    }
+
+    .balloon-text {
+        left: 20px;
+        font-size: 4.5rem;
+    }
+
+    .h5-home{
+        font-size:2rem;
+        top: 24%;
+        left: 20px;
+    }
+
+    .redes-home{
+        top: 76%;
+        left: 46px;
+    }
+
+    .redes-home2{
+        top: 80%;
+        left: 40px;
     }
 
     /* Botões e Links */
@@ -1236,9 +1420,7 @@ body {
     }
 
     /* Magnorum Section */
-    .Magnorum {
-        padding: 30px;
-    }
+
 
     .section-title2 {
         font-size: 2.5rem;
@@ -1261,61 +1443,154 @@ body {
     .divider {
         width: 80%;
     }
+
+    .h3-sobre-co{
+        top: 15%;
+    }
+    .h3-sobre-lo{
+        top: 15%;
+        left: 51%;
+    }
+
+    .p-sobre-co{
+        top: 20%;
+    }
+
+    .p-sobre-lo{
+        top: 20%;
+        left: 53%;
+    }
+
 }
 
-/* Telas grandes (máx. 1440px - desktops padrão) */
-@media screen and (max-width: 1440px) {
-    /* Navbar */
-    .navbar {
-        max-width: 1440px;
-        padding: 0px;
-        justify-content: space-between;
+/* Telas pequenas (máx. 768px - tablets e smartphones) */
+@media (min-width: 768px) and (max-width: 884px) {
+    .home{
+        min-height: 175vw;
+    }
+    .Magnorum{
+        min-height: 270vh;
+        padding: 30px;
+    }
+    .navbar-link2{
+        font-size: 1.7rem;
+        top: 0px;
+        left: 400px;
     }
 
-    .menu {
-        flex-direction: row; /* Links em linha */
-        justify-content: center;
-        gap: opx;
+    .navbar-link3{
+        font-size: 1.7rem;
+        top: -10px;
+        left: 0px;
     }
 
-    .menu li a {
-        font-size: 1rem; /* Tamanho menor */
-        padding: 6px 7px;
+    .navbar-link4{
+        font-size: 1.7rem;
+        top: -0px;
+        left: 280px;
+    }
+
+    .navbar-link {
+        font-size: 2rem;
+        top: -0px;
+        left: 0px;
+    }
+
+    .navbar-link-hover{
+        left: 480px;
+        top: 105%;
+    }
+
+    .navbar-link-hover2{
+        left: 400px;
+        top: 105%;
+    }
+
+    .navbar-link-hover3{
+        left: 335px;
+        top: 105%;
+    }
+
+    .navbar-link-hover4{
+        left: 280px;
+        top: 105%;
+    }
+
+    .logo{
+        width: 15%;
+        left: 40%;
+    }
+
+    .image-box2{
+        width: 70%;
+    }
+
+    .balloon-text {
+        left: 20px;
+        top: 17%;
+        font-size: 4.5rem;
+    }
+
+    .h5-home{
+        font-size:2rem;
+        top: 20%;
+        left: 20px;
+    }
+
+    .redes-home{
+        top: 69%;
+        left: 46px;
+        font-size: 3rem;
+    }
+
+    .redes-home2{
+        top: 63%;
+        left: 40px;
+        width: 40%;
+    }
+    .insta{
+        top: 30%;
+    }
+    .insta i{
+        font-size: 100px;
+    }
+
+    .linkedin{
+        top: -44%;
+    }
+    .linkedin i{
+        font-size: 100px;
+    }
+
+    /* Botões e Links */
+    .nav-button {
+        font-size: 1.8rem; /* Botões maiores */
     }
 
     /* Home Section */
-    .home {
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 40px;
-    }
-
     .home .text h1 {
-        font-size: 3.5rem; /* Tamanho intermediário */
+        font-size: 3rem; /* Tamanho médio do título */
     }
 
     /* Imagens */
-    .imglogos {
-        max-width: 70%;
+    .imglogos, .imglogos2 {
+        max-width: 80%;
     }
 
     /* Magnorum Section */
-    .Magnorum {
-        padding: 40px;
-        gap: 30px;
-    }
+
 
     .section-title2 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
     /* Galeria */
     .gallery-container {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Organização em linha, quebra se necessário */
     }
 
     .gallery-text h3 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .gallery-text p {
@@ -1324,9 +1599,351 @@ body {
 
     /* Divisor */
     .divider {
-        width: 70%;
+        width: 80%;
     }
+
+    .h3-sobre-co{
+        top: 15%;
+    }
+    .h3-sobre-lo{
+        top: 15%;
+        left: 51%;
+    }
+
+    .p-sobre-co{
+        top: 20%;
+    }
+
+    .p-sobre-lo{
+        top: 20%;
+        left: 53%;
+    }
+
 }
+
+/* Telas médias (máx. 1024px - laptops pequenos) */
+@media (min-width: 1114px) and (max-width: 1280px) {
+    .Magnorum{
+        min-height: 270vh;
+        padding: 30px;
+    }
+    .navbar-link2{
+        font-size: 1.4rem;
+        top: 0px;
+        left: 400px;
+    }
+
+    .navbar-link3{
+        font-size: 1.4rem;
+        top: -0px;
+        left: 335px;
+    }
+
+    .navbar-link4{
+        font-size: 1.4rem;
+        top: -0px;
+        left: 280px;
+    }
+
+    .navbar-link {
+        font-size: 1.4rem;
+        top: -0px;
+        left: 480px;
+    }
+
+    .navbar-link-hover{
+        left: 480px;
+        top: 105%;
+    }
+
+    .navbar-link-hover2{
+        left: 400px;
+        top: 105%;
+    }
+
+    .navbar-link-hover3{
+        left: 335px;
+        top: 105%;
+    }
+
+    .navbar-link-hover4{
+        left: 280px;
+        top: 105%;
+    }
+
+    .balloon-text {
+        left: 20px;
+        font-size: 4.5rem;
+    }
+
+    .h5-home{
+        font-size:2rem;
+        top: 24%;
+        left: 20px;
+    }
+
+    .redes-home{
+        top: 76%;
+        left: 46px;
+    }
+
+    .redes-home2{
+        top: 80%;
+        left: 40px;
+    }
+
+    /* Botões e Links */
+    .nav-button {
+        font-size: 1.8rem; /* Botões maiores */
+    }
+
+    /* Home Section */
+    .home .text h1 {
+        font-size: 3rem; /* Tamanho médio do título */
+    }
+
+    /* Imagens */
+    .imglogos, .imglogos2 {
+        max-width: 80%;
+    }
+
+    /* Magnorum Section */
+
+
+    .section-title2 {
+        font-size: 2.5rem;
+    }
+
+    /* Galeria */
+    .gallery-container {
+        flex-wrap: wrap; /* Organização em linha, quebra se necessário */
+    }
+
+    .gallery-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .gallery-text p {
+        font-size: 1rem;
+    }
+
+    /* Divisor */
+    .divider {
+        width: 80%;
+    }
+
+    .h3-sobre-co{
+        top: 15%;
+    }
+    .h3-sobre-lo{
+        top: 15%;
+        left: 51%;
+    }
+
+    .p-sobre-co{
+        top: 20%;
+    }
+
+    .p-sobre-lo{
+        top: 20%;
+        left: 53%;
+    }
+
+}
+
+/* Telas entre 1440px e 1920px (grandes monitores) */
+@media (min-width: 1440px) and (max-width: 1920px) {
+    .home .text h1 {
+        font-size: 4rem;
+        margin: 20px 0;
+    }
+
+    .home .text span {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        padding: 20px 50px;
+    }
+
+    .navbar-link2{
+        font-size: 1.4rem;
+        top: -12px;
+        left: 450px;
+    }
+
+    .navbar-link3{
+        font-size: 1.4rem;
+        top: -12px;
+        left: 380px;
+    }
+
+    .navbar-link4{
+        font-size: 1.4rem;
+        top: -12px;
+        left: 320px;
+    }
+
+    .navbar-link {
+        font-size: 1.4rem;
+        top: -12px;
+        left: 530px;
+    }
+
+    .navbar-link-hover{
+        left: 530px;
+        top: 80%;
+    }
+
+    .navbar-link-hover2{
+        left: 450px;
+        top: 80%;
+    }
+
+    .navbar-link-hover3{
+        left: 380px;
+        top: 80%;
+    }
+
+    .navbar-link-hover4{
+        left: 320px;
+        top: 80%;
+    }
+
+    .balloon-text {
+        left: 20px;
+        font-size: 4.5rem;
+    }
+
+    .h5-home{
+        font-size:2rem;
+        top: 24%;
+        left: 20px;
+    }
+
+    .redes-home{
+        top: 81%;
+        left: 46px;
+    }
+
+    .redes-home2{
+        top: 84%;
+        left: 30px;
+    }
+
+    .ptextsobre{
+        width: 30%;
+    }
+
+    .balloon-text2 {
+        font-size: 2.5rem;
+    }
+
+    .ptextsobre, .box-elements-mag {
+        width: 70%;
+        padding: 30px;
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+
+    .image-box {
+        height: 500px;
+        border-radius: 30px;
+    }
+
+    .section-title, .sobre-title {
+        font-size: 3rem;
+        margin: 30px 0;
+    }
+
+    .text-definition {
+        font-size: 1.5rem;
+        padding: 25px;
+    }
+
+    .text-sobre-porque{
+        left: 10%;
+    }
+
+    .ptextsobre0{
+        left: 11%;
+    }
+    .text-definition1{
+        left: 12%;
+    }
+    .sobre-porque1 i{
+        left: 39%;
+    }
+
+    .ptextsobre2{
+        left: 50;
+    }
+    .text-definition2{
+        left: 51;
+    }
+    .sobre-porque2 i{
+        left: 82%;
+    }
+
+    .ptextsobre3{
+        left: 11%;
+    }
+    .text-definition3{
+        left: 12%;
+    }
+    .sobre-porque3 i{
+        left: 39%;
+    }
+
+    .ptextsobre4{
+        left: 50;
+    }
+    .text-definition4{
+        left: 51;
+    }
+    .img-suppot{
+        left: 82%;
+    }
+
+    .ptextsobre5{
+        left: 50;
+    }
+    .text-definition5{
+        left: 51;
+    }
+    .sobre-porque5 i{
+        left: 82%;
+    }
+
+    .ptextsobre6{
+        left: 11%;
+    }
+    .text-definition6{
+        left: 12%;
+    }
+    .sobre-porque6 i{
+        left: 39%;
+    }
+
+    .h3-sobre-co{
+        top: 15%;
+    }
+    .h3-sobre-lo{
+        top: 15%;
+        left: 51%;
+    }
+
+    .p-sobre-co{
+        top: 20%;
+    }
+
+    .p-sobre-lo{
+        top: 20%;
+        left: 53%;
+    }
+
+}
+
 
 /* Telas ultra-grandes (mín. 1920px - desktops grandes) */
 @media screen and (min-width: 1920px) {
