@@ -1752,7 +1752,7 @@ body {
 }
 
 /* Telas entre 1440px e 1920px (grandes monitores) */
-@media (min-width: 1440px) and (max-width: 1920px) {
+@media (min-width: 1440px)  {
     .home .text h1 {
         font-size: 4rem;
         margin: 20px 0;
@@ -1766,47 +1766,46 @@ body {
         padding: 20px 50px;
     }
 
+    .navbar-link {
+        font-size: 1.2rem;
+        top: -10px;
+        left: 720px;
+    }
     .navbar-link2{
-        font-size: 1.4rem;
-        top: -12px;
-        left: 450px;
+        font-size: 1.2rem;
+        top: -10px;
+        left: 620px;
     }
 
     .navbar-link3{
-        font-size: 1.4rem;
-        top: -12px;
-        left: 380px;
+        font-size: 1.2rem;
+        top: -10px;
+        left: 520px;
     }
 
     .navbar-link4{
-        font-size: 1.4rem;
-        top: -12px;
-        left: 320px;
-    }
-
-    .navbar-link {
-        font-size: 1.4rem;
-        top: -12px;
-        left: 530px;
+        font-size: 1.2rem;
+        top: -10px;
+        left: 420px;
     }
 
     .navbar-link-hover{
-        left: 530px;
+        left: 720px;
         top: 80%;
     }
 
     .navbar-link-hover2{
-        left: 450px;
+        left: 620px;
         top: 80%;
     }
 
     .navbar-link-hover3{
-        left: 380px;
+        left: 520px;
         top: 80%;
     }
 
     .navbar-link-hover4{
-        left: 320px;
+        left: 420px;
         top: 80%;
     }
 
@@ -2005,4 +2004,117 @@ body {
     .divider {
         width: 60%;
     }
+
+    .redes-home{
+        top: 69%;
+        left: 46px;
+        font-size: 1rem;
+    }
+
+    .redes-home2{
+        top: 63%;
+        left: 40px;
+        width: 10%;
+    }
+    .insta{
+        top: 30%;
+    }
+    .insta i{
+        font-size: 100px;
+    }
+
+    .linkedin{
+        top: -44%;
+    }
+    .linkedin i{
+        font-size: 100px;
+    }
+}
+.contact {
+    background-color: #000000;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container2 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 0px;
+    color: #000000;
+}
+
+.margin {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.number, .email {
+    font-size: 18px;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background-color: #f2f2f2;
+}
+
+input[type="submit"] {
+    background-color: rgba(0, 31, 63, 0.8);
+    color: #FFD700;
+    border:2px solid #FFD700;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #cc5200;
+}
+
+textarea {
+    resize: none;
+}
+
+.tech-row {
+    display: flex;
+    justify-content: center; /* Alinha as logos à direita */
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 60px;
+    flex-wrap: nowrap;
+}
+
+.tech-item {
+    text-align: center;
+}
+
+.tech-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 5px;
 }
