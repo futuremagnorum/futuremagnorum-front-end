@@ -63,9 +63,9 @@ body {
 
 .logo-navbar{
     position: fixed;
-    width: 5%;
-    top: 1.5%;
-    left: 35%;
+    width: 10%;
+    top: 0%;
+    left: 39%;
 }
 
 .link-navbar-home1{
@@ -659,5 +659,438 @@ textarea {
     top: 57%;
     left: 210%;
     width: 170%;
+}
+
+@media (max-width: 1440px){
+    .home-page{
+        min-height: 280vw;
+    }
+
+    .Mag-box{
+        top: 60%;
+        left: 5%;
+    }
+
+    .logo-navbar{
+        left: 41%;
+    }
+    
+    .gallery-container{
+        top: 370%;
+        left: 5%;
+    }
+
+    .box-equipe{
+        top: -170%;
+    }
+
+    .box-equipe-tec{
+        top: -194%;
+    }
+
+    .h1-equipe{
+        top: 320%;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 428px){
+    .home-page{
+        min-height: 1000vw;
+    }
+
+    .h1-home{
+        font-size: 2rem;
+        width: 80%;
+        left: 18%;
+    }
+    .h2-home{
+        font-size: 1.3rem;
+        left: 25%;
+        top: 42%;
+    }
+
+    .logo-navbar{
+        width: 30%;
+        left: 34%;
+    }
+
+    .h1-tec{
+        font-size: 1.7rem;
+        width: 100%;
+        left: 5%;
+    }
+
+    .h2tec-box{
+        font-size: 1rem;
+    }
+
+    .h2tec-box2{
+        font-size: 1rem;
+    }
+
+    .h2tec-box3{
+        font-size: 1rem;
+    }
+
+    .h2tec-box4{
+        font-size: 1rem;
+    }
+
+    .Mag-box{
+        top: 73%;
+        left: -37%;
+        width: 120%;
+    }
+
+    .logo-tec{
+        display: none;
+    }
+
+    .sobre-porque1{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+    }
+    .sobre-porque2{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 250%;
+    }
+    .text-definition2{
+        width: 100%;
+    }
+    .sobre-porque3{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 310%;
+    }
+    .text-definition3{
+        width: 95%;
+    }
+    .sobre-porque4{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 370%;
+    }
+    .text-definition4{
+        width: 95%;
+    }
+    .sobre-porque5{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 430%;
+    }
+    .text-definition5{
+        width: 100%;
+    }
+    .sobre-porque6{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 490%;
+    }
+    
+    .gallery-container{
+        top: 335%;
+        left: 5%;
+        width: 20%;
+    }
+
+    .h1-equipe{
+        font-size: 2rem;
+        left: 34%;
+    }
+
+    .gallery-text{
+        font-size: 0.8rem;
+        left: 5%;
+        top: -420%;
+        width: 430%;
+    }
+
+    .box-equipe{
+        top: -110%;
+        left: 2%;
+        width: 95%;
+        height: 60%;
+    }
+
+    .box-equipe-tec{
+        top: -128%;
+        width: 95%;
+        left: 2%;
+    }
+
+    .nav-button1{
+        display: none;
+    }
+    .nav-button{
+        display: none;
+    }
+
+    .gallery-images{
+        top: 300PX;
+        left: 1%;
+        gap: 0px;
+
+    }
+
+    .redes-home{
+        font-size: 3rem;
+        top: 680%;
+        left: 15%;
+        width: 300%;
+    }
+
+    .insta{
+        top: 790%;
+        left: 20%;
+    }
+
+    .linkedin{
+        top: 880px;
+        left: 160%;
+    }
+
+    .insta i{
+        font-size: 70px;
+    }
+
+    .linkedin i{
+        font-size: 70px;
+    }
+
+    .email{
+        top: 880px;
+        left: 190%;
+        width: 130%;
+    }
+
+    .container{
+        top: 300%;
+        left: 0%;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 414px){
+    .home-page{
+        min-height: 900vw;
+    }
+
+    .h1-home{
+        font-size: 2rem;
+        width: 80%;
+        left: 18%;
+    }
+    .h2-home{
+        font-size: 1.3rem;
+        left: 25%;
+        top: 42%;
+    }
+
+    .logo-navbar{
+        width: 30%;
+        left: 34%;
+    }
+
+    .h1-tec{
+        font-size: 1.7rem;
+        width: 100%;
+        left: 5%;
+    }
+
+    .h2tec-box{
+        font-size: 1rem;
+    }
+
+    .h2tec-box2{
+        font-size: 1rem;
+    }
+
+    .h2tec-box3{
+        font-size: 1rem;
+    }
+
+    .h2tec-box4{
+        font-size: 1rem;
+    }
+
+    .Mag-box{
+        top: 73%;
+        left: -37%;
+        width: 120%;
+    }
+
+    .logo-tec{
+        display: none;
+    }
+
+    .sobre-porque1{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+    }
+    .sobre-porque2{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 250%;
+    }
+    .text-definition2{
+        width: 100%;
+    }
+    .sobre-porque3{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 310%;
+    }
+    .text-definition3{
+        width: 95%;
+    }
+    .sobre-porque4{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 370%;
+    }
+    .text-definition4{
+        width: 95%;
+    }
+    .sobre-porque5{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 430%;
+    }
+    .text-definition5{
+        width: 100%;
+    }
+    .sobre-porque6{
+        width: 60%;
+        height: 50%;
+        left: 37%;
+        top: 490%;
+    }
+    
+    .gallery-container{
+        top: 335%;
+        left: 5%;
+        width: 20%;
+    }
+
+    .h1-equipe{
+        font-size: 2rem;
+        left: 34%;
+        top: 330%;
+    }
+
+    .gallery-text{
+        font-size: 0.8rem;
+        left: 5%;
+        top: -410%;
+        width: 430%;
+    }
+
+    .box-equipe{
+        top: -120%;
+        left: 2%;
+        width: 95%;
+        height: 60%;
+    }
+
+    .box-equipe-tec{
+        top: -144%;
+        width: 95%;
+        left: 2%;
+    }
+
+    .nav-button1{
+        display: none;
+    }
+    .nav-button{
+        display: none;
+    }
+
+    .gallery-images{
+        top: 290PX;
+        left: 1%;
+        gap: 0px;
+
+    }
+
+    .redes-home{
+        font-size: 3rem;
+        top: 680%;
+        left: 15%;
+        width: 300%;
+    }
+
+    .insta{
+        top: 790%;
+        left: 20%;
+    }
+
+    .linkedin{
+        top: 880px;
+        left: 160%;
+    }
+
+    .insta i{
+        font-size: 70px;
+    }
+
+    .linkedin i{
+        font-size: 70px;
+    }
+
+    .email{
+        top: 880px;
+        left: 190%;
+        width: 130%;
+    }
+
+    .container{
+        top: 300%;
+        left: 0%;
+    }
+}
+
+@media (max-width: 1280px){
+    .home-page{
+        min-height: 300vw;
+    }
+
+    .logo-navbar{
+        left: 41.5%;
+    }
+
+    .Mag-box{
+        left: 0.5%;
+    }
+
+    .box-equipe{
+        top: -170%;
+    }
+
+    .box-equipe-tec{
+        top: -193%;
+        left: 32.5%;
+    }
+
+    .gallery-text{
+        left: 410%;
+    }
+
+    .nav-button{
+        left: 1120%;
+    }
+    .nav-button1{
+        left: 340%;
+    }
 }
 
