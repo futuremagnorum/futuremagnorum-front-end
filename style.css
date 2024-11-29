@@ -1062,23 +1062,62 @@ textarea {
 
 @media (min-width: 768px) and (max-width: 1280px){
     .home-page{
-        min-height: 300vw;
+        min-height: 330vw;
     }
+
+    .sobre-porque1{
+        width: 50%;
+    }
+    .sobre-porque2{
+        width: 50%;
+    }
+    .sobre-porque3{
+        width: 50%;
+    }
+    .sobre-porque4{
+        width: 50%;
+    }
+    .sobre-porque5{
+        width: 50%;
+    }
+    .sobre-porque6{
+        width: 50%;
+    }
+
 
     .logo-navbar{
         left: 41.5%;
     }
 
     .Mag-box{
-        left: 0.5%;
+        width: 50%;
+        left: 6%;
     }
 
+    .box-elements-mag1{
+        left: 81%;
+    }
+    .box-elements-mag2{
+        left: 63%;
+    }
+    .box-elements-mag3{
+        left: 81%;
+    }
+    .box-elements-mag4{
+        left: 63%;
+    }
+
+    .logo-tec{
+        left: 50%;
+    }
+
+
     .box-equipe{
-        top: -170%;
+        top: -175%;
     }
 
     .box-equipe-tec{
-        top: -193%;
+        top: -202%;
         left: 32.5%;
     }
 
@@ -1126,3 +1165,60 @@ textarea {
         top: 323%;
     }
 }
+
+@media (max-width: 360px) and (max-height: 800px){
+    .home-page{
+        min-width: 110vw;
+    }
+
+    .box-equipe{
+        top: -164%;
+        left: 5%;
+    }
+
+    .box-equipe-tec{
+        top: -182%;
+        left: 5%;
+    }
+
+    .gallery-container{
+        left: 10%;
+    }
+
+    .redes-home{
+        left: 50%;
+    }
+
+    .logo-navbar{
+        left: 30%;
+    }
+
+    .Mag-box{
+        left: -33%;
+    }
+
+}
+
+@media (max-width: 360px) and (max-height: 780px){
+
+    .box-equipe{
+        top: -172%;
+        left: 5%;
+    }
+
+    .box-equipe-tec{
+        top: -194%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 360px) and (max-height: 880px){
+    .home-page{
+        min-height: 1100vw;
+    }
+
+    .h1-equipe{
+        top: 310%;
+    }
+}
+
