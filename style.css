@@ -1094,3 +1094,35 @@ textarea {
     }
 }
 
+@media (max-width: 414px){
+    .box-equipe{
+        top: -120%;
+    }
+
+    .box-equipe-tec{
+        top: -140%;
+    }
+
+    .h1-equipe{
+        top: 315%;
+    }
+
+}
+
+@media (max-width: 375px){
+    .h1-equipe{
+        top: 327%;
+    }
+
+    .box-equipe-tec{
+        top: -143%;
+    }
+}
+
+
+
+@media (max-width: 390px){
+    .h1-equipe{
+        top: 323%;
+    }
+}
