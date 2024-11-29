@@ -1222,3 +1222,49 @@ textarea {
     }
 }
 
+@media (max-width: 1920px){
+    .home-page{
+        min-height: 210vw;
+    }
+    
+    .h1-home{
+        left: 32%;
+        top: 20%;
+    }
+
+    .h2-home{
+        top: 30%;
+        left: 37%;
+    }
+
+    .h1-tec{
+        left: 28%;
+    }
+
+    .Mag-box{
+        top: 70%;
+        left: 13.5%;
+    }
+
+    .h1-equipe{
+        top: 240%;
+    }
+    
+    .box-equipe{
+        top: -115%;
+    }
+
+    .box-equipe-tec{
+        top: -150%;
+    }
+
+    .gallery-container{
+        top: 280%;
+        left: 14%;
+    }
+
+    .container{
+        top: 340%;
+        left: 35%;
+    }
+}
