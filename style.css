@@ -1,0 +1,195 @@
+/* definições gerais*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+}
+
+/* Estiliza o container da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+/* Estiliza o "trilho" da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+/* Estiliza o "polegar" da barra de rolagem (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background: #FFD700;
+    border-radius: 10px;
+}
+
+/* Torna o polegar visível ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background: #FFD700; 
+}
+
+
+
+/*home*/
+.home-page{
+    background: linear-gradient(145deg,navy,black,navy);
+    color: rgb(255, 255, 255);
+    min-height: 250vw;
+
+}
+.h1{
+    font-size: 2rem;
+    color: #ffd700;
+}
+.h2{
+    font-size: 1.4rem;
+    color: #ffd700;
+
+}
+
+.h1-home{
+    color: #FFD700;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+}
+
+.h2-home{
+    color: #FFD700;
+    position: absolute;
+    top: 33%;
+    left: 17.5%;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 0%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: row;
+    align-items: row;
+    padding: 0px 0px;
+    width: 40%;
+    height: 10%;
+    z-index: 1;
+    color: transparent;
+}
+
+.logo-navbar{
+    position: fixed;
+    width: 5%;
+    top: 0%;
+    left: 31%;
+}
+
+.caixa-home-navbar{
+    position: fixed;
+    top: 0%;
+    left: 40%;
+    color: rgba(0, 31, 63, 0.8);
+    background-color: rgba(0, 31, 63, 0.8);
+    border: 2px solid #ffd700;
+    border-radius: 40px;
+    width: 250px;
+    height: 30px;
+}
+
+.h2-home-bu{
+    position: absolute;
+    font-size: 1.5rem;
+    top: 55%;
+    left: 40%;
+    z-index: 1;
+}
+
+.linkedin{
+    position: absolute;
+    font-size: 500%;
+    top: 80%;
+    left: 33%;
+}
+.linkedin i{
+    color: #FFD700;
+}
+
+.insta{
+    position: absolute;
+    font-size: 500%;
+    top: 80%;
+    left: 41%;
+}
+.insta i{
+    color: #FFD700;
+}
+
+
+.redes-home{
+    position: absolute;
+    font-size: 2rem;
+    top: 70%;
+    left: 36%;
+}
+
+.email{
+    position: absolute;
+    width: 11.5%;
+    top: 80%;
+    left: 47%;
+}
+
+.box-home-bu{
+    position: absolute;
+    color: rgba(0, 31, 63, 0.8);
+    background-color: rgba(0, 31, 63, 0.8);
+    border: 2px solid #FFD700;
+    border-radius: 40px;
+    top: 55.2%;
+    left: 38.4%;
+    width: 10%;
+    height: 5%;
+}
+
+.box-nav-bu{
+    position: relative;
+    color: rgba(0, 31, 63, 0.8);
+    background-color: rgba(0, 31, 63, 0.8);
+    border: 2px solid #FFD700;
+    border-radius: 40px;
+    left: 90%;
+    width: 45%;
+    height: 30%;
+}
+
+
+.nav-home-bu{
+    position: relative;
+    top: 3.5%;
+    left: 84%;
+    color: #FFD700;
+    text-decoration: none;
+    z-index: 1;
+    padding: 15px;
+}
+
+
+/*Saiba mais*/
+
+
+
+.h2-Saiba-home{
+    position: absolute;
+    top: 110%;
+    left: 35%;
+    color: #FFD700;
+    font-size: 3rem;
+}
