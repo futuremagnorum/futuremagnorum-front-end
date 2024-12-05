@@ -1,6 +1,0 @@
-Sou desenvolvedor com experiência em aplicações móveis e sistemas backend. lidero o projeto Magnorum, uma plataforma que conecta jovens talentos com oportunidades de emprego. Tenho um portfólio diversificado que inclui desde sistema de banco de dados até sistemas de segurança complexos, o que me permite aplicar uma abordagem abrangente e criativa ao desenvolvimento.
-
-Minha expertise inclui tecnologias como Kivy, KivyMD, e MongoDB, além de ferramentas como Blob storege para o armazenamento de dados. No desenvolvimento de aplicativos, foco em criar interfaces intuitivas e eficientes, sempre pensando em como oferecer a melhor experiência para o usuário final.
-
-Trabalho de forma colaborativa e acredito no crescimento contínuo, tanto em termos técnicos quanto interpessoais, o que me levou a liderar e organizar esta equipe de desenvolvimento, promovendo o crescimento profissional de todos os membros. Meu objetivo é continuar aprendendo e contribuindo para a criação de soluções inovadoras no campo da tecnologia com este projeto.
-
