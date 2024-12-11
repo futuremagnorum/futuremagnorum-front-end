@@ -39,11 +39,13 @@ body {
 
 
 /*home*/
-.home-page{
-    background: linear-gradient(145deg,navy,black,navy);
-    color: rgb(255, 255, 255);
-    min-height: 250vw;
-
+.wrapper{
+    overflow: hidden;
+    background: rgb(7, 3, 61);
+}
+  
+canvas{
+    display: block;
 }
 .h1{
     font-size: 2rem;

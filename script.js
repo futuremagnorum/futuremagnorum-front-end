@@ -1,3 +1,49 @@
+const canvas = document.getElementById('effect');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const stars = [];
+
+function initStars() {
+  for(let i = 0; i < 500; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 2.5,
+      speed: Math.random() * 0.5 + 0.2
+    });
+  }
+}
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for( const star of stars ) {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 2, Math.PI * 2);
+    ctx.fillStyle = 'gold';
+    ctx.fill();
+    ctx.closePath();
+
+    star.y += star.speed;
+
+    if (star.y > canvas.width){
+      star.y = 0 ;
+    }
+  }
+
+  requestAnimationFrame(drawStars);
+}
+
+initStars();
+drawStars();
+
+
+
+
+
 const members = [
     {
         name: "Rafael",
@@ -74,3 +120,4 @@ document.querySelectorAll('.nav-home-bu').forEach(link => {
         }
     });
 });
+
