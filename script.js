@@ -61,20 +61,72 @@ updateGallery(currentIndex);
 
 setInterval(nextImage, 5000); // Muda a imagem a cada 5 segundos
 
-document.querySelectorAll('.link-navbar-home').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault(); // Impede o comportamento padrão
-        const targetId = this.getAttribute('href').substring(1); // Remove o "#" do href
-        const targetSection = document.getElementById(targetId);
+// Seleciona todos os links com a classe 'nav-link'
+const navLinks = document.querySelectorAll('.nav-link');
 
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+// Adiciona evento de clique para cada link
+navLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // Impede o comportamento padrão do link
+
+        // Obtém o ID do alvo da rolagem
+        const targetId = this.getAttribute('href').substring(1); // Remove o '#' do href
+        const targetElement = document.getElementById(targetId); // Obtém o elemento correspondente
+
+        // Verifica se o elemento existe antes de tentar rolar
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth', // Rolagem suave
+                block: 'start' // Alinha no início da seção
             });
+        } else {
+            console.error(`Elemento com ID ${targetId} não encontrado.`);
         }
     });
 });
 
 
+
+
+
+
+const numStars =  500; // Número de estrelas
+
+// Função para criar uma estrela
+function createStar() {
+  const star = document.createElement('div');
+  star.classList.add('star');
+
+  // Posição aleatória em todo o documento
+  const totalWidth = document.body.scrollWidth; // Largura total do documento
+  const totalHeight = document.body.scrollHeight; // Altura total do documento
+
+  star.style.left = `${Math.random() * totalWidth}px`;
+  star.style.top = `${Math.random() * totalHeight}px`;
+
+  // Atraso aleatório para a animação
+  star.style.animationDelay = `${Math.random() * 2}s`;
+
+  // Adiciona a estrela ao body
+  document.body.appendChild(star);
+}
+
+// Criar várias estrelas
+function initializeStars() {
+  for (let i = 0; i < numStars; i++) {
+    createStar();
+  }
+}
+
+// Recria as estrelas ao redimensionar ou alterar o tamanho do documento
+function resizeStars() {
+  document.querySelectorAll('.star').forEach(star => star.remove());
+  initializeStars();
+}
+
+// Inicializa as estrelas
+initializeStars();
+
+// Ajusta estrelas quando a janela for redimensionada
+window.addEventListener('resize', resizeStars);
 
