@@ -32,6 +32,20 @@ const members = [
     }
 ];
 
+function updateGallery(index) {
+    // Mantém a altura fixa para evitar deslocamentos
+    galleryText.style.minHeight = "250px";
+
+    // Atualiza o texto do membro
+    galleryText.innerHTML = members[index].text;
+
+    // Atualiza as imagens das tecnologias
+    galleryImages.innerHTML = members[index].techImages
+        .map(imgSrc => `<img src="${imgSrc}" alt="Tecnologia" class="tech-img">`)
+        .join("");
+}
+
+
 let currentIndex = 0;
 const galleryText = document.getElementById("galleryText");
 const galleryImages = document.getElementById("galleryImages");
