@@ -135,7 +135,7 @@ header.navbar {
 }
 
 .navbar1 ul li {
-    margin: 0 15px;
+    margin: 0 5px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -148,8 +148,8 @@ header.navbar {
     text-decoration: none;
     background: linear-gradient(135deg, #FFD700, #000000);
     color: #ffffff;
-    font-size: 18px;
-    padding: 8px 10px;
+    font-size: 14px;
+    padding: 8px 5px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -206,6 +206,7 @@ header.navbar {
 .Email-button{
     position: relative;
     top: 80px;
+    width: 180px;
     background: linear-gradient(135deg, #FFD700, #000000);
     color: rgb(0, 0, 0);
     font-size: 18px;
@@ -272,33 +273,36 @@ header.navbar {
 
 .insta{
     position: relative;
-    top: -26px;
-    left: 880px;
+    top: -20px;
+    left: 920px;
 }
 
 
 .Git-hub{
     position: relative;
-    width: 25%;
-    top: -87px;
-    left: 1030px;
+    width: 39%;
+    top: -35px;
+    left: 530px;
+    z-index: 1;
 }
 
 
 .insta i{
     color: #ffd700;
-   font-size: 41px;
+   font-size: 35px;
 }
 
 .tiktok{
     position: relative;
-    top: -155px;
-    left: 960px;
+    width: 50px;
+    top: -127px;
+    left: 1000px;
+    z-index: 2;
 }
 
 .tiktok i{
     color: #ffd700;
-    font-size: 41px; 
+    font-size: 35px; 
 }
 
 
@@ -356,6 +360,7 @@ header.navbar {
 }
 
 .text-ser{
+    color: #ffffff;
     font-size: 1rem;
     margin-bottom: 20px;
 }
@@ -388,12 +393,22 @@ header.navbar {
     min-height: 250px;
     margin-bottom: 20px;
     text-align: center;
+    padding: 20px;
+    background-color: #001F3F;
+    border: 3px solid #FFD700;
+    border-radius: 40px;
+    z-index: 1;
 }
 
 .gallery-images {
     display: flex;
     gap: 10px;
     justify-content:flex-start ;
+    z-index: 1;
+    padding: 8px;
+    background-color: #001F3F;
+    border: 3px solid #FFD700;
+    border-radius: 40px;
 }
 
 .tech-img {
@@ -412,7 +427,7 @@ header.navbar {
     left: 20%;
     top: -380px;
     background: none;
-    color: white;
+    color: #FFD700;
     font-size: 30px;
     border: none;
     cursor: pointer;
@@ -422,10 +437,10 @@ header.navbar {
 
 .nav-button {
     position: relative;
-    left: 73%;
+    left: 57%;
     top: -380px;
     background: none;
-    color: white;
+    color: #FFD700;
     font-size: 30px;
     border: none;
     cursor: pointer;
@@ -554,19 +569,25 @@ header.navbar {
 }
 .left h1 {
     position: relative;
-    left: -180px;
+    left: -525px;
     font-size: 2em;
     color: #FFD700;
+    top: 70px;
 }
 .left p {
     position: relative;
-    left: -180px;
+    text-align: justify;
+    width: 400px;
+    left: -430px;
     color: #fff;
+    top: 70px;
 }
 .right {
     position: relative;
-    left: 100px;
-    flex: 2;
+    left: 300px;
+    top: -50px;
+    width: 500px;
+    flex: 1;
     background: #001F3F;
     border-radius: 40px;
     padding: 20px;
@@ -599,17 +620,18 @@ textarea {
 }
 .checkbox {
     position: relative;
-    left: -100px;
+    left: -70px;
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
 .checkbox input {
-    margin-right: -100px;
+    margin-right: -50px;
 }
 button {
     margin-top: 20px;
     padding: 10px;
+    width: 150px;
     border: none;
     background: #fff;
     color: #333;
