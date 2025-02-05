@@ -54,6 +54,30 @@ body {
     min-height: 100vh;
     padding: 50px 20px;
 }
+
+.Serviços{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: #ffd700;
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: #ffd700;
+    min-height: 100vh;
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+}
 /*----------------------------------*/
 
 
@@ -122,8 +146,8 @@ header.navbar {
     top: 15px;
     left: -180px;
     text-decoration: none;
-    background: linear-gradient(135deg, #FFD700, #007bff);
-    color: #FFD700;
+    background: linear-gradient(135deg, #FFD700, #000000);
+    color: #ffffff;
     font-size: 18px;
     padding: 8px 10px;
     border: none;
@@ -134,7 +158,7 @@ header.navbar {
 }
 
 .nav-link:hover {
-    background: linear-gradient(135deg, #007bff, #FFD700);
+    background: linear-gradient(135deg, #000000, #FFD700);
     color: #007bff;
     transform: scale(1.05);
 }
@@ -182,7 +206,7 @@ header.navbar {
 .Email-button{
     position: relative;
     top: 80px;
-    background: linear-gradient(135deg, #FFD700, #007bff);
+    background: linear-gradient(135deg, #FFD700, #000000);
     color: rgb(0, 0, 0);
     font-size: 18px;
     padding: 12px 24px;
@@ -194,7 +218,7 @@ header.navbar {
 }
 
 .Email-button:hover {
-    background: linear-gradient(135deg, #007bff, #FFD700);
+    background: linear-gradient(135deg, #000000, #FFD700);
     transform: scale(1.05);
 }
 
@@ -278,69 +302,115 @@ header.navbar {
 }
 
 
+#Serviços {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.Serviços {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Serviços h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.sobre-porque {
+    background: #001F3F;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-porque i, .sobre-porque img {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.sobre-porque h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.sobre-porque p {
+    font-size: 1rem;
+    color: #FFD700;
+}
+
+.img-suppot{
+    position: relative;
+    width: 50px;
+    top: 0px;
+    left: 0px;
+}
+
+.text-ser{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+
+
 /*equipe*/
 
+#equipe_page {
+    position: relative;
+    padding: 20px;
+}
+
+.h1-equipe {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
 .gallery-container {
+    position: relative;
+    top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-.image-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    max-width: 1000px;
-    min-height: 300px; /* Garante que a altura não varie */
 }
 
 .gallery-text {
-    position: relative;
-    top: 160px;
-    left: 200px;
-    text-align: justify;
-    flex: 1;
-    max-width: 55%;
-    padding: 20px;
-    min-height: 250px; /* Mantém o tamanho fixo mesmo com textos diferentes */
+    width: 500px;
+    color: #ffffff;
+    min-height: 250px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .gallery-images {
-    position: relative;
-    top: 380px;
-    left: -250px;
-    flex: 1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Espaço entre imagens */
-    max-width: 70%;
-}
-
-.gallery-images img {
-    max-width: 100px; /* Tamanho fixo das imagens */
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-.gallery-images img:hover {
-    transform: scale(1.1);
+    gap: 10px;
+    justify-content:flex-start ;
 }
 
 .tech-img {
-    width: 40px;
+    width: 50px;
     height: 50px;
-    object-fit: contain;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tech-img:hover {
+    transform: scale(1.1);
 }
 
 .nav-button1 {
-    position: relative  ;
-    left: 0px;
-    top: 0px;
+    position: relative;
+    left: 20%;
+    top: -380px;
     background: none;
     color: white;
     font-size: 30px;
@@ -352,8 +422,8 @@ header.navbar {
 
 .nav-button {
     position: relative;
-    top: 0%;
-    left: 0%;
+    left: 73%;
+    top: -380px;
     background: none;
     color: white;
     font-size: 30px;
@@ -363,61 +433,190 @@ header.navbar {
     z-index: 1;
 }
 
-.box-equipe{
-    position: relative;
-    top: -163%;
-    left: 17%;
-    background-color: rgba(0, 31, 63, 0.8);
-    border: 2px solid #ffd700;
-    color: rgba(0, 31, 63, 0.8);
-    width: 60%;
-    height: 70%;
-    border-radius: 40px;
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar1 ul {
+        flex-direction: column;
+    }
+    .image-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
-.box-equipe-tec{
-    position: relative;
-    top: -180%;
-    left: 29%;
-    background-color: rgba(0, 31, 63, 0.8);
-    border: 2px solid #ffd700;
-    color: rgba(0, 31, 63, 0.8);
-    width: 35%;
-    height: 10%;
-    border-radius: 40px;
+
+
+/* Estilização da seção Saiba Mais */
+#saiba-mais {
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
 
-.nav-button:hover {
-    color: #ccc;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.h1-equipe{
-    position: relative;
-    top: 150px;
-    left: -10px;
+.saiba-titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.saiba{
-    position: relative;
-    top: 100px;
-    left: 560px;
-    width: 300px;
-    color: #FFD700;
+.subtitulo {
+    font-size: 1.8em;
+    color: #ffcc00;
 }
 
-.O-que{
-    position: relative;
-    top: 200px;
-    left: 40px;
-    width: 300px;
-    color: #FFD700;
+.descricao {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
-.text-oque{
-    position: relative;
-    top: 210px;
-    left: 40px;
-    width: 42%;
-    text-align: justify;
+.destaque {
+    color: #ff8800;
+    font-weight: bold;
+}
+
+
+#quem-somos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 2.5em;
+    font-weight: bold;
     color: #ffffff;
+}
+
+.descricao {
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.destaque {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Missão, Visão e Valores */
+.missao-visao-valores {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bloco {
+    color: #ffffff;
+    background: rgba(0, 31, 63, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.bloco h2 {
+    color: #FFD700;
+}
+
+.bloco ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bloco ul li {
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+}
+.left {
+    flex: 1;
+    padding-right: 20px;
+}
+.left h1 {
+    position: relative;
+    left: -180px;
+    font-size: 2em;
+    color: #FFD700;
+}
+.left p {
+    position: relative;
+    left: -180px;
+    color: #fff;
+}
+.right {
+    position: relative;
+    left: 100px;
+    flex: 2;
+    background: #001F3F;
+    border-radius: 40px;
+    padding: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px;
+}
+.name-group {
+    display: flex;
+    gap: 10px;
+}
+.name-group input {
+    flex: 1;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #666;
+    border-radius: 20px;
+}
+textarea {
+    height: 120px;
+}
+.checkbox {
+    position: relative;
+    left: -100px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.checkbox input {
+    margin-right: -100px;
+}
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+button:hover {
+    background: #ddd;
 }

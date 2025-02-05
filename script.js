@@ -1,4 +1,3 @@
-
 const members = [
     {
         name: "Rafael",
@@ -32,34 +31,19 @@ const members = [
     }
 ];
 
-function updateGallery(index) {
-    // Mantém a altura fixa para evitar deslocamentos
-    galleryText.style.minHeight = "250px";
-
-    // Atualiza o texto do membro
-    galleryText.innerHTML = members[index].text;
-
-    // Atualiza as imagens das tecnologias
-    galleryImages.innerHTML = members[index].techImages
-        .map(imgSrc => `<img src="${imgSrc}" alt="Tecnologia" class="tech-img">`)
-        .join("");
-}
-
-
 let currentIndex = 0;
 const galleryText = document.getElementById("galleryText");
 const galleryImages = document.getElementById("galleryImages");
 
 function updateGallery(index) {
-    // Atualiza o texto
-    galleryText.innerHTML = members[index].text;
-
-    // Atualiza as imagens das tecnologias
-    galleryImages.innerHTML = members[index].techImages
+    const member = members[index];
+    galleryText.innerHTML = member.text;
+    galleryImages.innerHTML = member.techImages
         .map(imgSrc => `<img src="${imgSrc}" alt="Tecnologia" class="tech-img">`)
         .join("");
 }
 
+// Navegação entre membros
 function nextImage() {
     currentIndex = (currentIndex + 1) % members.length;
     updateGallery(currentIndex);
@@ -73,7 +57,15 @@ function prevImage() {
 // Inicializa com o primeiro membro
 updateGallery(currentIndex);
 
-setInterval(nextImage, 5000); // Muda a imagem a cada 5 segundos
+// Alterar automaticamente a cada 5 segundos
+setInterval(nextImage, 5000);
+
+
+
+
+
+
+
 
 // Seleciona todos os links com a classe 'nav-link'
 const navLinks = document.querySelectorAll('.nav-link');
