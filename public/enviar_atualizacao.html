@@ -1,0 +1,64 @@
+<form id="atualizacao-form">
+    <input type="text" id="assunto" placeholder="Assunto" required>
+    <textarea id="corpo" placeholder="Conteúdo da atualização" required></textarea>
+    <button type="submit">Enviar Atualização</button>
+  </form>
+  
+  <div id="feedback"></div> <!-- Área para mostrar o feedback -->
+  
+  <script>
+    // Seleciona o formulário e a área de feedback
+    const form = document.getElementById('atualizacao-form');
+    const feedback = document.getElementById('feedback');
+  
+    // Adiciona um evento de submit ao formulário
+    form.addEventListener('submit', function(event) {
+      // Impede o envio do formulário de forma padrão
+      event.preventDefault();
+  
+      // Coleta os valores dos campos do formulário
+      const assunto = document.getElementById('assunto').value;
+      const corpo = document.getElementById('corpo').value;
+  
+      // Verifica se os campos não estão vazios
+      if (assunto && corpo) {
+        console.log('Assunto:', assunto);
+        console.log('Corpo:', corpo);
+        
+        // Exibe uma mensagem de carregamento
+        feedback.textContent = 'Enviando atualização...';
+        feedback.style.color = 'blue';
+  
+        // Envia os dados para o servidor (exemplo com fetch)
+        fetch('https://exemplo.com/api/atualizacao', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            assunto: assunto,
+            corpo: corpo
+          })
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Exibe mensagem de sucesso
+          feedback.textContent = 'Atualização enviada com sucesso!';
+          feedback.style.color = 'green';
+        })
+        .catch(error => {
+          // Exibe mensagem de erro
+          feedback.textContent = 'Erro ao enviar a atualização. Tente novamente.';
+          feedback.style.color = 'red';
+        });
+      } else {
+        // Exibe mensagem de erro caso os campos não estejam preenchidos
+        feedback.textContent = 'Por favor, preencha todos os campos.';
+        feedback.style.color = 'red';
+      }
+    });
+  </script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="script.js"></script>
+  
