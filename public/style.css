@@ -119,6 +119,12 @@ header.navbar {
     cursor: pointer;
 }
 
+@media (min-width: 1025px){
+    .logo-navbar{
+        left: 588px;
+    }
+}
+
 .h1-titulo{
     position:relative;
     font-size: 30px;
@@ -159,7 +165,7 @@ header.navbar {
 
 .nav-link:hover {
     background: linear-gradient(135deg, #000000, #FFD700);
-    color: #007bff;
+    color: #909394;
     transform: scale(1.05);
 }
 
@@ -305,6 +311,27 @@ header.navbar {
     font-size: 35px; 
 }
 
+@media (min-width: 1025px){
+    .insta{
+        left: 800px;
+        top: -17px;
+    }
+    .insta i{
+        font-size: 30px;
+    }
+    .tiktok i{
+        font-size: 30px;
+    }
+    .Git-hub{
+        left: 465px;
+        top: -33px;
+    }
+    .tiktok{
+        left: 870px;
+        top: -117px;
+    }
+}
+
 
 #Serviços {
     text-align: center;
@@ -424,8 +451,8 @@ header.navbar {
 
 .nav-button1 {
     position: relative;
-    left: 20%;
-    top: -380px;
+    left: 18%;
+    top: -300px;
     background: none;
     color: #FFD700;
     font-size: 30px;
@@ -435,10 +462,15 @@ header.navbar {
     z-index: 1;
 }
 
+.nav-button1:hover{
+    background-color: transparent;
+    color: #001F3F;
+}
+
 .nav-button {
     position: relative;
     left: 57%;
-    top: -380px;
+    top: -300px;
     background: none;
     color: #FFD700;
     font-size: 30px;
@@ -446,6 +478,11 @@ header.navbar {
     cursor: pointer;
     padding: 10px;
     z-index: 1;
+}
+
+.nav-button:hover{
+    background-color: transparent;
+    color: #001F3F;
 }
 
 @media (max-width: 768px) {
@@ -519,6 +556,13 @@ header.navbar {
     margin-bottom: 30px;
 }
 
+.descricao1 {
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
 .destaque {
     color: #FFD700;
     font-weight: bold;
@@ -529,6 +573,7 @@ header.navbar {
     display: flex;
     justify-content: center;
     gap: 20px;
+    width: 90%;
     flex-wrap: wrap;
 }
 
@@ -641,4 +686,104 @@ button {
 }
 button:hover {
     background: #ddd;
+}
+
+
+@media (min-width: 1025px){
+    .right{
+        left: 300px;
+        top: -100px;
+    }
+    .left h1{
+        left: -420px;
+    }
+    .left p{
+        left: -320px;
+    }
+}
+
+
+@media (max-width: 600px){
+    .logo-navbar{
+        position: relative;
+        left: 28%;
+    }
+    .h1-titulo{
+        position: relative;
+        top: -37px;
+        left: 33.5%;
+    }
+    .h1-home{
+        left: 20%;
+        width: 150%;
+        font-size: 45px;
+    }
+    .descri{
+        left: 47%;
+    }
+    .Email-button{
+        left: 90%;
+    }
+    .h2-ser{
+        position: relative;
+        left: 50%;
+    }
+    .text-ser{
+        position: relative;
+        left: 50%;
+    }
+    .grid-servicos{
+        position: relative;
+        left: 55%;
+    }
+    .saiba-titulo{
+        position: relative;
+        left: 50%;
+    }
+    .subtitulo{
+        position: relative;
+        left: 50%;
+    }
+    .descricao{
+        position: relative;
+        left: 50%;
+    }
+    .titulo{
+        position: relative;
+        width: 150%;
+        left: 70%;
+    }
+    .descricao1{
+        position: relative;
+        left: 75%;
+    }
+    .missao-visao-valores{
+        position: relative;
+        width: 250%;
+        left: 75%;
+    }
+    .equipe{
+        position: relative;
+        left: 50%;
+    }
+    .nav-button{
+        position: absolute;
+        left: 600px;
+        top: 300px;
+    }
+    .nav-button1{
+        position: absolute;
+        left: 8px;
+        top: 300px;
+    }
+    .left{
+        position: relative;
+        left: 220%;
+        top: 50px;
+    }
+    .right{
+        position: relative;
+        top: 150px;
+        left: 67%;
+    }
 }
