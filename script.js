@@ -101,7 +101,7 @@ navLinks.forEach(link => {
 
 
 
-const numStars =  900; // Número de estrelas
+const numStars =  500; // Número de estrelas
 
 // Função para criar uma estrela
 function createStar() {
