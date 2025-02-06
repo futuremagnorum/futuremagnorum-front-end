@@ -36,40 +36,44 @@ const galleryText = document.getElementById("galleryText");
 const galleryImages = document.getElementById("galleryImages");
 
 function updateGallery(index) {
-    const member = members[index];
-    galleryText.innerHTML = member.text;
-    galleryImages.innerHTML = member.techImages
+  const member = members[index];
+  galleryText.innerHTML = member.text;
+  galleryImages.innerHTML = member.techImages
     .map(imgSrc => `<img src="${imgSrc}" alt="Tecnologia" class="tech-img">`)
     .join("");
- 
 }
 
 // Navegação entre membros
 function nextImage() {
-    currentIndex = (currentIndex + 1) % members.length;
-    updateGallery(currentIndex);
+  currentIndex = (currentIndex + 1) % members.length;
+  updateGallery(currentIndex);
 }
 
 function prevImage() {
-    currentIndex = (currentIndex - 1 + members.length) % members.length;
-    updateGallery(currentIndex);
+  currentIndex = (currentIndex - 1 + members.length) % members.length;
+  updateGallery(currentIndex);
 }
 
 // Inicializa com o primeiro membro
 updateGallery(currentIndex);
 
 // Alterar automaticamente a cada 5 segundos
-setInterval(nextImage, 5000);
+let intervalId = setInterval(nextImage, 5000);
+
+// Pausa a troca automática enquanto o usuário está com o mouse sobre a galeria
+galleryImages.addEventListener('mouseenter', function() {
+  clearInterval(intervalId); // Pausa o intervalo
+});
+
+// Retoma a troca automática quando o mouse sai da galeria
+galleryImages.addEventListener('mouseleave', function() {
+  intervalId = setInterval(nextImage, 5000); // Retoma o intervalo
+});
 
 
 
 
 
-
-
-
-// Seleciona todos os links com a classe 'nav-link'
-const navLinks = document.querySelectorAll('.nav-link');
 
 // Adiciona evento de clique para cada link
 navLinks.forEach(link => {
@@ -331,4 +335,38 @@ document.getElementById("contato-form").addEventListener("submit", async functio
             statusMsg.style.color = "red";
         }
     });
+
+        // Seleciona o ícone de "hamburguer" e a lista de navegação
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.navbar1 ul');
+
+    // Adiciona um evento de clique no ícone de "hamburguer"
+    hamburger.addEventListener('click', () => {
+        // Alterna a classe "active" que mostra ou esconde o menu
+        navLinks.classList.toggle('active');
+    });
+
+    document.getElementById("hamburger-icon").addEventListener("click", function() {
+        var navbarLinks = document.getElementById("navbar-links");
+        navbarLinks.classList.toggle("active");
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.querySelector(".hamburger");
+        const navbarList = document.querySelector(".navbar1 ul");
     
+        hamburger.addEventListener("click", function() {
+          navbarList.classList.toggle("active");
+        });
+      });
+    
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById('hamburger');
+        const navbarLinks = document.querySelector('.navbar1 ul'); // Certifique-se de que o seletor está correto
+      
+        hamburger.addEventListener('click', function() {
+          navbarLinks.classList.toggle('active');
+        });
+      });
+      
