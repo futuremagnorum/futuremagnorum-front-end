@@ -175,33 +175,6 @@ header.navbar {
     transform: scale(0.95);
 }
 
-/* Estilo do ícone do "hamburguer" */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
-@media (max-width: 600px){
-    .navbar1 ul {
-        display: none;
-        flex-direction: column; /* Exibe os itens em uma coluna */
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar1 ul.active {
-        display: flex;
-    }
-
-    .hamburger {
-        position: relative;
-        display: block;
-        left: 73%;
-        top: -89px;
-    }
-}
 
 .h1-home{
     position:absolute;
@@ -264,26 +237,34 @@ header.navbar {
 }
 
 
+/* Define o contêiner das estrelas */
+#star-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none; /* Para não interferir com os cliques */
+}
+
+/* Estilo das estrelas */
 .star {
     position: absolute;
-    width: 0.1px; /* Diminuído para evitar borda grande */
+    width: 2px;
     height: 2px;
-    background-color: gold; /* Cor dourada */
-    border-radius: 50%; /* Forma redonda */
-    animation: twinkle 2s infinite ease-in-out;
-  }
+    background: white;
+    box-shadow: 0 0 5px white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}
 
-  /* Animação para as estrelas piscarem */
-  @keyframes twinkle {
-    0%, 100% {
-      opacity: 0.2;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.5);
-    }
-  }
+/* Animação para brilho */
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
 
   /* Estiliza o container da barra de rolagem */
 ::-webkit-scrollbar {
@@ -718,8 +699,7 @@ button:hover {
     background: #ddd;
 }
 
-
-@media (min-width: 1025px){
+@media (max-width: 1024px){
     .right{
         left: 300px;
         top: -100px;
@@ -732,10 +712,26 @@ button:hover {
     }
 }
 
+@media (min-width: 1025px){
+    .right{
+        left: 300px;
+        top: -100px;
+    }
+    .left h1{
+        left: -420px;
+    }
+    .left p{
+        left: -320px;
+    }
+    .logo-navbar{
+        left: 625px;
+    }
+}
+
 
 @media (max-width: 600px){
     .Git-hub, .insta, .tiktok{
-        width: none;
+        display: none;
     }
     .logo-navbar{
         position: relative;
@@ -829,4 +825,6 @@ button:hover {
         transform: translateX(-50%);
     }
 }
+
+
 
