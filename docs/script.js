@@ -1,7 +1,7 @@
 const members = [
     {
-        name: "Rafael",
-        text: "<h3>Rafael - Líder do Projeto</h3><p>Sou desenvolvedor com experiência em aplicativos móveis e backend, liderando o projeto Magnorum, uma plataforma para conectar jovens talentos a vagas de emprego. Tenho um portfólio variado e domínio de tecnologias como Kivy, KivyMD e MongoDB, focando em criar interfaces intuitivas e experiências de usuário de alta qualidade. Trabalho de forma colaborativa, promovendo o crescimento da equipe e buscando sempre contribuir com soluções inovadoras em tecnologia.</p>",
+        name: "Raphael Baruck",
+        text: "<h3>Raphael - Líder do Projeto</h3><p>Sou desenvolvedor com experiência em aplicativos móveis e backend, liderando o projeto Magnorum, uma plataforma para conectar jovens talentos a vagas de emprego. Tenho um portfólio variado e domínio de tecnologias como Kivy, KivyMD e MongoDB, focando em criar interfaces intuitivas e experiências de usuário de alta qualidade. Trabalho de forma colaborativa, promovendo o crescimento da equipe e buscando sempre contribuir com soluções inovadoras em tecnologia.</p>",
         techImages: ["img/Python-logo-notext.svg 1.png", "img/logo-kivymd-no-bg 1.png", "img/image2_no_bg 1.png", "img/image1_no_bg 1.png", "img/ccccc-Photoroom.png", "img/bbbbbb-Photoroom.png", "img/ddddd-Photoroom.png", "img/eeeeee-Photoroom.png"]
     },
     {
@@ -101,7 +101,7 @@ navLinks.forEach(link => {
 
 
 
-const numStars =  900; // Número de estrelas
+const numStars =  500; // Número de estrelas
 
 // Função para criar uma estrela
 function createStar() {
@@ -336,37 +336,5 @@ document.getElementById("contato-form").addEventListener("submit", async functio
         }
     });
 
-        // Seleciona o ícone de "hamburguer" e a lista de navegação
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.navbar1 ul');
 
-    // Adiciona um evento de clique no ícone de "hamburguer"
-    hamburger.addEventListener('click', () => {
-        // Alterna a classe "active" que mostra ou esconde o menu
-        navLinks.classList.toggle('active');
-    });
-
-    document.getElementById("hamburger-icon").addEventListener("click", function() {
-        var navbarLinks = document.getElementById("navbar-links");
-        navbarLinks.classList.toggle("active");
-    });
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.querySelector(".hamburger");
-        const navbarList = document.querySelector(".navbar1 ul");
-    
-        hamburger.addEventListener("click", function() {
-          navbarList.classList.toggle("active");
-        });
-      });
-    
-
-      document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById('hamburger');
-        const navbarLinks = document.querySelector('.navbar1 ul'); // Certifique-se de que o seletor está correto
-      
-        hamburger.addEventListener('click', function() {
-          navbarLinks.classList.toggle('active');
-        });
-      });
       
