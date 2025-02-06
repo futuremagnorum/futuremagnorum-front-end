@@ -730,7 +730,13 @@ button:hover {
 
 
 @media (max-width: 600px){
-    .Git-hub, .insta, .tiktok{
+    .Git-hub{
+        display: none;
+    }
+    .insta{
+        display: none;
+    }
+    .tiktok{
         display: none;
     }
     .logo-navbar{
