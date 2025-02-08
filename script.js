@@ -1,24 +1,3 @@
-const numStars = 700; // Número de estrelas
-const starContainer = document.getElementById("star-container"); // Pegando o contêiner correto
-
-// Função para criar uma estrela
-function createStar() {
-    const star = document.createElement("div");
-    star.classList.add("star");
-
-    // Posição aleatória
-    const totalWidth = window.innerWidth;
-    const totalHeight = window.innerHeight;
-
-    star.style.left = `${Math.random() * totalWidth}px`;
-    star.style.top = `${Math.random() * totalHeight}px`;
-
-    // Atraso aleatório na animação
-    star.style.animationDelay = `${Math.random() * 2}s`;
-
-    // Adiciona a estrela no contêiner
-    starContainer.appendChild(star);
-}
 
 // Criar várias estrelas
 function initializeStars() {
