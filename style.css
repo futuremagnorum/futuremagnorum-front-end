@@ -167,7 +167,7 @@ header.navbar {
 
 .nav-link:hover {
     background: linear-gradient(135deg, #00027a, #FFD700);
-    color: #686868;
+    color: #ffd700;
     transform: scale(1.05);
 }
 
@@ -241,11 +241,10 @@ header.navbar {
     position: absolute;
     width: 0.1px; /* Diminuído para evitar borda grande */
     height: 2px;
-    background: white;
-    box-shadow: 0 0 5px white;
-    border-radius: 50%;
-    animation: twinkle 2s infinite alternate;
-}
+    background-color: gold; /* Cor dourada */
+    border-radius: 50%; /* Forma redonda */
+    animation: twinkle 2s infinite ease-in-out;
+  }
 
   /* Animação para as estrelas piscarem */
   @keyframes twinkle {
