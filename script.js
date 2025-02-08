@@ -1,3 +1,51 @@
+const numStars = 700; // Número de estrelas
+const starContainer = document.getElementById("star-container"); // Pegando o contêiner correto
+
+// Função para criar uma estrela
+function createStar() {
+    const star = document.createElement("div");
+    star.classList.add("star");
+
+    // Posição aleatória
+    const totalWidth = window.innerWidth;
+    const totalHeight = window.innerHeight;
+
+    star.style.left = `${Math.random() * totalWidth}px`;
+    star.style.top = `${Math.random() * totalHeight}px`;
+
+    // Atraso aleatório na animação
+    star.style.animationDelay = `${Math.random() * 2}s`;
+
+    // Adiciona a estrela no contêiner
+    starContainer.appendChild(star);
+}
+
+// Criar várias estrelas
+function initializeStars() {
+    for (let i = 0; i < numStars; i++) {
+        createStar();
+    }
+}
+
+// Redimensionamento da tela
+function resizeStars() {
+    starContainer.innerHTML = ""; // Remove estrelas antigas
+    initializeStars();
+}
+
+// Inicializa as estrelas
+initializeStars();
+
+// Ajusta estrelas quando a janela for redimensionada
+window.addEventListener("resize", resizeStars);
+
+
+
+
+
+
+
+
 const members = [
     {
         name: "Raphael Baruck",
@@ -101,46 +149,6 @@ navLinks.forEach(link => {
 
 
 
-const numStars = 800; // Número de estrelas
-const starContainer = document.getElementById("star-container"); // Pegando o contêiner correto
-
-// Função para criar uma estrela
-function createStar() {
-    const star = document.createElement("div");
-    star.classList.add("star");
-
-    // Posição aleatória
-    const totalWidth = window.innerWidth;
-    const totalHeight = window.innerHeight;
-
-    star.style.left = `${Math.random() * totalWidth}px`;
-    star.style.top = `${Math.random() * totalHeight}px`;
-
-    // Atraso aleatório na animação
-    star.style.animationDelay = `${Math.random() * 2}s`;
-
-    // Adiciona a estrela no contêiner
-    starContainer.appendChild(star);
-}
-
-// Criar várias estrelas
-function initializeStars() {
-    for (let i = 0; i < numStars; i++) {
-        createStar();
-    }
-}
-
-// Redimensionamento da tela
-function resizeStars() {
-    starContainer.innerHTML = ""; // Remove estrelas antigas
-    initializeStars();
-}
-
-// Inicializa as estrelas
-initializeStars();
-
-// Ajusta estrelas quando a janela for redimensionada
-window.addEventListener("resize", resizeStars);
 
 
 
