@@ -237,33 +237,26 @@ header.navbar {
 }
 
 
-/* Define o contêiner das estrelas */
-#star-container {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    pointer-events: none; /* Para não interferir com os cliques */
-}
-
-/* Estilo das estrelas */
 .star {
     position: absolute;
-    width: 2px;
+    width: 0.1px; /* Diminuído para evitar borda grande */
     height: 2px;
-    background: white;
-    box-shadow: 0 0 5px white;
-    border-radius: 50%;
-    animation: twinkle 2s infinite alternate;
-}
+    background-color: gold; /* Cor dourada */
+    border-radius: 50%; /* Forma redonda */
+    animation: twinkle 2s infinite ease-in-out;
+  }
 
-/* Animação para brilho */
-@keyframes twinkle {
-    0% { opacity: 0.3; }
-    100% { opacity: 1; }
-}
+  /* Animação para as estrelas piscarem */
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.2;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
 
 
   /* Estiliza o container da barra de rolagem */
@@ -654,15 +647,23 @@ form {
 }
 label {
     font-size: 14px;
-    color: #fff;
+    color: #FFD700;
     margin-top: 10px;
 }
 .name-group {
     display: flex;
     gap: 10px;
 }
+#nome:hover{
+    background-color: #000000;
+    color: #FFD700;
+}
 .name-group input {
     flex: 1;
+}
+#email:hover{
+    background-color: #000000;
+    color: #FFD700;
 }
 input, textarea {
     width: 100%;
@@ -673,6 +674,10 @@ input, textarea {
 }
 textarea {
     height: 120px;
+}
+textarea:hover{
+    background-color: #000000;
+    color: #FFD700;
 }
 .checkbox {
     position: relative;
@@ -689,14 +694,15 @@ button {
     padding: 10px;
     width: 150px;
     border: none;
-    background: #fff;
-    color: #333;
+    background: #ffffff;
+    color: #001F3F;
     font-size: 16px;
     cursor: pointer;
     border-radius: 20px;
 }
 button:hover {
-    background: #ddd;
+    background: #000000;
+    color: #FFD700;
 }
 
 @media (max-width: 1024px){
