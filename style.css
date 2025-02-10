@@ -718,7 +718,8 @@ button:hover {
     }
 }
 
-@media (min-width: 1025px){
+  
+@media (min-width: 1025px) and (max-width: 1799px){
     .right{
         left: 300px;
         top: -100px;
@@ -730,7 +731,7 @@ button:hover {
         left: -320px;
     }
     .logo-navbar{
-        left: 625px;
+        left: 46.5%;
     }
 }
 
