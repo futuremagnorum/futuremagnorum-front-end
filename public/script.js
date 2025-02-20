@@ -152,5 +152,25 @@
         intervalId = setInterval(nextImage, 5000); // Retoma o intervalo
     });
 
+
+    document.getElementById("emailForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+    
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const mensagem = document.getElementById("mensagem").value;
+    
+        const response = await fetch("/api/sendEmail", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ nome, email, mensagem }),
+        });
+    
+        const result = await response.json();
+        document.getElementById("status").innerText = result.message || result.error;
+    });
+
         
         
