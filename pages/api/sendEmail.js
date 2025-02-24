@@ -1,36 +1,65 @@
-import nodemailer from "nodemailer";
+// testando sucesso
+// curl -XPOST 'http://localhost:3000/api/email' -d '{"message": "gostaria de saber alguma informacao", "email": "teste@teste.com"}' -H 'Content-type: application/json'
 
-export default async function handler(req, res) {
-    if (req.method !== "POST") {
-        return res.status(405).json({ error: "Método não permitido" });
-    }
+// testando falha
+// curl -XPOST 'http://localhost:3000/api/email' -d '{"message": "gostaria de saber alguma informacao"}' -H 'Content-type: application/json'
+import nodemailer from 'nodemailer';
 
-    const { nome, email, mensagem } = req.body;
+export default function handler(req, res) {
+    const { nome, email, mensagem, cadastro } = req.body;
 
+    // Verificar se todos os campos estão preenchidos
     if (!nome || !email || !mensagem) {
-        return res.status(400).json({ error: "Todos os campos são obrigatórios" });
+        return res.status(400).json({ status: 'failed', error: 'Nome, e-mail ou mensagem estão vazios.' });
     }
 
-    try {
-        const transporter = nodemailer.createTransport({
-            service: "gmail", // Ou outro provedor como SendGrid, Mailtrap, etc.
-            auth: {
-                user: process.env.EMAIL_USER, // Seu e-mail
-                pass: process.env.EMAIL_PASS, // Senha ou App Password
-            },
-        });
+    // Log para verificar os dados recebidos
+    console.log('Dados recebidos:', { nome, email, mensagem, cadastro });
 
-        const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: "seu-email@exemplo.com", // Para onde os e-mails serão enviados
-            subject: `Nova mensagem de ${nome}`,
-            text: `Nome: ${nome}\nEmail: ${email}\nMensagem: ${mensagem}`,
-        };
+    // Criar o transporte de e-mail
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',  // ou outro provedor de e-mail
+      auth: {
+        user: 'viniciuslacerda972@gmail.com',  // seu e-mail
+        pass: 'ykac ytfu oacw kjrq'  // sua senha de e-mail ou senha do app
+      },
+      tls: {
+          rejectUnauthorized: false  // permitir conexões inseguras (não recomendado em produção)
+      },
+      port: 587,  // Porta padrão para TLS
+      secure: false  // Usar TLS em vez de SSL
+  });
+  
 
-        await transporter.sendMail(mailOptions);
+    // Configurar o conteúdo do e-mail
+    const mailOptions = {
+        from: 'viniciuslacerda972@gmail.com',
+        to: 'viniciuslacerda972@gmail.com',  // seu e-mail de destino
+        subject: `Nova mensagem de ${nome} pelo site`,
+        text: `
+            Você recebeu uma nova mensagem de contato:
 
-        return res.status(200).json({ message: "E-mail enviado com sucesso!" });
-    } catch (error) {
-        return res.status(500).json({ error: "Erro ao enviar o e-mail", details: error.message });
-    }
+            Nome: ${nome}
+            E-mail: ${email}
+            Mensagem: ${mensagem}
+
+            Deseja receber atualizações: ${cadastro ? 'Sim' : 'Não'}
+            
+            *Mensagem enviada pelo site.*
+        `
+    };
+
+    // Log para verificar o que está sendo enviado
+    console.log('Enviando e-mail com as opções:', mailOptions);
+
+    // Enviar o e-mail
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log('Erro ao enviar e-mail:', error); // Exibe o erro
+            return res.status(500).json({ status: 'failed', error: 'Erro ao enviar e-mail.' });
+        } else {
+            console.log('E-mail enviado:', info); // Exibe o resultado
+            return res.status(200).json({ status: 'success', messageId: info.messageId });
+        }
+    });
 }
