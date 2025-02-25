@@ -20,8 +20,8 @@ export default function handler(req, res) {
     const transporter = nodemailer.createTransport({
       service: 'gmail',  // ou outro provedor de e-mail
       auth: {
-        user: 'viniciuslacerda972@gmail.com',  // seu e-mail
-        pass: 'ykac ytfu oacw kjrq'  // sua senha de e-mail ou senha do app
+        user: 'magnorumbr@gmail.com',  // seu e-mail
+        pass: 'naiq hojg hvkt vdea'  // sua senha de e-mail ou senha do app
       },
       tls: {
           rejectUnauthorized: false  // permitir conexões inseguras (não recomendado em produção)
