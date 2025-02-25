@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "type": "module",
+  "name": "futuremagnorum-front-end",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +10,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "http-proxy-middleware": "^3.0.3",
     "next": "^15.1.7",
+    "nodemailer": "^6.10.0",
     "package.json": "^2.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "resend": "^4.1.2",
-    "nodemailer": "^6.7.0"
+    "resend": "^4.1.2"
   }
 }
