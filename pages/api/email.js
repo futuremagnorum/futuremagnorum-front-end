@@ -18,7 +18,7 @@ export default function handler(req, res) {
 
     // Criar o transporte de e-mail
     const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com", // Use o servidor SMTP correto
+        host: "smtp.gmail.com",
         port: 587,
         secure: false,
         auth: {
@@ -27,8 +27,9 @@ export default function handler(req, res) {
         },
         tls: {
             rejectUnauthorized: false
-        }
-    });
+        },
+        connectionTimeout: 5000 // Para evitar timeout
+    }, { serverless: true });
   
 
     // Configurar o conteúdo do e-mail
