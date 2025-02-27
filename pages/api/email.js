@@ -1,8 +1,3 @@
-// testando sucesso
-// curl -XPOST 'http://localhost:3000/api/email' -d '{"message": "gostaria de saber alguma informacao", "email": "teste@teste.com"}' -H 'Content-type: application/json'
-
-// testando falha
-// curl -XPOST 'http://localhost:3000/api/email' -d '{"message": "gostaria de saber alguma informacao"}' -H 'Content-type: application/json'
 import nodemailer from 'nodemailer';
 
 export default function handler(req, res) {
@@ -63,4 +58,3 @@ export default function handler(req, res) {
         }
     });
 }
-
