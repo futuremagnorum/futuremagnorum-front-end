@@ -33,8 +33,11 @@ function initializeStars() {
 
 // Redimensionamento da tela
 function resizeStars() {
-    starContainer.innerHTML = ""; // Remove estrelas antigas
-    initializeStars();
+    const container = document.querySelector("#star-container");
+    if (container) {
+        container.innerHTML = ""; // Só limpa o container se ele existir
+        initializeStars();
+    }
 }
 
 // Inicializa as estrelas
