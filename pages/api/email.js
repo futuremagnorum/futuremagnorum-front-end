@@ -22,8 +22,7 @@ export default function handler(req, res) {
         },
         tls: {
             rejectUnauthorized: false
-        },
-        connectionTimeout: 5000 // Para evitar timeout
+        }
     });
 
     // Configurar o conteúdo do e-mail

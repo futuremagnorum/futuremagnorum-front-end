@@ -156,7 +156,6 @@ document.getElementById('emailForm').addEventListener('submit', function (event)
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }
     })
-    
     .then(response => response.json())
     .then(data => {
         if (data.status === 'success') {
@@ -166,8 +165,10 @@ document.getElementById('emailForm').addEventListener('submit', function (event)
         }
     })
     .catch(error => {
+        console.error('Erro:', error);
         document.getElementById('status').innerHTML = 'Erro ao enviar a mensagem.';
     });
+    
 });
 
 
