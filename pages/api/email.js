@@ -29,13 +29,13 @@ export default function handler(req, res) {
             rejectUnauthorized: false
         },
         connectionTimeout: 5000 // Para evitar timeout
-    }, { serverless: true });
+    });
   
 
     // Configurar o conteúdo do e-mail
     const mailOptions = {
-        from: 'viniciuslacerda972@gmail.com',
-        to: 'viniciuslacerda972@gmail.com',  // seu e-mail de destino
+        from: 'viniciuslacerda972@gmail.com',  // Seu e-mail
+        to: 'magnorumbr@gmail.com',  // E-mail de destino
         subject: `Nova mensagem de ${nome} pelo site`,
         text: `
             Você recebeu uma nova mensagem de contato:
@@ -55,6 +55,15 @@ export default function handler(req, res) {
 
     // Enviar o e-mail
     transporter.sendMail(mailOptions, (error, info) => {
+        if (!nome) {
+            return res.status(400).json({ status: 'failed', error: 'Nome é obrigatório.' });
+         }
+         if (!email) {
+            return res.status(400).json({ status: 'failed', error: 'E-mail é obrigatório.' });
+         }
+         if (!mensagem) {
+            return res.status(400).json({ status: 'failed', error: 'Mensagem é obrigatória.' });
+         }         
         if (error) {
             console.log('Erro ao enviar e-mail:', error); // Exibe o erro
             return res.status(500).json({ status: 'failed', error: 'Erro ao enviar e-mail.' });
