@@ -18,17 +18,17 @@ export default function handler(req, res) {
 
     // Criar o transporte de e-mail
     const transporter = nodemailer.createTransport({
-      service: 'gmail',  // ou outro provedor de e-mail
-      auth: {
-        user: process.env.EMAIL_USER,  // <-- Use a variável de ambiente
-        pass: process.env.EMAIL_PASS   // <-- Use a variável de ambiente
-      },
-      tls: {
-          rejectUnauthorized: false  // permitir conexões inseguras (não recomendado em produção)
-      },
-      port: 587,  // Porta padrão para TLS
-      secure: false  // Usar TLS em vez de SSL
-  });
+        host: "smtp.gmail.com", // Use o servidor SMTP correto
+        port: 587,
+        secure: false,
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
   
 
     // Configurar o conteúdo do e-mail
