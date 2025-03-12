@@ -1,8 +1,3 @@
-// testando sucesso
-// curl -XPOST 'http://localhost:3000/api/email' -d '{"message": "gostaria de saber alguma informacao", "email": "teste@teste.com"}' -H 'Content-type: application/json'
-
-// testando falha
-// curl -XPOST 'http://localhost:3000/api/email' -d '{"message": "gostaria de saber alguma informacao"}' -H 'Content-type: application/json'
 import nodemailer from 'nodemailer';
 
 export default function handler(req, res) {
@@ -18,23 +13,22 @@ export default function handler(req, res) {
 
     // Criar o transporte de e-mail
     const transporter = nodemailer.createTransport({
-      service: 'gmail',  // ou outro provedor de e-mail
-      auth: {
-        user: process.env.EMAIL_USER,  // <-- Use a variável de ambiente
-        pass: process.env.EMAIL_PASS   // <-- Use a variável de ambiente
-      },
-      tls: {
-          rejectUnauthorized: false  // permitir conexões inseguras (não recomendado em produção)
-      },
-      port: 587,  // Porta padrão para TLS
-      secure: false  // Usar TLS em vez de SSL
-  });
-  
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+        },
+        tls: {
+            rejectUnauthorized: false
+        }
+    });
 
     // Configurar o conteúdo do e-mail
     const mailOptions = {
-        from: 'viniciuslacerda972@gmail.com',
-        to: 'viniciuslacerda972@gmail.com',  // seu e-mail de destino
+        from: 'magnorumbr@gmail.com',  // Seu e-mail
+        to: 'magnorumbr@gmail.com',  // E-mail de destino
         subject: `Nova mensagem de ${nome} pelo site`,
         text: `
             Você recebeu uma nova mensagem de contato:
