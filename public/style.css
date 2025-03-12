@@ -34,7 +34,8 @@ body {
     text-align: center;
 }
 
-.Saiba-Mais {
+.saiba-mais {
+    position: relative;
     color: #ffd700;
     min-height: 100vh;
     display: flex;
@@ -42,9 +43,11 @@ body {
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
+    left: 1%;
 }
 
 .equipe {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,6 +56,7 @@ body {
     color: #ffd700;
     min-height: 100vh;
     padding: 50px 20px;
+    left: 1.5%;
 }
 
 .Serviços{
@@ -67,6 +71,7 @@ body {
 }
 
 .container{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,6 +82,7 @@ body {
     padding: 50px 20px;
     max-width: 800px;
     margin: auto;
+    left: 2.2%;
 }
 /*----------------------------------*/
 
@@ -86,8 +92,7 @@ body {
 .navbar{
     position: fixed;
     top: 1%;
-    left: 0%;
-    width: 0%;
+    left: 15%;
     font-size: 1rem;
     display: flex;
     justify-content: row;
@@ -105,17 +110,17 @@ header.navbar {
     justify-content: row;   
     width: 100%;
     height: 55px;
-    padding: 10 20px;
+    padding: 10 10px;
     border-radius: 50px;
     background-color: transparent;
     
 }
 
 .logo-navbar {
-    position: relative;
-    top: 0px;
-    left: 625px;
-    max-height: 50px;
+    position: fixed;
+    top: -58px;
+    left: 23;
+    max-height: 190px;
     cursor: pointer;
 }
 
@@ -181,7 +186,7 @@ header.navbar {
     font-size: 60px;
     color: #FFD700;
     top: 25%;
-    left: 32%;
+    left: 34%;
 }
 
 .h2-home{
@@ -197,7 +202,7 @@ header.navbar {
     position: relative;
     width: 530px;
     top: 60px;
-    left: 20px;
+    left: 3%;
     border-radius: 10px;
 }
 
@@ -214,6 +219,7 @@ header.navbar {
 
 .Email-button{
     position: relative;
+    left: 16%;
     top: 80px;
     width: 180px;
     background: linear-gradient(135deg, #FFD700, #00027a);
@@ -315,6 +321,18 @@ header.navbar {
     font-size: 35px; 
 }
 
+.youtube{
+    position: relative;
+    width: 50px;
+    top: -177px;
+    left: 1020px;
+    z-index: 2;
+}
+.youtube i{
+    color: #ffd700;
+    font-size: 47px; 
+}
+
 @media (min-width: 1025px){
     .insta{
         left: 800px;
@@ -343,8 +361,10 @@ header.navbar {
 }
 
 .Serviços {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
+    left: 2.25%;
 }
 
 .Serviços h2 {
@@ -418,12 +438,19 @@ header.navbar {
     align-items: center;
 }
 
+.member-name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 .gallery-text {
     width: 500px;
     color: #ffffff;
     min-height: 250px;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: justify;
     padding: 20px;
     background-color: #001F3F;
     border: 3px solid #FFD700;
@@ -705,6 +732,31 @@ button:hover {
     color: #FFD700;
 }
 
+.rodape{
+    width: 600px;
+    height: 90px;
+}
+
+.final{
+    position: relative;
+    color: #FFD700;
+    left: 4%;
+    top: -13px;
+    width: 300px;
+    font-size: 1.2em;
+    line-height: 1;
+
+}
+.t_final{
+    position: relative;
+    color: #ffffff;
+    left: 4%;
+    top: 0px;
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+
 @media (max-width: 1024px){
     .right{
         left: 300px;
@@ -748,7 +800,7 @@ button:hover {
     }
     .logo-navbar{
         position: relative;
-        left: 42%;
+        left: 23%;  
     }
     .h1-titulo{
         position: relative;
@@ -836,6 +888,17 @@ button:hover {
     .insta, .Git-hub, .tiktok {
         left: 50%;
         transform: translateX(-50%);
+    }
+    .navbar1{
+        display: none;
+    }
+    .rodape{
+        position: relative;
+        top: 40%;
+    }
+    body{
+        position: relative;
+        left: 10%;
     }
 }
 
