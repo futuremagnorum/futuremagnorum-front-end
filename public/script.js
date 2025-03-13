@@ -108,7 +108,7 @@ if (emailForm) {
             return; // Não envia a requisição se os campos estiverem vazios
         }
 
-        fetch('http://localhost:3000/api/email', {
+        fetch('https://futuremagnorum.vercel.app    ', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
