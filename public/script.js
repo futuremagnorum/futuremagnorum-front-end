@@ -108,7 +108,7 @@ if (emailForm) {
             return; // Não envia a requisição se os campos estiverem vazios
         }
 
-        fetch('https://futuremagnorum.vercel.app    ', {
+        fetch('https://futuremagnorum.vercel.app/api/email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
