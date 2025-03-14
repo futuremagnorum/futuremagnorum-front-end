@@ -90,37 +90,24 @@ document.addEventListener('keydown', event => {
 });
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    var form = new FormData(this);
+    event.preventDefault(); // Impede o envio padrão para exibir a mensagem antes
+    var form = this;
     var status = document.getElementById("status");
 
-    // Criando um objeto JSON com os dados do formulário
-    var data = {
-        nome: form.get("nome"),
-        email: form.get("email"),
-        cadastro: form.get("cadastro") ? "on" : "off" // Certifique-se de que o checkbox está sendo enviado corretamente
-    };
-
-    fetch("https://script.google.com/macros/s/AKfycbyswN8tmD0ADrQF97aN7RkQdENMJsz0ZvVZrGCiWwJRzu20hp-YT2V8oNSQopIq4zqG/exec", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" },
-        mode: "cors" // Habilita CORS no navegador
-    })
-    .then(response => response.text())
-    .then(result => {
-        if (result.includes("Success")) {
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form)
+    }).then(response => {
+        if (response.ok) {
             status.innerText = "E-mail enviado com sucesso!";
             status.style.color = "green";
-            this.reset();
+            form.reset(); // Limpa o formulário
         } else {
-            status.innerText = "Erro ao enviar: " + result;
+            status.innerText = "Erro ao enviar. Tente novamente.";
             status.style.color = "red";
         }
-    })
-    .catch(() => {
-        status.innerText = "Erro de conexão.";
+    }).catch(() => {
+        status.innerText = "Erro ao conectar com o servidor.";
         status.style.color = "red";
     });
 });
