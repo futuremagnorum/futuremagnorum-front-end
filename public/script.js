@@ -1,12 +1,11 @@
 const numStars = 800;
-let stars = [];
 
 // Criar e adicionar estrelas ao body
 function createStars() {
     const fragment = document.createDocumentFragment();
-    const totalWidth = window.innerWidth;
-    const totalHeight = window.innerHeight;
-
+    const totalWidth = document.body.scrollWidth;
+    const totalHeight = document.body.scrollHeight;
+    
     for (let i = 0; i < numStars; i++) {
         const star = document.createElement('div');
         star.classList.add('star');
@@ -14,24 +13,17 @@ function createStars() {
         star.style.top = `${Math.random() * totalHeight}px`;
         star.style.animationDelay = `${Math.random() * 2}s`;
         fragment.appendChild(star);
-        stars.push(star);
     }
     document.body.appendChild(fragment);
 }
 
-// Redimensiona as estrelas sem recriar todas do zero
+// Atualizar estrelas ao redimensionar
 function resizeStars() {
-    requestAnimationFrame(() => {
-        const totalWidth = window.innerWidth;
-        const totalHeight = window.innerHeight;
-        stars.forEach(star => {
-            star.style.left = `${Math.random() * totalWidth}px`;
-            star.style.top = `${Math.random() * totalHeight}px`;
-        });
-    });
+    document.querySelectorAll('.star').forEach(star => star.remove());
+    createStars();
 }
 
-// Inicialização das estrelas
+// Inicialização
 createStars();
 window.addEventListener('resize', resizeStars);
 
@@ -97,7 +89,7 @@ document.addEventListener('keydown', event => {
     else if (event.key === "ArrowLeft") prevImage();
 });
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
+ddocument.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
     var form = new FormData(this);
