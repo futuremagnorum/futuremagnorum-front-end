@@ -1,11 +1,12 @@
 const numStars = 800;
+let stars = [];
 
 // Criar e adicionar estrelas ao body
 function createStars() {
     const fragment = document.createDocumentFragment();
-    const totalWidth = document.body.scrollWidth;
-    const totalHeight = document.body.scrollHeight;
-    
+    const totalWidth = window.innerWidth;
+    const totalHeight = window.innerHeight;
+
     for (let i = 0; i < numStars; i++) {
         const star = document.createElement('div');
         star.classList.add('star');
@@ -13,17 +14,24 @@ function createStars() {
         star.style.top = `${Math.random() * totalHeight}px`;
         star.style.animationDelay = `${Math.random() * 2}s`;
         fragment.appendChild(star);
+        stars.push(star);
     }
     document.body.appendChild(fragment);
 }
 
-// Atualizar estrelas ao redimensionar
+// Redimensiona as estrelas sem recriar todas do zero
 function resizeStars() {
-    document.querySelectorAll('.star').forEach(star => star.remove());
-    createStars();
+    requestAnimationFrame(() => {
+        const totalWidth = window.innerWidth;
+        const totalHeight = window.innerHeight;
+        stars.forEach(star => {
+            star.style.left = `${Math.random() * totalWidth}px`;
+            star.style.top = `${Math.random() * totalHeight}px`;
+        });
+    });
 }
 
-// Inicialização
+// Inicialização das estrelas
 createStars();
 window.addEventListener('resize', resizeStars);
 
@@ -57,14 +65,12 @@ const galleryImages = document.getElementById("galleryImages");
 
 function updateGallery(index) {
     const member = members[index];
-    
-    // Aplicando a classe ao nome
+
     galleryText.innerHTML = `
         <div class="member-name">${member.name}</div>
         <div class="member-text">${member.text}</div>
     `;
-    
-    // Exibindo as imagens de tecnologia
+
     galleryImages.innerHTML = member.techImages.map(img => `<img src="${img}" alt="Tecnologia" class="tech-img">`).join("");
 }
 
@@ -89,33 +95,37 @@ document.addEventListener('keydown', event => {
     else if (event.key === "ArrowLeft") prevImage();
 });
 
+// Envio do formulário de contato
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
     var form = new FormData(this);
     var status = document.getElementById("status");
 
-    // Verifica se o usuário marcou o checkbox antes de enviar ao webhook
-    if (form.get("cadastro") === "on") {
-        fetch("https://script.google.com/macros/s/AKfycbyGubCfPR_zedVPE5pl5jHD3D5GLMAU_C6QfYGijcQ4dAklaba848C5djAm-CcOlDUi/exec", { // Substitua pelo seu Google Script
-            method: "POST",
-            body: form
-        });
-    }
+    // Criando um objeto JSON com os dados do formulário
+    var data = {
+        nome: form.get("nome"),
+        email: form.get("email"),
+        cadastro: form.get("cadastro") ? "on" : "off" // Certifique-se de que o checkbox está sendo enviado corretamente
+    };
 
-    fetch(this.action, {
-        method: this.method,
-        body: form
-    }).then(response => {
-        if (response.ok) {
+    fetch("https://script.google.com/macros/s/AKfycbyTQWpzaXfch56pGUB8bF0bo9iVLtX8KmugBfGBbuCvK4rpjpg-yZxJhv-WHFBFXQ/exec", {
+        method: "POST",
+        body: JSON.stringify(data), // Enviar como JSON
+        headers: { "Content-Type": "application/json" } // Cabeçalho correto
+    })
+    .then(response => response.text())
+    .then(result => {
+        if (result.includes("Success")) {
             status.innerText = "E-mail enviado com sucesso!";
             status.style.color = "green";
             this.reset();
         } else {
-            status.innerText = "Erro ao enviar.";
+            status.innerText = "Erro ao enviar: " + result;
             status.style.color = "red";
         }
-    }).catch(() => {
+    })
+    .catch(() => {
         status.innerText = "Erro de conexão.";
         status.style.color = "red";
     });
