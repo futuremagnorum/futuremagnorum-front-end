@@ -89,36 +89,3 @@ document.addEventListener('keydown', event => {
     else if (event.key === "ArrowLeft") prevImage();
 });
 
-// Envio de formulário
-const emailForm = document.getElementById('emailForm');
-if (emailForm) {
-    emailForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        
-        const data = {
-            nome: this.nome.value,
-            email: this.email.value,
-            mensagem: this.mensagem.value,
-            cadastro: this.cadastro.checked
-          };
-
-        // Verifique se os campos estão preenchidos antes de enviar
-        if (!data.nome || !data.email || !data.mensagem) {
-            document.getElementById('status').innerHTML = 'Por favor, preencha todos os campos.';
-            return; // Não envia a requisição se os campos estiverem vazios
-        }
-
-        fetch('https://futuremagnorum.vercel.app/api/email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('status').innerHTML = data.status === 'success' ? 'Mensagem enviada com sucesso!' : 'Ocorreu um erro. Tente novamente.';
-        })
-        .catch(() => {
-            document.getElementById('status').innerHTML = 'Erro ao enviar a mensagem.';
-        });
-    });
-}   
