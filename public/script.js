@@ -65,12 +65,14 @@ const galleryImages = document.getElementById("galleryImages");
 
 function updateGallery(index) {
     const member = members[index];
-
+    
+    // Aplicando a classe ao nome
     galleryText.innerHTML = `
         <div class="member-name">${member.name}</div>
         <div class="member-text">${member.text}</div>
     `;
-
+    
+    // Exibindo as imagens de tecnologia
     galleryImages.innerHTML = member.techImages.map(img => `<img src="${img}" alt="Tecnologia" class="tech-img">`).join("");
 }
 
@@ -95,37 +97,33 @@ document.addEventListener('keydown', event => {
     else if (event.key === "ArrowLeft") prevImage();
 });
 
-// Envio do formulário de contato
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
     var form = new FormData(this);
     var status = document.getElementById("status");
 
-    // Criando um objeto JSON com os dados do formulário
-    var data = {
-        nome: form.get("nome"),
-        email: form.get("email"),
-        cadastro: form.get("cadastro") ? "on" : "off" // Certifique-se de que o checkbox está sendo enviado corretamente
-    };
+    // Verifica se o usuário marcou o checkbox antes de enviar ao webhook
+    if (form.get("cadastro") === "on") {
+        fetch("https://script.google.com/macros/s/AKfycbyTQWpzaXfch56pGUB8bF0bo9iVLtX8KmugBfGBbuCvK4rpjpg-yZxJhv-WHFBFXQ/exec", { // Substitua pelo seu Google Script
+            method: "POST",
+            body: form
+        });
+    }
 
-    fetch("https://script.google.com/macros/s/AKfycbyTQWpzaXfch56pGUB8bF0bo9iVLtX8KmugBfGBbuCvK4rpjpg-yZxJhv-WHFBFXQ/exec", {
-        method: "POST",
-        body: JSON.stringify(data), // Enviar como JSON
-        headers: { "Content-Type": "application/json" } // Cabeçalho correto
-    })
-    .then(response => response.text())
-    .then(result => {
-        if (result.includes("Success")) {
+    fetch(this.action, {
+        method: this.method,
+        body: form
+    }).then(response => {
+        if (response.ok) {
             status.innerText = "E-mail enviado com sucesso!";
             status.style.color = "green";
             this.reset();
         } else {
-            status.innerText = "Erro ao enviar: " + result;
+            status.innerText = "Erro ao enviar.";
             status.style.color = "red";
         }
-    })
-    .catch(() => {
+    }).catch(() => {
         status.innerText = "Erro de conexão.";
         status.style.color = "red";
     });
