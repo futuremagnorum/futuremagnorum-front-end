@@ -89,3 +89,34 @@ document.addEventListener('keydown', event => {
     else if (event.key === "ArrowLeft") prevImage();
 });
 
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var form = new FormData(this);
+    var status = document.getElementById("status");
+
+    // Verifica se o usuário marcou o checkbox antes de enviar ao webhook
+    if (form.get("cadastro") === "on") {
+        fetch("https://script.google.com/macros/s/AKfycbyGubCfPR_zedVPE5pl5jHD3D5GLMAU_C6QfYGijcQ4dAklaba848C5djAm-CcOlDUi/exec", { // Substitua pelo seu Google Script
+            method: "POST",
+            body: form
+        });
+    }
+
+    fetch(this.action, {
+        method: this.method,
+        body: form
+    }).then(response => {
+        if (response.ok) {
+            status.innerText = "E-mail enviado com sucesso!";
+            status.style.color = "green";
+            this.reset();
+        } else {
+            status.innerText = "Erro ao enviar.";
+            status.style.color = "red";
+        }
+    }).catch(() => {
+        status.innerText = "Erro de conexão.";
+        status.style.color = "red";
+    });
+});

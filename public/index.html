@@ -173,25 +173,27 @@
                     <p>Quer trabalhar em conjunto? Preencha o formulário e entraremos em contato em breve! Será um prazer falar com você.</p>
                 </div>
                 <div class="right">
-                    <form action="https://formsubmit.co/716b9e8c20890f70da323c96eb14c8c5 " method="POST">
+                    <form id="contact-form" action="https://formsubmit.co/716b9e8c20890f70da323c96eb14c8c5" method="POST">
                         <label for="nome">Nome:</label>
                         <input type="text" id="nome" name="nome" required>
-                        <br>
-        
+                    
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" name="email" required>
-                        <br>
-        
+                    
                         <label for="mensagem">Mensagem:</label>
                         <textarea id="mensagem" name="mensagem" required></textarea>
-                        <br>
-        
+                    
                         <label>
                             <input type="checkbox" id="cadastro" name="cadastro">
                             Deseja receber atualizações?
                         </label>
-                        <br>
-        
+                    
+                        <!-- Desativar CAPTCHA para evitar bloqueios -->
+                        <input type="hidden" name="_captcha" value="false">
+                    
+                        <!-- Redirecionamento para uma página de sucesso -->
+                        <input type="hidden" name="_next" value="https://futuremagnorum.vercel.app//sucesso.html">
+                    
                         <button type="submit">Enviar</button>
                     </form>
         
