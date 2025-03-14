@@ -102,10 +102,11 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         cadastro: form.get("cadastro") ? "on" : "off" // Certifique-se de que o checkbox está sendo enviado corretamente
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbyTQWpzaXfch56pGUB8bF0bo9iVLtX8KmugBfGBbuCvK4rpjpg-yZxJhv-WHFBFXQ/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbyswN8tmD0ADrQF97aN7RkQdENMJsz0ZvVZrGCiWwJRzu20hp-YT2V8oNSQopIq4zqG/exec", {
         method: "POST",
-        body: JSON.stringify(data), // Enviar como JSON
-        headers: { "Content-Type": "application/json" } // Cabeçalho correto
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+        mode: "cors" // Habilita CORS no navegador
     })
     .then(response => response.text())
     .then(result => {
