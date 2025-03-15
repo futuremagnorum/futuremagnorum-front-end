@@ -663,10 +663,11 @@ header.navbar {
     left: 300px;
     top: -50px;
     width: 500px;
+    height: 100%;
     flex: 1;
     background: #001F3F;
     border-radius: 40px;
-    padding: 10px;
+    padding: 20px;
 }
 form {
     display: flex;
@@ -706,9 +707,19 @@ textarea:hover{
     background-color: #000000;
     color: #FFD700;
 }
-button {
+
+.checkbox {
     position: relative;
-    top: 25px;
+    left: -70px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.checkbox input {
+    margin-right: -50px;
+}
+
+button {
     margin-top: 20px;
     padding: 10px;
     width: 150px;
@@ -733,7 +744,7 @@ button:hover {
     position: relative;
     color: #FFD700;
     left: 4%;
-    top: -13px;
+    top: 0px;
     width: 300px;
     font-size: 1.2em;
     line-height: 1;
@@ -743,10 +754,12 @@ button:hover {
     position: relative;
     color: #ffffff;
     left: 4%;
-    top: 0px;
+    top: 13px;
     font-size: 1em;
     line-height: 1.2;
 }
+
+
 
 
 @media (max-width: 1024px){

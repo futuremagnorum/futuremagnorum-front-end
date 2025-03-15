@@ -82,7 +82,7 @@ updateGallery(currentIndex);
 let intervalId = setInterval(nextImage, 5000);
 
 galleryImages.addEventListener('mouseenter', () => clearInterval(intervalId));
-galleryImages.addEventListener('mouseleave', () => intervalId = setInterval(nextImage, 5000));
+galleryImages.addEventListener('mouseleave', () => intervalId = setInterval(nextImage, 10000));
 
 document.addEventListener('keydown', event => {
     if (event.key === "ArrowRight") nextImage();
@@ -90,23 +90,34 @@ document.addEventListener('keydown', event => {
 });
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Impede o envio padrão para exibir a mensagem antes
+    event.preventDefault();
+
     var form = this;
     var status = document.getElementById("status");
+    var formData = {
+        nome: form.querySelector('[name="name"]').value,
+        email: form.querySelector('[name="email"]').value,
+        cadastro: "on"
+    };
 
-    fetch(form.action, {
-        method: form.method,
-        body: new FormData(form)
-    }).then(response => {
-        if (response.ok) {
+    fetch("/api/proxy", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Resposta do servidor:", data);
+        if (data.message.includes("success")) {
             status.innerText = "E-mail enviado com sucesso!";
             status.style.color = "green";
-            form.reset(); // Limpa o formulário
+            form.reset();
         } else {
             status.innerText = "Erro ao enviar. Tente novamente.";
             status.style.color = "red";
         }
-    }).catch(() => {
+    })
+    .catch(() => {
         status.innerText = "Erro ao conectar com o servidor.";
         status.style.color = "red";
     });
