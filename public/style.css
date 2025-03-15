@@ -79,7 +79,7 @@ body {
     align-items: center;
     text-align: center;
   }
-  
+
   .Saiba-Mais {
     color: #333333;
     min-height: 100vh;
@@ -399,7 +399,7 @@ body {
   }
   
   .descricao {
-    text-align: left;
+    text-align: center;
     font-size: 1.1rem;
     line-height: 1.8;
     color: #ffffff;
@@ -860,9 +860,19 @@ body {
       font-size: 0.8rem;
     }
 
+
+    .Saiba-Mais,
+    .equipe,
+    .Serviços,
+    .container,
+    .home_page{
+      min-width: 60vw;
+    }
+
     .descricao{
       font-size: 1rem;
-    }
+      text-align: center;
+    } 
 
     .rodape{
       width: 330px;
