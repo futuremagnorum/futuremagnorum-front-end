@@ -140,15 +140,11 @@ body {
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px #57c5b6;
   }
   
   .logo-navbar {
-    position: relative;
-    top: 0;
-    left: 770%;
-    max-height: 140px;
-    color: #1a5f7a;
+    max-height: 50px;
   }
   
   .h1-titulo {
@@ -176,11 +172,6 @@ body {
     font-size: 16px;
     font-weight: bold;
   }
-
-  #navMenu{
-    position: relative;
-    left: -113%;
-  }
   
   .nav-link {
     text-decoration: none;
@@ -206,7 +197,7 @@ body {
   
   .social-icons {
     position: relative;
-    left: -5%;
+    left: 0%;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -232,7 +223,7 @@ body {
     top: 3px;
     height: 40px;
     width: auto;
-    filter: invert(30%) sepia(56%) saturate(1352%) hue-rotate(165deg) brightness(92%) contrast(88%);
+    color: #000;
   }
   .youtube{
     font-size: 40px;
@@ -808,15 +799,18 @@ button[type="submit"]:hover {
   background: linear-gradient(135deg, #1a5f7a, #57c5b6);
 }
 
-.m_T{
+  .m_T{
     position: relative;
-    left: -103.5%;
+    left: -110%;
     top: -230px;
     color: #57c5b6;
-    background-color: #1a5f7a;
-    border-radius: 20px;
-    height: 30px;
-    width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+    height: 0px;
+  }
+
+  .m_T i{
+    font-size: 40px;
   }
 
 #status {
@@ -969,10 +963,46 @@ button[type="submit"]:hover {
       flex-direction: column;
     }
   
-    .left,
+    left {
+      flex: 1;
+      min-width: 300px;
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+    
+    .left h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #1a5f7a;
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+    
+    .left p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555555;
+      position: relative;
+      left: 0;
+      top: 0;
+      width: auto;
+      text-align: left;
+    }
+    
     .right {
-      width: 100%;
-      max-width: 100%;
+      flex: 1;
+      min-width: 300px;
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 2rem;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      position: relative;
+      left: 0;
+      top: 0;
+      width: auto;
     }
   
     .nav-button,

@@ -120,11 +120,19 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
 function trocarEstilo() {
     let link = document.getElementById("theme-stylesheet");
+    let logo = document.querySelector(".logo-navbar"); 
+    let themeIcon = document.querySelector(".m_T i"); // Seleciona o ícone dentro do botão
 
     if (link.getAttribute("href") === "style.css") {
         link.setAttribute("href", "stylel.css");
+        logo.setAttribute("src", "img/M (1) (1) (1) (1).png"); 
+        themeIcon.className = "bi bi-moon-fill"; // Altera o ícone para lua
     } else {
         link.setAttribute("href", "style.css");
+        logo.setAttribute("src", "img/transparent_gold_logo.png"); 
+        themeIcon.className = "bi bi-brightness-high-fill"; // Altera o ícone para sol
     }
 }
+
+
 

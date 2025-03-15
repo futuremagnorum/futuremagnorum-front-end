@@ -144,10 +144,7 @@ body {
   }
   
   .logo-navbar {
-    position: relative;
-    top: 0;
-    left: 770%;
-    max-height: 140px;
+    max-height: 50px;
   }
 
   .h1-titulo {
@@ -175,12 +172,6 @@ body {
     font-size: 16px;
     font-weight: bold;
   }
-
-  #navMenu{
-    position: relative;
-    left: -113%;
-  }
-  
   
   .nav-link {
     text-decoration: none;
@@ -205,8 +196,6 @@ body {
   }
   
   .social-icons {
-    position: relative;
-    left: -5%;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -446,13 +435,16 @@ body {
 
   .m_T{
     position: relative;
-    left: -103.5%;
+    left: -110%;
     top: -230px;
     color: #FFD700;
-    background-color: #001F3F;
-    border-radius: 20px;
-    height: 30px;
-    width: 100px;
+    background-color: transparent;
+    border-color: transparent;
+    height: 0px;
+  }
+
+  .m_T i{
+    font-size: 40px;
   }
   
   .bloco {
