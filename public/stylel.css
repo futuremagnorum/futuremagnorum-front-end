@@ -366,7 +366,7 @@ body {
   .img-suppot {
     width: 40px;
     margin-bottom: 1rem;
-    filter: invert(67%) sepia(67%) saturate(380%) hue-rotate(130deg) brightness(92%) contrast(88%);
+    color: #57c5b6;
   }
   
   .sobre-porque h4 {
