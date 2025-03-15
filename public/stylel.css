@@ -18,7 +18,7 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
     margin: 0;
-    background: black; /* Fundo preto */
+    background: rgb(255, 255, 255); /* Fundo preto */
 }
   
   /* Typography */
@@ -28,18 +28,18 @@ body {
   h4,
   h5,
   h6 {
-    color: #00027a;
+    color: #1a5f7a;
     margin-bottom: 1rem;
     line-height: 1.2;
   }
   
   p {
     margin-bottom: 1rem;
-    color: #ffffff;
+    color: #555555;
   }
   
   .destaque {
-    color: #FFD700;
+    color: #1a5f7a;
     font-weight: bold;
   }
   
@@ -62,11 +62,11 @@ body {
   
   /* Section backgrounds */
   section:nth-child(odd) {
-    background-color: #000000;
+    background-color: #ffffff;
   }
   
   section:nth-child(even) {
-    background-color: #000000;
+    background-color: #f8f9fa;
   }
   
   /*paginas*/
@@ -136,11 +136,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px #FFD700;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .logo-navbar {
@@ -148,11 +148,12 @@ body {
     top: 0;
     left: 770%;
     max-height: 140px;
+    color: #1a5f7a;
   }
-
+  
   .h1-titulo {
     font-size: 1.5rem;
-    color: #FFD700;
+    color: #1a5f7a;
     margin: 0;
   }
   
@@ -181,10 +182,9 @@ body {
     left: -113%;
   }
   
-  
   .nav-link {
     text-decoration: none;
-    color: #FFD700;
+    color: #333333;
     font-size: 0.9rem;
     font-weight: 600;
     padding: 0.5rem 1rem;
@@ -216,17 +216,8 @@ body {
     font-size: 26px;
   }
 
-  .Git-hub img {
-    position: relative;
-    left: 0;
-    top: 3px;
-    height: 40px;
-    width: auto;
-    color: #FFD700;
-  }
-  
   .social-icons a {
-    color: #FFD700;
+    color: #1a5f7a;
     font-size: 1.2rem;
     transition: all 0.3s ease;
   }
@@ -235,11 +226,23 @@ body {
     transform: scale(1.2);
   }
   
+  .Git-hub img {
+    position: relative;
+    left: 0;
+    top: 3px;
+    height: 40px;
+    width: auto;
+    filter: invert(30%) sepia(56%) saturate(1352%) hue-rotate(165deg) brightness(92%) contrast(88%);
+  }
+  .youtube{
+    font-size: 40px;
+  }
+  
   .mobile-menu-toggle {
     display: none;
     background: none;
     border: none;
-    color: #FFD700;
+    color: #1a5f7a;
     font-size: 1.5rem;
     cursor: pointer;
   }
@@ -247,7 +250,7 @@ body {
   /* Home section */
   #home_page {
     position: relative;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9)), ;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9)),;
     background-size: 300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -264,7 +267,7 @@ body {
   .h1-home {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    color: #FFD700;
+    color: #1a5f7a;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     top: 0;
@@ -275,7 +278,7 @@ body {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     line-height: 1.8;
-    color: #ffffff;
+    color: #555555;
     position: relative;
     width: auto;
     text-align: center;
@@ -298,8 +301,8 @@ body {
     position: relative;
     top: 0;
     width: auto;
-    background: linear-gradient(135deg, #FFD700, #ad9c38);
-    color: rgb(0, 0, 0);
+    background: linear-gradient(135deg, #1a5f7a, #57c5b6);
+    color: white;
     font-size: 1rem;
     font-weight: 600;
     padding: 0.8rem 1.5rem;
@@ -307,13 +310,13 @@ body {
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px #FFD700;
+    box-shadow: 0 4px 15px rgba(26, 95, 122, 0.2);
   }
   
   .Email-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px #FFD700;
-    background: linear-gradient(135deg, #ad9c38, #FFD700);
+    box-shadow: 0 6px 20px rgba(26, 95, 122, 0.3);
+    background: linear-gradient(135deg, #57c5b6, #1a5f7a);
   }
   
   .Email-button:active {
@@ -322,19 +325,19 @@ body {
   
   /* Services section */
   #Serviços {
-    background-color: #000000;
+    background-color: #f8f9fa;
   }
   
   .h2-ser {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #FFD700;
+    color: #1a5f7a;
   }
   
   .text-ser {
     max-width: 700px;
     margin: 0 auto 3rem;
-    color: #ffffff;
+    color: #555555;
   }
   
   .grid-servicos {
@@ -345,50 +348,50 @@ body {
   }
   
   .sobre-porque {
-    background: #000000;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid #FFD700;
+    border: 1px solid #e9ecef;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 5px 15px #FFD700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   }
   
   .sobre-porque:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px #FFD700;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
   
   .sobre-porque i {
     font-size: 2.5rem;
-    color: #FFD700;
+    color: #57c5b6;
     margin-bottom: 1rem;
   }
   
   .img-suppot {
     width: 40px;
     margin-bottom: 1rem;
-    color: #FFD700;;
+    filter: invert(67%) sepia(67%) saturate(380%) hue-rotate(130deg) brightness(92%) contrast(88%);
   }
   
   .sobre-porque h4 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #FFD700;
+    color: #1a5f7a;
   }
   
   .text-definition {
-    color: #ffffff;
+    color: #555555;
     font-size: 0.95rem;
   }
   
   /* Saiba Mais section */
   #saiba-mais {
-    background-color: #000000;
+    background-color: #ffffff;
   }
   
   .saiba-mais {
@@ -400,31 +403,31 @@ body {
   .saiba-titulo {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #FFD700;
+    color: #1a5f7a;
   }
   
   .subtitulo {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: #e9cf40;
+    color: #57c5b6;
   }
   
   .descricao {
     text-align: left;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #ffffff;
+    color: #555555;
   }
   
   /* Quem Somos section */
   #quem-somos {
-    background-color: #000000;
+    background-color: #f8f9fa;
   }
   
   .titulo {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #FFD700;
+    color: #1a5f7a;
   }
   
   .descricao1 {
@@ -433,7 +436,7 @@ body {
     text-align: center;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #ffffff;
+    color: #555555;
   }
   
   .missao-visao-valores {
@@ -443,40 +446,29 @@ body {
     gap: 2rem;
     width: 100%;
   }
-
-  .m_T{
-    position: relative;
-    left: -103.5%;
-    top: -230px;
-    color: #FFD700;
-    background-color: #001F3F;
-    border-radius: 20px;
-    height: 30px;
-    width: 100px;
-  }
   
   .bloco {
-    background: #001F3F;
+    background: #ffffff;
     padding: 2rem;
     border-radius: 10px;
     flex: 1;
     min-width: 250px;
     max-width: 350px;
     transition: all 0.3s ease;
-    border: 1px solid #FFD700;
-    box-shadow: 0 5px 15px #FFD700;
-    color: #ffffff;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    color: #555555;
   }
   
   .bloco:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px #FFD700;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
   
   .bloco h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #FFD700  ;
+    color: #1a5f7a;
   }
   
   .bloco ul {
@@ -489,12 +481,12 @@ body {
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
-    color: #ffffff;
+    color: #555555;
   }
   
   .bloco ul li:before {
     content: "•";
-    color: #FFD700;
+    color: #57c5b6;
     position: absolute;
     left: 0;
     font-size: 1.2rem;
@@ -502,7 +494,7 @@ body {
   
   /* Equipe section */
   #equipe_page {
-    background-color: #000000;
+    background-color: #ffffff;
     position: relative;
   }
   
@@ -515,7 +507,7 @@ body {
   .h1-equipe {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #FFD700;
+    color: #1a5f7a;
   }
   
   .gallery-container {
@@ -533,13 +525,13 @@ body {
   }
   
   .gallery-text {
-    background: #001F3F;
-    border: 2px solid #FFD700;
+    background: #ffffff;
+    border: 2px solid #e9ecef;
     border-radius: 15px;
     padding: 2rem;
-    color: #ffffff;
+    color: #555555;
     min-height: 250px;
-    box-shadow: 0 5px 15px #FFD700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     width: 100%;
     margin-bottom: 0;
   }
@@ -547,7 +539,7 @@ body {
   .gallery-text h3 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    color: #FFD700;
+    color: #1a5f7a;
   }
   
   .gallery-images {
@@ -555,11 +547,11 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    background: #001F3F;
-    border: 2px solid #FFD700;
+    background: #ffffff;
+    border: 2px solid #e9ecef;
     border-radius: 15px;
     padding: 1.5rem;
-    box-shadow: 0 5px 15px #FFD700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   }
   
   .tech-img {
@@ -578,7 +570,7 @@ body {
     position: absolute;
     top: 50%;
     background: rgba(26, 95, 122, 0.1);
-    color: #FFD700;
+    color: #1a5f7a;
     font-size: 2rem;
     border: none;
     cursor: pointer;
@@ -608,7 +600,7 @@ body {
   
   /* Contato section */
   #contato {
-    background-color: #000000;
+    background-color: #f8f9fa;
   }
   
   #contato .container {
@@ -626,57 +618,57 @@ body {
     left: -55%;
     top: 55px;
   }
+
+  .name-group {
+    display: flex;
+    gap: 10px;
+}
+#nome:hover{
+        background-color: #57c5b6;
+        color: #1a5f7a;
+}
+.name-group input {
+        flex: 1;
+}
+#email:hover{
+        background-color: #57c5b6;
+        color: #1a5f7a;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #666;
+    border-radius: 20px;
+}
+
+textarea {
+    height: 120px;
+}
+textarea:hover{
+    background-color: #57c5b6;
+    color: #1a5f7a;
+}  
+
+form {
+    display: flex;
+    flex-direction: column;
+}
   
   .left h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #FFD700;
+    color: #1a5f7a;
     position: relative;
     left: -33%;
     top: 0;
   }
-
-    .name-group {
-        display: flex;
-        gap: 10px;
-    }
-    #nome:hover{
-            background-color: #000000;
-            color: #FFD700;
-    }
-    .name-group input {
-            flex: 1;
-    }
-    #email:hover{
-            background-color: #000000;
-            color: #FFD700;
-    }
-
-    input, textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #666;
-        border-radius: 20px;
-    }
-
-    textarea {
-        height: 120px;
-    }
-    textarea:hover{
-        background-color: #000000;
-        color: #FFD700;
-    }  
-
-    form {
-        display: flex;
-        flex-direction: column;
-    }
   
   .left p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #ffffff;
+    color: #555555;
     position: relative;
     left: 0;
     top: 0;
@@ -687,11 +679,11 @@ body {
   .right {
     flex: 1;
     min-width: 500px;
-    background: #001F3F;
+    background: #ffffff;
     border-radius: 15px;
     padding: 2rem;
-    border: 1px solid #FFD700;
-    box-shadow: 0 5px 15px #FFD700;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     position: relative;
     left: 50%;
     top: -140px;
@@ -705,7 +697,7 @@ body {
   }
   
   label {
-    color: #FFD700;
+    color: #1a5f7a;
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
     display: block;
@@ -718,20 +710,20 @@ body {
     border-radius: 8px;
     border: 1px solid #e9ecef;
     background: #f8f9fa;
-    color: #000000;
+    color: #333333;
     transition: all 0.3s ease;
   }
   
   input:focus,
   textarea:focus {
     outline: none;
-    border-color: #FFD700;
-    box-shadow: 0 0 0 2px #FFD700;
+    border-color: #57c5b6;
+    box-shadow: 0 0 0 2px rgba(87, 197, 182, 0.2);
   }
   
   input:hover,
   textarea:hover {
-    border-color: #FFD700;
+    border-color: #57c5b6;
   }
   
   textarea {
@@ -740,8 +732,8 @@ body {
   }
   
   button[type="submit"] {
-    background: linear-gradient(135deg, #ffe343, #FFD700);
-    color: rgb(0, 0, 0);
+    background: linear-gradient(135deg, #1a5f7a, #57c5b6);
+    color: white;
     font-weight: 600;
     padding: 0.8rem 1.5rem;
     border: none;
@@ -755,21 +747,21 @@ body {
   
   button[type="submit"]:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px #FFD700;
-    background: linear-gradient(135deg, #FFD700, #ffe343);
+    box-shadow: 0 4px 15px rgba(26, 95, 122, 0.3);
+    background: linear-gradient(135deg, #57c5b6, #1a5f7a);
   }
   
   #status {
     margin-top: 1rem;
     font-size: 0.9rem;
-    color: #FFD700;
+    color: #1a5f7a;
   }
   
   /* Decorative elements */
   .wave-divider {
     width: 100%;
     height: 70px;
-    fill: #000000;
+    fill: #f8f9fa;
     margin-top: -1px;
   }
   
@@ -779,73 +771,140 @@ body {
     margin-top: 0;
   }
 
-  .rodape{
-    width: 600px;
-    height: 90px;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+
+input:hover,
+textarea:hover {
+  border-color: #57c5b6;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #57c5b6, #1a5f7a);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  align-self: flex-start;
+  width: auto;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px #57c5b6;
+  background: linear-gradient(135deg, #1a5f7a, #57c5b6);
+}
+
+.m_T{
+    position: relative;
+    left: -103.5%;
+    top: -230px;
+    color: #57c5b6;
+    background-color: #1a5f7a;
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+  }
+
+#status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #1a5f7a;
+}
+
+/* Decorative elements */
+.wave-divider {
+  width: 100%;
+  height: 70px;
+  fill: #ffffff;
+  margin-top: -1px;
+}
+
+.wave-divider.flip {
+  transform: rotate(180deg);
+  margin-bottom: -1px;
+  margin-top: 0;
+}
+
+.rodape{
+  width: 600px;
+  height: 90px;
 }
 
 .final{
-    position: relative;
-    color: #FFD700;
-    left: 4%;
-    top: 0px;
-    width: 300px;
-    font-size: 1.2em;
-    line-height: 1;
+  position: relative;
+  color: #1a5f7a;
+  left: 4%;
+  top: 0px;
+  width: 300px;
+  font-size: 1.2em;
+  line-height: 1;
 
 }
 .t_final{
-    position: relative;
-    color: #ffffff;
-    left: 4%;
-    top: 13px;
-    font-size: 1em;
-    line-height: 1.2;
+  position: relative;
+  color: #000000;
+  left: 4%;
+  top: 13px;
+  font-size: 1em;
+  line-height: 1.2;
 }
 
 .star {
-    position: absolute;
-    width: 0.1px; /* Diminuído para evitar borda grande */
-    height: 2px;
-    background-color: gold; /* Cor dourada */
-    border-radius: 50%; /* Forma redonda */
-    animation: twinkle 2s infinite ease-in-out;
-  }
+  position: absolute;
+  width: 0.1px; /* Diminuído para evitar borda grande */
+  height: 4px;
+  background-color: #57c5b6; /* Cor dourada */
+  border-radius: 50%; /* Forma redonda */
+  animation: twinkle 2s infinite ease-in-out;
+}
 
-  /* Animação para as estrelas piscarem */
-  @keyframes twinkle {
-    0%, 100% {
-      opacity: 0.2;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.5);
-    }
+/* Animação para as estrelas piscarem */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
   }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
 
-    /* Estiliza o container da barra de rolagem */
+  /* Estiliza o container da barra de rolagem */
 ::-webkit-scrollbar {
-    width: 12px; /* Define a largura da barra de rolagem */
-    height: 12px; /* Define a altura para barras horizontais */
+  width: 12px; /* Define a largura da barra de rolagem */
+  height: 12px; /* Define a altura para barras horizontais */
 }
 
 /* Estiliza o "trilho" da barra de rolagem */
 ::-webkit-scrollbar-track {
-    background: black; /* Torna o fundo transparente */
+  background: rgb(255, 255, 255); /* Torna o fundo transparente */
 }
 
 /* Estiliza o "polegar" da barra de rolagem (a parte que você arrasta) */
 ::-webkit-scrollbar-thumb {
-    background: #FFD700; /* Torna o polegar transparente */
-    border-radius: 10px; /* Bordas arredondadas, opcional */
+  background: #57c5b6; /* Torna o polegar transparente */
+  border-radius: 10px; /* Bordas arredondadas, opcional */
 }
 
 /* Torna o polegar visível ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
-    background: #FFD700; /* Torna visível com uma transparência leve */
+  background: #57c5b6; /* Torna visível com uma transparência leve */
 }
-
   
   /* Responsive styles */
   @media (max-width: 1024px) {

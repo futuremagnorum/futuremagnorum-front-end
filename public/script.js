@@ -94,9 +94,15 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     var form = this;
     var status = document.getElementById("status");
 
+    // Cria o FormData a partir do formulário
+    var formData = new FormData(form);
+    
+    var nome = document.querySelector('input[name="nome"]').value;
+    formData.append("nome", nome);
+
     fetch(form.action, {
         method: form.method,
-        body: new FormData(form)
+        body: formData
     }).then(response => {
         if (response.ok) {
             status.innerText = "E-mail enviado com sucesso!";
@@ -111,3 +117,14 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         status.style.color = "red";
     });
 });
+
+function trocarEstilo() {
+    let link = document.getElementById("theme-stylesheet");
+
+    if (link.getAttribute("href") === "style.css") {
+        link.setAttribute("href", "stylel.css");
+    } else {
+        link.setAttribute("href", "style.css");
+    }
+}
+

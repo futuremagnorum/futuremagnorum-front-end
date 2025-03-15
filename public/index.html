@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="icon" href="/img/M-Photoroomss.png" sizes="192x192" type="image/x-icon">
+    <link rel="icon" href="public/img/favicon-16x16.png" type="image/x-icon"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Magnorum</title>
-    <link rel="stylesheet" href="style.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-        <header class="navbar" >
+
+        <header class="navbar">
+            <div class="logo-container">
+                <img src="img/M-Photoroomss.png" alt="Logo Magnorum" class="logo-navbar">
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="bi bi-list"></i>
+            </button>
+
             <nav class="navbar1">
-                <ul>
+                <ul id="navMenu">
                     <li><a href="#Serviços" class="nav-link">Serviços</a></li>
                     <li><a href="#saiba-mais" class="nav-link">Saiba mais</a></li>
                     <li><a href="#quem-somos" class="nav-link">Quem somos</a></li>
                     <li><a href="#equipe_page" class="nav-link">Equipe</a></li>
                     <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
-                <div class="insta">
-                    <a href="https://www.instagram.com/futuremagnorum?igsh=dHptemlieDE1eGp3">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/futuremagnorum?igsh=dHptemlieDE1eGp3" class="insta">
                         <i class="bi bi-instagram"></i>
                     </a>
-                </div>
-                <div class="Git-hub">
-                    <a href="https://github.com/futuremagnorum">
-                        <img src="img/github_gold_nobg.png" alt="" class="Git-hub">
+                    <a href="https://github.com/futuremagnorum" class="Git-hub">
+                        <img src="img/github_gold_nobg.png" alt="GitHub">
                     </a>
-                </div>
-                <div class="tiktok">
-                    <a href="https://www.tiktok.com/@future_magnorum">
+                    <a href="https://www.tiktok.com/@future_magnorum" class="tiktok">
                         <i class="bi bi-tiktok"></i>
                     </a>
-                </div>
-                <div class="youtube">
-                    <a href="https://www.youtube.com/@FutureMagnorum_Brasil">
+                    <a href="https://www.youtube.com/@FutureMagnorum_Brasil" class="youtube">
                         <i class="bi bi-youtube"></i>
                     </a>
                 </div>
             </nav>
-            <img src="img/transparent_gold_logo.png" alt="" class="logo-navbar">
         </header>
 
         <section id="home_page">
             <div class="home-page">
+                <button class="m_T" onclick="trocarEstilo()">Mudar Estilo</button>
                 <div class="h1">
                     <h1 class="h1-home">Future Magnorum</h1>
                 </div>
@@ -60,7 +63,10 @@
         </section>
 
         <section id="Serviços">
-            <div class="Serviços">
+            <svg class="wave-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,0 C240,95 480,100 720,85 C960,70 1200,40 1440,95 L1440,100 L0,100 Z"></path>
+            </svg>
+            <div class="container">
                 <h2 class="h2-ser">Serviços</h2>
                 <p class="text-ser">Conheça os serviços do Future Magnorum! Nosso aplicativo foi criado para simplificar a busca por empregos para jovens, conectando talentos a oportunidades de forma rápida e segura.</p>
                 <div class="grid-servicos">
@@ -96,27 +102,35 @@
                     </div>
                 </div>
             </div>
+            <svg class="wave-divider flip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,0 C240,95 480,100 720,85 C960,70 1200,40 1440,95 L1440,100 L0,100 Z"></path>
+            </svg>
         </section>
         
 
         <section id="saiba-mais">
-            <div class="saiba-mais">
-                <h1 class="saiba-titulo">🔎 Saiba Mais</h1>
-                <h2 class="subtitulo">O que é a Magnorum?</h2>
-                <p class="descricao">
-                    A <strong>Magnorum</strong> é um aplicativo inovador criado para facilitar a <strong>contratação de jovens e adolescentes</strong> que estão em busca do primeiro emprego ou de oportunidades no mercado de trabalho.  
-                    <br><br>
-                    Com uma plataforma intuitiva e acessível, a Magnorum <strong>conecta empresas</strong> que desejam contratar talentos em início de carreira a candidatos qualificados, <span class="destaque">simplificando o processo de recrutamento</span> e aumentando as chances de crescimento profissional.
-                    <br><br>
-                    O aplicativo permite que os usuários <strong>cadastrem seus perfis</strong>, destacando habilidades e interesses, enquanto os empregadores podem encontrar facilmente os candidatos ideais para suas vagas.
-                    <br><br>
-                    🚀 A Magnorum nasceu para <strong>transformar desafios em oportunidades</strong>, oferecendo um ambiente onde jovens possam desenvolver suas carreiras com mais facilidade e confiança.
-                </p>
+            <div class="container">
+                <div class="saiba-mais">
+                    <h1 class="saiba-titulo">🔎 Saiba Mais</h1>
+                    <h2 class="subtitulo">O que é a Magnorum?</h2>
+                    <p class="descricao">
+                        A <strong>Magnorum</strong> é um aplicativo inovador criado para facilitar a <strong>contratação de jovens e adolescentes</strong> que estão em busca do primeiro emprego ou de oportunidades no mercado de trabalho.  
+                        <br><br>
+                        Com uma plataforma intuitiva e acessível, a Magnorum <strong>conecta empresas</strong> que desejam contratar talentos em início de carreira a candidatos qualificados, <span class="destaque">simplificando o processo de recrutamento</span> e aumentando as chances de crescimento profissional.
+                        <br><br>
+                        O aplicativo permite que os usuários <strong>cadastrem seus perfis</strong>, destacando habilidades e interesses, enquanto os empregadores podem encontrar facilmente os candidatos ideais para suas vagas.
+                        <br><br>
+                        🚀 A Magnorum nasceu para <strong>transformar desafios em oportunidades</strong>, oferecendo um ambiente onde jovens possam desenvolver suas carreiras com mais facilidade e confiança.
+                    </p>
+                </div>
             </div>
         </section>
 
 
         <section id="quem-somos">
+            <svg class="wave-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,0 C240,95 480,100 720,85 C960,70 1200,40 1440,95 L1440,100 L0,100 Z"></path>
+            </svg>
             <div class="container">
                 <h1 class="titulo">🌍 Quem Somos</h1>
                 <p class="descricao1">
@@ -145,18 +159,23 @@
                     </div>
                 </div>
             </div>
+            <svg class="wave-divider flip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,0 C240,95 480,100 720,85 C960,70 1200,40 1440,95 L1440,100 L0,100 Z"></path>
+            </svg>
         </section>
         
         
         <section id="equipe_page">
-            <div class="equipe" id="Equipe">
-                <div class="h1">
-                    <h1 class="h1-equipe">Equipe</h1>
-                </div>
-                <div class="gallery-container">
-                    <div class="image-box">
-                        <div class="gallery-text" id="galleryText"></div>
-                        <div class="gallery-images" id="galleryImages"></div>
+            <div class="container">
+                <div class="equipe" id="Equipe">
+                    <div class="h1">
+                        <h1 class="h1-equipe">Equipe</h1>
+                    </div>
+                    <div class="gallery-container">
+                        <div class="image-box">
+                            <div class="gallery-text" id="galleryText"></div>
+                            <div class="gallery-images" id="galleryImages"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -205,3 +224,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
