@@ -667,7 +667,7 @@ header.navbar {
     flex: 1;
     background: #001F3F;
     border-radius: 40px;
-    padding: 20px;
+    padding: 10px;
 }
 form {
     display: flex;
@@ -707,19 +707,10 @@ textarea:hover{
     background-color: #000000;
     color: #FFD700;
 }
-
-.checkbox {
-    position: relative;
-    left: -70px;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-.checkbox input {
-    margin-right: -50px;
-}
-
 button {
+    position: relative;
+    top: 1%;
+    left: 33%;
     margin-top: 20px;
     padding: 10px;
     width: 150px;
