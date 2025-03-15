@@ -914,14 +914,20 @@ button[type="submit"]:hover {
   @media (max-width: 768px) {
     header.navbar {
       padding: 0.8rem 1rem;
+      width: 100%;
     }
-  
+
+    .rodape{
+      width: 330px;
+      font-size: smaller;
+    }
+
     .navbar1 ul {
       display: none;
       position: absolute;
       top: 60px;
       left: 0;
-      width: 100%;
+      width: 0%;
       background: #ffffff;
       flex-direction: column;
       padding: 1rem 0;
@@ -935,6 +941,14 @@ button[type="submit"]:hover {
   
     .navbar1 ul li {
       margin: 0.5rem 0;
+    }
+
+    .text-des{
+      font-size: 0.8rem;
+    }
+
+    .descricao{
+      font-size: 1rem;
     }
   
     .mobile-menu-toggle {
@@ -961,53 +975,62 @@ button[type="submit"]:hover {
   
     #contato .container {
       flex-direction: column;
+      position: center;
     }
   
-    left {
+    .left {
       flex: 1;
       min-width: 300px;
       position: relative;
-      left: 0;
-      top: 0;
+      top: -40px;
+      left: 0%;
     }
     
     .left h1 {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
-      color: #1a5f7a;
       position: relative;
-      left: 0;
-      top: 0;
+      left: -8%;
     }
     
     .left p {
       font-size: 1.1rem;
       line-height: 1.8;
-      color: #555555;
       position: relative;
-      left: 0;
+      left: -8%;
       top: 0;
       width: auto;
-      text-align: left;
+      text-align: center;
+    }
+
+    .m_T{
+      position: relative;
+      top: -70px;
+      left: -37%;
+    }
+
+    .m_T i{
+      font-size: 30px;
     }
     
     .right {
       flex: 1;
       min-width: 300px;
-      background: #ffffff;
       border-radius: 15px;
       padding: 2rem;
-      border: 1px solid #e9ecef;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       position: relative;
-      left: 0;
+      left: -10%;
       top: 0;
       width: auto;
+    }
+
+    .gallery-text{
+      font-size: 0.8rem;
     }
   
     .nav-button,
     .nav-button1 {
-      top: auto;
+      top: 50%;
       bottom: 2rem;
     }
   }
