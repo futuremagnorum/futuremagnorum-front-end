@@ -600,7 +600,7 @@ body {
     flex: 1;
     min-width: 300px;
     position: relative;
-    left: -55%;
+    left: -37%;
     top: 55px;
   }
 
@@ -922,6 +922,7 @@ button[type="submit"]:hover {
     .container,
     .home_page{
       min-width: 50vw;
+      padding: 10px 0;
     }
 
     .descricao{
