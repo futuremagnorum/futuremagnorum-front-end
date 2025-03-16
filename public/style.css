@@ -875,6 +875,12 @@ body {
       padding: 10px 0;
     }
 
+    #contato,
+    #home_page{
+      min-width: 40vw;
+      padding: 0px 0;
+    }
+
     .descricao{
       font-size: 1rem;
       text-align: center;
@@ -1026,5 +1032,3 @@ body {
       height: 40px;
     }
   }
-  
-  
