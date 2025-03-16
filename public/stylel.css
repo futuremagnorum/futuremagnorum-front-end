@@ -674,6 +674,11 @@ form {
     top: -140px;
     width: auto;
   }
+
+  .member-name{
+    font-size: 1.5rem;
+    color: #57c5b6;
+  }
   
   form {
     display: flex;
@@ -919,7 +924,7 @@ button[type="submit"]:hover {
     .Saiba-Mais,
     .equipe,
     .Serviços,
-    .container,
+    .contato,
     .home_page{
       min-width: 50vw;
       padding: 10px 0;
