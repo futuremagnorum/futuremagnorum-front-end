@@ -868,17 +868,15 @@ body {
 
     .Saiba-Mais,
     .equipe,
-    .Serviços,
-    .contato,
-    .home_page{
+    .Serviços{
       min-width: 50vw;
       padding: 10px 0;
     }
 
     #contato,
     #home_page{
-      min-width: 40vw;
-      padding: 0px 0;
+      min-width: 30vw;
+      padding: 5px 0;
     }
 
     .descricao{
