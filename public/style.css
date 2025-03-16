@@ -876,7 +876,11 @@ body {
     #contato,
     #home_page{
       min-width: 30vw;
-      padding: 5px 0;
+      padding: 2px 0;
+    }
+
+    .home-page{
+      min-height: 30vw;
     }
 
     .descricao{

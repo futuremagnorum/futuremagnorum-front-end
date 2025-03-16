@@ -930,10 +930,12 @@ button[type="submit"]:hover {
 
     #contato,
     #home_page{
-      min-height: 30vw;
       min-width: 30vw;
       padding: 2px 0;
-      margin-bottom: -10px;
+    }
+
+    .home-page{
+      min-height: 30vw;
     }
 
     .descricao{
